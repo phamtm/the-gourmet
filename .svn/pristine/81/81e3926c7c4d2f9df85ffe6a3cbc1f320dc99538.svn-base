@@ -1,0 +1,11 @@
+<div class="form-center">
+	<?php 
+		$user_firstname = $this->session->userdata['user']->first_name;
+		echo "<h1>Hello ".$user_firstname."!</h1>";
+		if (isset($this->session->userdata['user']->admin_right)) 
+		{
+			if ($this->session->userdata['user']->admin_right == 1)
+				echo "<h1>(Admin)</h1>";
+		}
+	?>	
+</div>

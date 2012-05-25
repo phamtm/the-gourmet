@@ -1,0 +1,45 @@
+<div id="upload-area">
+	<div id="upload-title">
+		Upload Your Recipe
+	</div><!-- end of upload-title -->
+	<div id="rec-desc">
+		<form action="<?php echo base_url(); ?>index.php/user/create_recipe" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+			<label>Recipe Name:</label>
+			<input type="text" id="rec_name" name="recipe_name" size="85"/>
+			<br>
+			
+			<label>Short Description (&lt; 300 words):</label>			
+			<textarea rows="3" name="rec_desc">Write a short description about your recipe (what is it suitable for? occasion? ...</textarea>
+			<br>
+			<div>
+				<span style="float:left;">
+					<input type="radio" name="meal_type" value="0" /> Breakfast
+					<input type="radio" name="meal_type" value="1" /> Lunch
+					<input type="radio" name="meal_type" value="2" /> Dinner
+				</span>
+
+				<span style="float:right;">
+					<input type="checkbox" name="vegetarian" value="vegeterian" />Vegetarian
+					<input type="checkbox" name="halal" value="halal" />Halal
+				</span>
+				<br><br>
+			</div>		
+
+			Upload a picture: <input type="file" name="userfile" value>
+			
+			<br><br>
+
+			<label>Ingredients</label>			
+			<textarea rows="7" name="ingredients">List each ingredient in a new line</textarea>
+			<br><br>
+			
+			<label>Steps</label><br>			
+			<textarea rows="10" name="steps">List each step in a new line</textarea>
+			<br>
+
+			<input type="submit" name="upload" value="Submit" style="margin-left:44%;" />
+		</form>
+	</div>	
+
+</div><!-- end of upload-area -->
+

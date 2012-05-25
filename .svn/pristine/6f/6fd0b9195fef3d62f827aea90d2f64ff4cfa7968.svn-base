@@ -1,0 +1,27 @@
+<div id="wrapper">
+	<div class="container">
+		<div id="middle-wrapper">
+			<div id = "tiles">
+				<div class="tiles-small">
+					<div class="tileRect">
+						<a href=""><img src="../style/tile0.jpg"></a>
+					</div>
+					<div class="tileRect" id="bottomRect">
+						<div class="tileSquare">
+							<a href=""><img src="../style/tile1.jpg"></a>
+						</div>
+						<div class="tileSquare">
+							<a href=""><img src="../style/tile2.jpg"></a>
+						</div>
+						<div class="tileSquare">
+							<a href=""><img src="../style/tile3.jpg"></a>
+						</div>
+					</div>
+				</div><!-- End of tiles-small -->
+
+				<?php echo $this->load->view('login_box_home'); ?>
+				
+			</div> <!-- End of tiles -->
+		</div> <!-- End of middle-wrapper -->
+	</div><!-- End of container -->
+</div><!-- End of wrapper -->

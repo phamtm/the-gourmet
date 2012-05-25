@@ -1,0 +1,33 @@
+
+	</div><!-- End of wrapper -->
+	<div id="footer">
+		<div class="columns">
+			<div class="column" style="border-right:1px solid #CCC;">
+				<ul>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+				</ul>
+				
+			</div>
+			<div class="column" style="border-right:1px solid #CCC;">
+				<ul>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+				</ul>
+			</div>
+			<div class="column">
+				<ul>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+					<li><a href="">This is column 1</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>			
+</body>
+</html>

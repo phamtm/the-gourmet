@@ -1,0 +1,12 @@
+<div id="form-signup">
+	<h1>Reset Password</h1>
+		<fieldset>
+			<?php
+			echo form_open('user/send_password_reset_code');
+			echo "Enter your email address:";
+			echo form_input('email_address');
+			echo form_error('email_address');
+			echo form_submit('submit', "Send Confirm Email");
+			?>
+		</fieldset> <!-- End of account info -->
+</div>

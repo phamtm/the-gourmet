@@ -1,0 +1,197 @@
+<?php
+	class User extends CI_Controller {
+
+		function index() {
+			$data['main_content'] = "home";
+			$this->load->view('templates/template', $data);
+		}
+
+		//=====================LOG IN FUNCTION===========================/
+		function sign_in()
+		{
+			$data['main_content'] = "sign_in";
+			$this->load->view('templates/template', $data);
+		}
+
+		function validate_login() {
+			$this->load->model('user_model');
+			$q = $this->user_model->validate_login();
+			$this->session->set_userdata('login_successful', TRUE);
+			if ($q)
+			{
+				$data = array(
+					'username'     => $this->input->post('username'),
+					'is_logged_in' => true,
+				);
+
+				$this->session->set_userdata($data);
+
+				$data['main_content'] = 'feature';
+				$this->load->view('templates/template', $data);
+			}
+			else
+			{				
+				$this->session->set_userdata('login_successful', FALSE);
+				$this->index();
+			}
+		}
+
+		//=====================LOGGING OUT FUNCTION===========================/
+		function log_out()
+		{			
+			$newdata = array(				
+				'user_name'    =>'',				
+				'is_logged_in' => FALSE,
+        	);
+	        $this->session->unset_userdata($newdata );
+	        $this->session->sess_destroy();
+	        $this->index();
+		}
+
+		//=====================SIGN UP FUNCTION===========================/
+		function sign_up() 
+		{
+			$data['main_content'] = 'sign_up';
+			$this->load->view('templates/template', $data);
+		}
+
+		function add_user() 
+		{
+			// load form validation library
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email');
+			$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]');
+			$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
+
+			if($this->form_validation->run() == FALSE)			
+				$this->sign_up();
+			else 
+			{
+				$this->load->model('user_model');
+				$this->session->set_userdata('userNameExist', FALSE);
+				$this->session->set_userdata('emailExist', FALSE);
+
+				// username exists - display an error message
+				if ($q = $this->user_model->check_username_exist($this->input->post('username')))
+				{										
+					$data['main_content'] = 'sign_up';
+					$this->session->set_userdata('userNameExist', TRUE);
+					$this->load->view('templates/template', $data);
+					return;
+				}
+
+				// email exists - display an error message
+				if ($q = $this->user_model->check_email_exist($this->input->post('email_address')))
+				{										
+					$data['main_content'] = 'sign_up';
+					$this->session->set_userdata('emailExist', TRUE);
+					$this->load->view('templates/template', $data);
+					return;
+				}
+
+				// create new member				 
+				$username        = $this->input->post('username');
+				$email_address   = $this->input->post('email_address');
+				$first_name      = $this->input->post('first_name');
+				$last_name       = $this->input->post('last_name');
+				$password        = ($this->input->post('password'));
+				$activation_code = $this->user_model->_random_string(22);
+				$password_reset_code = $this->user_model->_random_string(22);
+
+				if($this->user_model->register_user($username, $password, $email_address, $first_name, $last_name, $activation_code, $password_reset_code))
+				{
+					// send activation email
+					$this->send_activation_email($email_address, $activation_code);
+
+					// save user data for current session
+					$data = array(
+						'username' => $username,
+						$email_address, $first_name, $password
+					);
+					
+					$this->session->set_userdata($data);
+					$data['main_content'] = 'sign_up_successful';
+					$this->load->view('templates/template', $data);					
+				}
+				else
+				{			
+					// registration not successful - reload the page
+					$this->load->view('sign_up');
+				}
+			}
+		}
+
+		//=====================ACCOUNT ACTIVATION=========================/
+		function activation_confirm()
+		{
+			$registration_code = $this->uri->segment(3);
+
+			if ($registration_code == '')
+			{
+				echo 'Error no registration code in URL';
+				exit();
+			}
+
+			$this->load->model('user_model');
+			$q = $this->user_model->confirm_registration($registration_code);
+			if ($q)
+			{
+				$data['main_content'] = 'sign_up_successful';
+				$this->load->view('templates/template', $data);
+			}
+
+			// WHEN INVALID ACTIVATION LINK
+		}
+
+		function send_activation_email($email_address, $activation_code)
+		{
+			//send activation emails			
+			$this->email->from('phamminh91@gmail.com', 'The Gourmet');
+			$this->email->to($email_address);
+			$this->email->subject('Registration Confirmation');
+			$this->email->message('Please click this link to confirm your registration' 
+								. anchor('/user/activation_confirm/' . $activation_code, 'Confirm Registration'));
+			$this->email->send();
+		}
+
+		//===================== PASSWORD RESET =========================/
+		function forgot_password()
+		{
+			$data['main_content'] = 'forgot_password';
+			$this->load->view('templates/template', $data);
+		}
+
+		function send_password_reset_code()
+		{					
+			$email_address = $this->input->post('email_address');						
+			$this->email->from('phamminh91@gmail.com', 'The Gourmet');
+			$this->email->to($email_address);
+			$this->email->subject('Password Reset Confirmation');
+			$this->load->model('user_model');
+			$pwd_code = $this->user_model->get_password_reset_code($email_address);
+			$this->email->message('Please click this link to reset your password' 
+								. anchor('/user/reest_password/' . $pwd_code, "<br /> Reset Password."));
+			$this->email->send();
+		}
+
+		function reset_password()
+		{
+			$reset_code = $this->uri->segment(3);
+
+			if ($reset_code == '')
+			{
+				echo 'Error no reset code in URL';
+				exit();
+			}
+
+			$this->load->model('user_model');
+
+			$q = $this->user_model->confirm_reset_password($reset_code);
+			if ($q)
+			{
+				$data['main_content'] = 'reset_successful';
+				$this->load->view('templates/template', $data);
+			}
+		}
+	}
+?>

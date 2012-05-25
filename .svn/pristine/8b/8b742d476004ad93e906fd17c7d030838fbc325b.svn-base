@@ -1,0 +1,28 @@
+<div class="tiles-small" id="tiles-small-form">
+	<div id="form-login">				
+		<div id="form-icon" id="contact">
+			<img src="../style/chef-hat-icon.jpg" width="40%">
+		</div>
+		
+			<?php
+				echo form_open('login/validate_credentials');
+				echo "Username";
+				$data = array('name' => 'username', 'id' => 'input');
+				echo form_input($data);
+				echo "Password";
+				$data = array('name' => 'password', 'id' => 'input');
+				echo form_password($data);
+				echo form_submit('submit', 'Sign In');
+				echo anchor('login/signup', 'Sign Up');	
+			?>
+			<br/>
+			<a href=""><span>Or sign in with other services</span></a>
+			<div class="social-login-inactive">
+				<a href=""><img src="../style/icon-facebook.png"></a>
+				<a href=""><img src="../style/icon-google.png"></a>
+				<a href=""><img src="../style/icon-twitter.png"></a>
+				<a href=""><img src="../style/icon-yahoo.png"></a>
+			</div>
+		
+	</div>	
+</div> <!-- End of tiles-small -->

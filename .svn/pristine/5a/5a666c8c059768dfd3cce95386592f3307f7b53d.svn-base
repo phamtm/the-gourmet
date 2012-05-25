@@ -1,0 +1,14 @@
+<div id="form-signup" style="height: 300px;">
+	<h1>Welcome to Gourmet</h1>
+	<fieldset>
+	    <form action="<?php echo base_url(); ?>index.php/user/validate_login/sign_in" method="post" accept-charset="utf-8">
+	      Username
+	      <input type="text" class="s-input" name="username" value="" class="idleField">
+	      Password
+	      <input type="password" class="s-input" name="password" value="" class="idleField">
+	      <input type="submit" name="submit" value="Sign In"><br><br>
+	      <a href="http://localhost/index.php/user/sign_up">Sign Up</a><br>
+	      <a href="http://localhost/index.php/user/forgot_password">Forgot your password?</a>  
+	    </form>
+	</fieldset> <!-- End of account info -->
+</div>

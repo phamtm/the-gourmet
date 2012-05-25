@@ -1,0 +1,275 @@
+	<div class="gourmet-title">Meal Advisor</div>
+
+	<div class="search">
+
+		<div class="search-sidebar" style="width:250px; float:left; height: 700px;">
+			<ul>
+				<li>My Information</li>
+				<?php
+				$gender = $this->session->userdata['user']->gender == 0 ? 'Female' : 'Male';
+				$weight = $this->session->userdata['user']->weight;
+				$height = $this->session->userdata['user']->height;
+				$vegetarian = $this->session->userdata['user']->vegetarian == 0 ? 'No' : 'Yes';
+				echo "<li>Gender: ".$gender."</li>";
+				echo "<li>Weight: ".$weight."kg</li>";
+				echo "<li>Height: ".$height."cm</li>";
+				echo "<li>Vegetarian: ".$vegetarian."</li>";
+				?>
+				<li><a href="<?php echo base_url(); ?>index.php/user/edit_profile"  class="gh-button icon edit">Edit Profile</a></li>
+				<li>My Previously Saved Plans</li>
+				<li>
+					<div>
+						<div class="gh-button-group">
+							<a href="#" class="gh-button gh-bactive" id="button1" onclick="switchPlan(1)">Plan 1</a>
+							<a href="#" class="gh-button" id="button2" onclick="switchPlan(2)">Plan 2</a>
+							<a href="#" class="gh-button" id="button3" onclick="switchPlan(3)">Plan 3</a>
+						</div>
+					</div></li>
+				<li style="font-weight:normal; font-size:0.8em; text-align:justify; padding-top:30px;">Disclaimer: All your information is private. The more information you provide, the more accurate our suggestions to you. <br/><br/>Happy dining!</li>
+			</ul>
+		</div>
+
+		<div class="search-area" style="width:800px; padding-left:320px; margin-left:0px; padding-top:30px;">
+
+			<p>You are a littlbe bit too thin.</p>
+			<br/>
+
+			<div style="margin:0 auto; width:300px;">
+				<button class="cupid-green" style="width:130px;">Get a Plan</button>
+				<button class="clean-gray" style="width:130px;">Save This Plan</button>
+			</div>
+
+			<div id="plan1" >
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Breakfast</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Lunch</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Dinner</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+			</div>  <!-- end of plan1 -->
+
+			<div id="plan2" style="display:none;">
+				<div style="margin:0 auto; width:300px;">
+					<button class="cupid-green" style="width:130px;">Get a Plan</button>
+					<button class="clean-gray" style="width:130px;">Save This Plan</button>
+				</div>
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Breakfast</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Breakfast</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Breakfast</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+			</div> <!-- end of plan2 -->
+
+			<div id="plan3" style="display:none;">
+
+				<div class="mp-recipe-description-box">
+					<div class="mp-recipe-time">Breakfast</div>
+					<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+					<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+				</div>
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Breakfast</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+					<div class="mp-recipe-description-box">
+						<div class="mp-recipe-time">Breakfast</div>
+						<div class="mp-recipe-nutrients">Nutrients: 500kCals/serving</div>
+						<div class="mp-recipe-short-description">Healthy scrambled eggs don't have to be bland, try this simple vegetarian recipe - ideal for Boxing Day</div>
+					</div>
+
+				</div>
+
+				<div class="mp-recipe-row">
+
+					<a href="http://localhost/index.php/recipe/view_recipe/275" title="Scrambled egg muffin">
+						<div class="collage collage-pic-only">
+							<img src="http://localhost/media/recipe_imgs/275.jpg" alt="" width="200" height="140">
+							<div class="collage-text">
+								<div class="collage-title">Scrambled egg muffin</div>
+								<div class="rating">Likes: 0</div>
+							</div>
+						</div>
+					</a>
+
+				</div>
+
+			</div> <!-- end of plan3 -->
+
+		</div>
+
+
+
+		<script type="text/javascript">
+		function switchPlan(index)
+		{
+			if (index == 1)
+			{
+				document.getElementById('plan1').style.display = 'block';
+				document.getElementById('plan2').style.display = 'none';
+				document.getElementById('plan3').style.display = 'none';
+
+				document.getElementById("button1").setAttribute("class", "gh-button bactive");
+				document.getElementById("button2").setAttribute("class", "gh-button");
+				document.getElementById("button3").setAttribute("class", "gh-button");
+			}
+			if (index == 2)
+			{
+				document.getElementById('plan1').style.display = 'none';
+				document.getElementById('plan2').style.display = 'block';
+				document.getElementById('plan3').style.display = 'none';
+
+				document.getElementById("button1").setAttribute("class", "gh-button");
+				document.getElementById("button2").setAttribute("class", "gh-button bactive");
+				document.getElementById("button3").setAttribute("class", "gh-button");
+			}
+			else if (index == 3)
+			{
+				document.getElementById('plan1').style.display = 'none';
+				document.getElementById('plan2').style.display = 'none';
+				document.getElementById('plan3').style.display = 'block';
+
+				document.getElementById("button1").setAttribute("class", "gh-button");
+				document.getElementById("button2").setAttribute("class", "gh-button");
+				document.getElementById("button3").setAttribute("class", "gh-button bactive");
+			}
+		}
+		</script>

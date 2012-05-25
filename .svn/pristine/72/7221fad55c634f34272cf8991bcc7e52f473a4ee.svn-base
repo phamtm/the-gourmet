@@ -1,0 +1,94 @@
+<script type="text/javascript" src="<?php echo base_url(); ?>style/js/combine.js"></script>
+<div class="foodview">
+	<div class="foodview-top-row">
+		<div class="food-title">
+			<?php echo ucwords($cur_recipe->recipe_name); ?>
+		</div>
+		<div class="fv-description">
+			<?php echo ucfirst($cur_recipe->description); ?>
+		</div>
+
+		<!-- <div class="horizontal-seperator" style="width:30%"></div> -->
+	</div>
+
+	<div class="foodview-wrapper">
+		<div class="foodview-left-wrapper">
+			<div class="foodview-left-content">
+				<?php
+					echo "<a href=\"".base_url()."/media/recipe_imgs/".$cur_recipe->recipe_id.".jpg\" toptions='title = , layout = dashboard, shaded = 1, overlayClose = 1' />";
+					echo "<img src=\"".base_url()."/media/recipe_imgs/thumbs/".$cur_recipe->recipe_id.".jpg\" class=\"thumb\" alt=\"recipe\" width=\"500px\" height=\"313px\" />";
+					echo "<div class=\"thumb-caption\">Click to View Picture</div>";
+					echo "</a>";
+				?>
+			</div>
+			<div class="social-box">
+				<div class="fb-like" data-href="<?php base_url().$_SERVER['REQUEST_URI'] ?>" data-send="false" data-width="100" data-show-faces="false"></div>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="thegourmet">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</div>
+
+		<div class="foodview-right-wrapper">
+			<div class="foodview-ingredient">
+				<h1>Ingredients</h1>
+				<ul>
+					<?php
+						$list_ingred = $cur_recipe->ingredients;
+						$array_ingred = explode(PHP_EOL, $list_ingred);
+						foreach ($array_ingred as $an_ingred)
+						{
+							echo "<li>".ucfirst($an_ingred)."</li>";
+						}
+					?>
+				</ul>
+			</div>
+
+			<div class="foodview-col3-wrapper">
+				<div class="foodview-col3">
+					<h1>Step</h1>
+					<ul>
+						<?php
+							$list_steps = $cur_recipe->steps;
+							$array_steps = explode(PHP_EOL, $list_steps);
+							foreach ($array_steps as $a_step)
+							{
+								echo "<li>".ucfirst($a_step)."</li>";
+							}
+						?>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="food-river">
+		<?php
+			$recipes = $records->result();
+			if ($records->num_rows > 0)
+			{
+				echo "<h2 style='text-align:center; margin-bottom:10px;'>You may also like:</h2>";
+				echo "<div class='food-river-content'>";
+				echo $this->uri->segment(5);
+				foreach ($recipes as $a_recipe)
+				{
+					if ($a_recipe->recipe_id == $this->uri->segment(5))
+						continue;
+					$img_url = base_url()."/media/recipe_imgs/thumbs/".$a_recipe->recipe_id.".jpg";
+					echo "<a href='".base_url()."/index.php/recipe/view_recipe/".$a_recipe->recipe_id."' title='".$a_recipe->recipe_name."'>";
+					echo "<div class=\"food-river-box\"><img src=\"".$img_url."\" width=\"180\" height=\"100\" alt=\"\"></div>";
+					echo "</a>";
+				}
+				echo "</div>";
+			}
+		?>
+	</div>
+
+	<div style="width:100%; float:left; padding-top:40px;">
+		<form class="form-wrapper cf" action="<?php echo base_url(); ?>/index.php/recipe/search_recipe" method="post" accept-charset="utf-8" autocomplete="off">
+			<input type="text" placeholder="Search here..." required onkeyup="getStates(thisValue)" name="query" value="<?php if(isset($cur_search_str)) echo $cur_search_str;?>" spellcheck="false">
+			<button type="submit">Search</button>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://gettopup.com/releases/latest/top_up-min.js"></script>

@@ -1,0 +1,125 @@
+<?php
+
+class Admin extends CI_Controller {
+
+	function __construct() {
+		parent::__construct();
+		$this->load->helper('url');
+	}
+
+	function index() {
+		$data['main_content']='admin_view';
+		$this->load->view('templates/template',$data);
+	}
+	//--------------------RECIPE SECTION------------------//
+	function index_recipe()
+	{
+		$this->load->library('pagination');
+		$this->load->library('table');
+		//$this->table->set_heading('Id', 'The Title', 'The Content');
+		$config['base_url'] = base_url().'index.php/Admin/index';
+		$config['total_rows'] = $this->db->get('recipes')->num_rows();
+		$config['per_page'] = 100;
+		$config['num_links'] = 20;
+		$config['full_tag_open'] = '<div id="pagination">';
+		$config['full_tag_close'] = '</div>';
+		$this->pagination->initialize($config);
+		$data['records'] = $this->db->get('recipes');
+
+		$data['main_content']='admin_view_recipe';
+		$this->load->view('templates/template',$data);
+	}
+
+	function make_admin($user_id)
+	{
+		$this->load->model('admin_model');
+		$this->admin_model->make_admin($user_id);
+		$this->index_user();
+	}
+
+	function remove_admin($user_id)
+	{
+		$this->load->model('admin_model');
+		$this->admin_model->remove($user_id);
+		$this->index_user();
+	}
+
+
+	function delete_recipe($recipe_id='') {
+		$id_delete;
+		$id_delete=($recipe_id)?$recipe_id:$this->id_delete;
+
+		$this->load->Model('admin_model');
+		if ($this->admin_model->delete_recipe($id_delete)) {
+			$data['deleted'] = TRUE;
+			$data['main_content']='admin_view_recipe';
+			$data['records']=$this->db->get('recipes');
+			$date['id_deleted'] = $id_delete;
+			$this->load->view('templates/template',$data);
+		}
+	}
+
+	function edit_recipe($recipe_id='') {
+		//get parameter
+		$id_edit=($recipe_id)?$recipe_id:$this->id_edit;
+
+		//load view
+		$data['id1'] = $id_edit;
+		$data['main_content']='admin_view_edit_recipe';
+		$this->load->view('templates/template',$data);
+	}
+
+	function update_recipe($recipe_id='') {
+		//load model
+		$id_edit=($recipe_id)?$recipe_id:$this->id_edit;
+		$this->load->Model('admin_model');
+		if ($this->admin_model->edit_recipe($id_edit)) {
+			$data['edited'] = TRUE;
+			$data['main_content']='admin_view_recipe';
+			$data['records']=$this->db->get('recipes');
+			$this->load->view('templates/template',$data);
+		}
+	}
+
+	//----------------USER SECTION-------------------//
+
+	function index_user() {
+		$data['records']=$this->db->get('user_info');
+		$data['main_content']='admin_view_user';
+		$this->load->view('templates/template',$data);
+	}
+
+	function delete_user($user_id='') {
+		$id_delete;
+		$id_delete=($user_id)?$user_id:$this->id_delete;
+
+		$this->load->model('admin_model');
+		if ($this->admin_model->delete_user($id_delete)) {
+			$data['deleted'] = TRUE;
+			$data['main_content']='admin_view_user';
+			$data['records']=$this->db->get('user_info');
+			$this->load->view('templates/template',$data);
+		}
+	}
+
+	function send_email_view($user_id) {
+		$id=($user_id)?$user_id:$this->id;
+
+		//load view
+		$data['main_content']='admin_view_send_email';
+		$data['id1']=$id;
+		$this->load->view('templates/template',$data);
+	}
+
+	function send_email($user_id) {
+		$id=($user_id)?$user_id:$this->id;
+		//load model
+		$this->load->model('admin_model');
+		if ($this->admin_model->send_email($id)) {
+			$data['sent_email']=TRUE;
+			$data['main_content']='admin_view_user';
+			$data['records']=$this->db->get('user_info');
+			$this->load->view('templates/template',$data);
+		}
+	}
+}

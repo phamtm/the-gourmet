@@ -1,0 +1,512 @@
+update recipes set ingredients='0.5 tsp fennel seeds, crushed
+2 tomatoes, chopped
+a large pinch of saffron threads, crushed
+olive oil
+1 small onion, finely chopped
+1.5 l vegetable stock
+275 g arborio rice
+125 ml white wine
+Parmesan (or vegetarian alternative), grated', calories='330' where recipe_id='1';
+update recipes set ingredients='150 g pack green beans, trimmed
+1 fennel bulb
+1 large avocado
+100 g bag watercress, roughly chopped
+2 oranges
+olive oil
+2 cooked chicken breasts, shredded', calories='572' where recipe_id='12';
+update recipes set ingredients='1 onion, finely chopped
+2 yellow peppers, roughly chopped
+1 tsp olive oil
+2 x 400g/14oz cans chopped tomatoes
+500 g bag mixed grain or granary bread mix
+plain flour, for dusting
+10 cherry tomatoes, halved or whole
+250 g tub ricotta
+a few basil leaves, to serve' , calories='291' where recipe_id='2';
+
+update recipes set ingredients='4 fillets white fish, such as hake
+4 tsp Thai red curry paste
+1 avocado, sliced
+1 cucumber, sliced into fingers
+1 romaine or 2 Little Gem lettuces, leaves separated
+small bunch coriander, roughly chopped
+zest and juice 1 lime, plus extra to serve
+1 tsp clear honey
+250 g brown rice, cooked, to serve', calories='221' where recipe_id='3';
+update recipes set ingredients='2 tbsp sunflower oil
+400 g boneless, skinless chicken thighs, trimmed and cut into chunks
+1 onion, finely chopped
+3 carrots, finely chopped
+3 celery sticks, finely chopped
+2 thyme sprigs or 0.5 tsp dried
+1 bay leaf, fresh or dried
+600 ml vegetable or chicken stock
+2 x 400g / 14oz cans haricot beans, drained
+chopped parsley, to serve', calories='291' where recipe_id='4';
+update recipes set ingredients='4 carrots, cut into chunks
+4 small parsnips, or 3 large, cut into chunks
+3 red onions, cut into wedges
+2 red peppers, deseeded and cut into chunks
+2 tbsp olive oil
+1 tsp each ground cumin, paprika, cinnamon and mild chilli powder
+400 g can chopped tomatoes
+2 small handfuls soft dried apricots
+2 tsp honey', calories='272' where recipe_id='5';
+update recipes set ingredients='400 g bag raw prawns, in their shells, defrosted if frozen
+olive oil
+1 red chilli, deseeded, half sliced and half finely chopped
+1.5 l fish stock
+1 onion, chopped
+300 g risotto rice (we used arborio)
+1 small glass white wine
+200 g frozen peas
+zest and juice 1 lemon', calories='442' where recipe_id='6';
+update recipes set ingredients='4 skinless chicken leg joints, cut into drumsticks and thighs
+turmeric
+sweet paprika
+chilli flakes
+coarsely ground black pepper
+olive oil
+white wine vinegar
+For the salad
+seeds from 1 pomegranate
+3 oranges, segmented
+juice lime, plus extra wedges to serve
+pomegranate molasses
+small handful mint leaves, torn', calories='294' where recipe_id='7';
+update recipes set ingredients='100 g couscous
+olive oil
+2 salmon fillets
+200 g sprouting broccoli, roughly shredded, larger stalks removed
+juice 1 lemon
+seeds from half a pomegranate
+small handful pumpkin seeds
+2 handfuls watercress
+olive oil and extra lemon wedges, to serve', calories='320' where recipe_id='8';
+update recipes set ingredients='4 skinless chicken breasts, each cut into 6 strips
+zest and juice 2 limes
+black peppercorns, coarsely crushed
+sunflower oil
+8 tortilla wraps
+200 g tub guacamole (or make your own)
+1 Little Gem lettuce, shredded
+148 ml low-fat natural yogurt tub', calories='464' where recipe_id='9';
+update recipes set ingredients='400 g pack lean minced lamb
+3 garlic cloves, crushed
+cumin
+300 g basmati rice
+enough lamb or vegetable stock to cover the rice, from a cube is fine
+300 g frozen peas
+zest 2 lemon, juice of 1
+For the cucumber-yogurt
+0.5 cucumber, finely chopped or grated
+150 ml pot mild natural yogurt
+small bunch mint, leaves torn', calories='496' where recipe_id='10';
+update recipes set ingredients='500 g potatoes, diced
+2 shallots, sliced
+olive oil
+dried crushed oregano or 1 tsp fresh leaves
+200 g small mushrooms
+4 eggs', calories='218' where recipe_id='11';
+update recipes set ingredients='4 large or 6 small skinless chicken thigh fillets
+3 shallots, quartered
+1 carrot, sliced
+8 new potatoes or salad potatoes, skin left on and halved or quartered if large
+500 ml chicken stock, fresh, cube or concentrate
+1 cupful peas
+a small bunch of tarragon, chopped', calories='441' where recipe_id='13';
+update recipes set ingredients='1 small onion, chopped
+olive oil
+2 sprigs thyme, chopped
+250 g butternut squash or pumpkin, peeled and diced
+200 g risotto rice
+600 ml hot, fresh vegetable stock or chicken stock, or cube or concentrate
+grated parmesan or Grana Padano, to serve', calories='243' where recipe_id='14';
+update recipes set ingredients='sunflower oil
+1 large onion, chopped
+large piece ginger, crushed
+4 garlic cloves, crushed
+0.5 red chilli, finely chopped
+golden caster sugar
+black mustard seeds
+ground cumin
+ground coriander
+turmeric
+garam masala
+malt vinegar
+400 g can chopped tomatoes
+400 g raw king prawns
+small bunch coriander, chopped
+basmati rice, yogurt, mango chutney and a Carrot & cumin salad, to serve', calories='217' where recipe_id='15';
+update recipes set ingredients='1 large onion, chopped
+large piece ginger, grated
+3 garlic cloves, finely chopped
+0.5 tsp turmeric
+ground cumin
+curry powder, or to taste
+227 g can chopped tomatoes
+0.5 tsp sugar
+1 cauliflower, cut into florets
+2 potatoes, cut into chunks
+1 small green chilli, halved lengthways
+squeeze lemon juice
+handful coriander, roughly chopped, to serve
+naan bread and natural yogurt, to serve', calories='212' where recipe_id='16';
+update recipes set ingredients='200 g basmati rice
+olive oil
+1 onion, chopped
+2cm piece ginger, chopped
+2 garlic cloves, finely chopped
+1 green chilli, finely chopped
+each cumin and mustard seeds
+400 g can black-eyed beans / peas, rinsed and drained
+2 bay leaves
+1 cinnamon stick
+turmeric
+pumpkin seeds, plain or toasted', calories='332' where recipe_id='17';
+update recipes set ingredients='3 slices wholegrain or rye toast
+ready-made houmous
+1 small avocado (100g), stoned and sliced
+1 handful rocket leaves
+8-12 cherry tomatoes, sliced', calories='583' where recipe_id='18';
+update recipes set ingredients='1 tsp black peppercorns
+1 tsp coriander seeds
+4 oranges
+1 red chilli, deseeded, finely chopped
+8 fresh mackerel fillets
+1 tsp wholegrain mustard
+1 tbsp clear honey
+120 g bag watercress, spinach and rocket salad mix
+1 shallot, thinly sliced', calories='412' where recipe_id='19';
+update recipes set ingredients='2 red peppers, quartered and deseeded
+2 tbsp olive oil
+1 fennel bulb, roughly chopped
+1 onion, roughly chopped
+1 large carrot, roughly chopped
+2 garlic cloves, crushed
+1/4 tsp crushed chillies
+1 tsp fennel seeds
+2 tbsp tomato pur®®e
+400 g can chopped tomatoes
+600 ml vegetable stock
+1 tsp caster sugar
+small handful basil, leaves shredded
+500 g bag fresh egg pasta, cooked', calories='323' where recipe_id='20';
+update recipes set ingredients='1 tbsp olive oil
+1 onion, finely chopped
+1 red and 1 yellow pepper, deseeded and sliced
+2 garlic cloves, sliced
+250 g paella rice
+850 ml shot vegetable stock (we used Kallo very low salt stock)
+pinch saffron
+400 g seafood mix (we used a bag of frozen mixed seafood, defrosted before use)
+juice 0.5 small lemon
+small handful flat-leaf parsley, roughly chopped', calories='369' where recipe_id='21';
+update recipes set ingredients='1 tbsp olive oil
+250 g chestnut mushrooms, finely chopped
+2 garlic cloves, crushed
+1 bunch spring onions, sliced
+1 tbsp medium curry powder
+zest and juice 0.5 lemon
+400 g can chickpeas, rinsed and drained
+85 g fresh wholemeal breadcrumbs
+6 tbsp 0% Greek yogurt
+pinch ground cumin
+2 mixed-grain muffins or rolls, toasted and halved
+2 plum tomatoes, sliced
+handful rocket leaves', calories='271' where recipe_id='22';
+update recipes set ingredients='small knob of butter
+1 large leek, thinly sliced
+300 g risotto rice, such as arborio or carnaroli
+700 ml fish or vegetable stock
+250 ml full-fat milk
+375 g undyed smoked haddock, skinned and cut into large chunks
+3 tbsp crAme fraAche
+100 g baby spinach', calories='444' where recipe_id='23';
+update recipes set ingredients='400 g linguine
+3 courgettes, coarsely grated
+3 tbsp olive oil, plus extra to drizzle
+1 garlic clove, finely chopped
+zest 1 unwaxed lemon
+large pinch crushed chillies
+handful basil leaves, torn', calories='435' where recipe_id='24';
+update recipes set ingredients='2 small butternut squash
+garlic clove, crushed
+olive oil
+a pinch dried chilli flakes
+thyme, chopped
+courgette, cut into 2cm chunks
+red pepper, cut into 2cm chunks
+2 small red onions, cut into thin wedges
+200 g cherry tomatoes
+50 g pine nuts
+100 g goat\'s cheese, crumbled
+breadcrumbs
+parsley, chopped
+Parmesan', calories='382' where recipe_id='25';
+update recipes set ingredients='200 g linguine
+200 g spring greens, trimmed and chopped
+olive oil
+1 garlic clove, crushed
+200 g raw peeled prawns (frozen are good for this, thaw them first)
+1 red chilli, finely sliced', calories='519' where recipe_id='26';
+update recipes set ingredients='750 g small new potatoes, thickly sliced
+750 g frozen peas and beans (we used Waitrose pea and bean mix)
+olive oil
+zest and juice of 1 lemon
+small pack mint, leaves only
+4 salmon fillets about 140g/5oz each', calories='555' where recipe_id='27';
+update recipes set ingredients='200 g couscous
+400 ml chicken stock
+olive oil
+4 courgettes, grated
+2 lemons, 1 halved, 1 cut into wedges
+2 boneless, skinless chicken breasts', calories='275' where recipe_id='28';
+update recipes set ingredients='500 g sweet potatoes, peeled and cut into bite-size pieces
+olive oil
+4 skinless chicken thigh fillets, each cut into large chunks
+1 large red onion, cut into wedges
+rogan josh curry paste
+2 large tomatoes, roughly chopped
+125 g spinach', calories='281' where recipe_id='29';
+update recipes set ingredients='400 g turkey mince
+25 g fresh white breadcrumbs
+2 garlic cloves, crushed
+olive oil
+1 onion, chopped
+1 carrot, diced
+fennel seeds
+400 g can chopped tomatoes
+tomato pur®®e
+400 g spaghetti, cooked, to serve', calories='216' where recipe_id='30';
+update recipes set ingredients='150 ml hot vegetable stock
+50 g couscous
+pine nuts, lightly toasted
+chopped parsley
+zest and juice 1 lemon
+olive oil, for greasing
+4 boneless trout fillets', calories='349' where recipe_id='31';
+update recipes set ingredients='a bulb fennel
+2 Seville oranges or normal oranges, 1 segmented, 1 zested and juiced
+sherry vinegar
+extra-virgin olive oil
+chopped tarragon
+4 salmon fillets
+a small bunch of watercress, woody stems removed', calories='452' where recipe_id='32';
+update recipes set ingredients='250g/9oz Chinese cabbage
+175g/60z white cabbage
+2 celery sticks
+2 carrots
+small handful mint, chopped
+small handful coriander, chopped
+200 g cooked large peeled prawns
+roasted peanuts, chopped
+For the dressing
+1-2 small red chillies, sliced
+1 garlic clove, crushed
+2 tbsp caster sugar
+2 tbsp rice vinegar
+3 tbsp lime juice
+3 tbsp fish sauce', calories='198' where recipe_id='33';
+update recipes set ingredients='olive oil
+4 garlic cloves, finely chopped
+2 large onions, chopped
+sweet pimenton (Spanish paprika ) or mild chilli powder
+ground cumin
+cider vinegar
+brown sugar
+2 x 400g (2 x 14oz) cans chopped tomatoes
+2 x 400g (2 x 14oz) cans black beans, rinsed and drained
+a few, or one, of the following to serve: crumbled feta cheese, chopped spring onions, sliced radishes, avocado chunks, soured cream', calories='339' where recipe_id='34';
+update recipes set ingredients='1 large red pepper, quartered and deseeded
+zest and juice 0.5 small lemon
+pinch smoked paprika (we used sweet smoked paprika)
+extra-virgin olive oil
+100 g bag young leaf spinach
+2 x 140g (2 x 5oz) skinless salmon fillets
+400 g can chickpeas', calories='481' where recipe_id='35';
+update recipes set ingredients='100 g wholewheat noodles
+sunflower oil
+125 g pack purple sprouting broccoli (or Tenderstem), cut into short lengths
+100 g sugar snap peas, halved
+4 spring onions, cut into short lengths
+reduced-salt soy sauce
+175g lean rump steak, thinly sliced
+sesame seeds
+clear honey', calories='420' where recipe_id='36';
+update recipes set ingredients='sunflower oil
+1 onion, sliced
+medium curry powder
+400 g can chopped tomatoes
+750 g potatoes, diced
+spiced mango chutney, plus extra to serve
+100 g low-fat natural yogurt
+mint sauce from a jar
+8 plain chapatis
+coriander sprigs, to serve', calories='230' where recipe_id='37';
+update recipes set ingredients='maple syrup or clear honey
+thumb-size piece fresh root ginger, cut into matchsticks, plus 1 tsp grated root ginger
+2 skinless, boneless chicken breasts
+450g/1lb sweet potatoes, roughly chopped
+olive oil', calories='418' where recipe_id='38';
+update recipes set ingredients='1 red onion, sliced
+olive oil
+0.5 tsp ground cinnamon
+ground cumin
+300 g mushrooms, quartered
+400 g can chopped tomatoes
+410 g can chickpeas, rinsed and drained
+clear honey
+175 g couscous
+50 g soft dried apricots, diced
+handful flat-leaf parsley, roughly chopped', calories='245' where recipe_id='39';
+update recipes set ingredients='1 red onion, finely chopped
+sunflower oil
+1 red pepper, deseeded and diced
+200 g basmati rice
+450 ml chicken stock
+400 g can kidney beans, rinsed and drained
+4 turkey steaks
+Cajun seasoning
+140g fresh pineapple (or 220g can pineapple rings, drained)
+0.5 green chilli, finely chopped
+juice 1 lime', calories='467' where recipe_id='40';
+update recipes set ingredients='85 g baby corn, halved lengthways
+85 g shiitake mushrooms, halved
+2 x 140g (2 x 5oz) skinless, boneless cod fillets
+dark soy sauce
+rice wine
+clear honey
+1 garlic clove, thinly sliced
+0.5 red chilli, thinly sliced
+0.5 fingerlength piece fresh root ginger, cut into matchsticks
+2 heads pak choi, halved', calories='187' where recipe_id='41';
+update recipes set ingredients='olive oil
+2 medium leeks, thinly sliced
+200 g chestnut mushrooms, sliced
+2 garlic cloves, crushed
+300 g spaghetti
+140 g low-fat soft cheese (we used Philadelphia Light)
+85 g wafer-thin smoked ham, shredded
+small pack basil
+25 g grated Parmesa', calories='384' where recipe_id='42';
+update recipes set ingredients='4 skinless, boneless chicken breasts
+chunky mango chutney
+medium curry powder
+cumin seeds
+sunflower oil
+2 small onions, thinly sliced
+4 bay leaves
+1 cinnamon stick
+200 g basmati rice
+chopped coriander
+lime wedges, to serve (optional)', calories='414' where recipe_id='43';
+update recipes set ingredients='4 boneless pork loin steaks, trimmed of any fat
+2 tsp Chinese five-spice powder
+sunflower oil
+1 large red onion, cut into thin wedges through the root
+4 red apples, cored and cut into eighths
+redcurrant jelly
+red wine vinegar or cider vinegar
+200 ml chicken stock', calories='304' where recipe_id='44';
+update recipes set ingredients='4 skinless, boneless chicken breasts
+25 g garlic butter, softened
+25 g crispy breadcrumbs', calories='218' where recipe_id='45';
+update recipes set ingredients='4 small sweet potatoes (about 200g each)
+185 g can tuna in spring water, drained
+0.5 red onion, finely sliced
+1 small red chilli, deseeded and chopped
+juice 1 lime
+Greek yogurt
+handful coriander leaves', calories='238' where recipe_id='46';
+update recipes set ingredients='2 skinless chicken breast fillets
+2 large basil leaves
+2 slices prosciutto
+olive oil
+Marsala
+100 ml chicken stock
+For the basil-mash
+500 g potatoes, cut into large chunks
+2-3 tbsp milk
+grated Parmesan
+1-2 tbsp chopped basil', calories='481' where recipe_id='47';
+update recipes set ingredients='3 garlic cloves, crushed
+good chunk fresh root ginger, grated
+1 red chilli, deseeded and chopped
+soy sauce
+tomato pur®®e
+2 chicken breasts, cut into chunky strips
+3 blocks dried egg noodles
+0.5 a head broccoli, broken into florets
+3 carrots, cut into thin sticks
+vegetable oil
+300 g pack bean sprouts
+3 spring onions, halved and sliced into long strips
+1 tbsp oyster sauce', calories='545' where recipe_id='48';
+update recipes set ingredients='sunflower oil
+2 medium onions, cut into rough wedges
+curry paste
+850 ml vegetable stock
+750 g stewpack frozen vegetables
+100 g red lentils
+200 g basmati rice
+turmeric
+handful of raisins and roughly chopped parsley
+poppadoms and mango chutney, to serve', calories='432' where recipe_id='49';
+update recipes set ingredients='300 g sweet potatoes, peeled and roughly cubed
+400 g can peeled plum tomatoes
+400 g can chickpeas, drained
+1 tsp dried chilli flakes
+mild curry paste
+100 g baby spinach leaves
+chopped fresh coriander
+4 plain chapatis (Indian flatbreads)
+fat-free Greek yogurt', calories='289' where recipe_id='50';
+update recipes set ingredients='1 kg potatoes, peeled and cut into 3cm chunks
+olive oil
+1 large onion, chopped
+2 large garlic cloves, crushed
+2 medium aubergines, cut into 3cm chunks
+medium curry powder
+400 g can chopped tomatoes
+tomato pur®®e
+410 g can green lentils, drained', calories='301' where recipe_id='51';
+update recipes set ingredients='450 g strong white bread flour, plus more to dust
+7 g sachet fast-action yeast
+extra-virgin olive oil, plus extra to serve
+350 ml warm water
+For the topping
+about 5 tbsp roast tomato sauce, or stir together 100ml passata and a crushed garlic clove
+8 tomatoes (green, orange, red, yellow - all different shapes and sizes)
+your choice of toppings: goat\'s cheese (with rind), grated Parmesan or Parmesan shavings, handful rocket, prosciutto', calories='231' where recipe_id='52';
+update recipes set ingredients='500 g bag new potatoes
+2 large corn cobs
+0.5 red onion, thinly sliced
+juice 1 lime
+olive oil
+2 garlic cloves, crushed
+0.5- 1 tsp sweet smoked paprika
+4 skinless chicken breasts, each halved across the middle to make 2 thin escalopes
+small bunch coriander, leaves roughly chopped
+lime wedges, optional, to serve', calories='343' where recipe_id='53';
+update recipes set ingredients='1 tsp dried thyme or 2 tsp fresh
+1 lemon
+For the relish
+250 g cooked peeled beetroot (not in vinegar), finely diced
+1 small red onion, finely chopped
+2 tbsp chopped parsley
+2 tsp olive oil
+2 tsp wholegrain mustard
+Little Gem lettuce, to serve
+wholemeal pitta bread, to serve', calories='183' where recipe_id='54';
+update recipes set ingredients='150 g pot low-fat natural yogurt
+2 tbsp hot curry paste
+4 boneless, skinless chicken breasts, cubed
+250 g pack cherry tomatoes
+4 wholemeal chapatis, warmed, to serve
+For the cucumber-salad
+1 cucumber, halved lengthways, deseeded and sliced
+1 red onion, thinly sliced
+handful chopped coriander leaves
+juice 1 lemon
+50 g pack lamb\'s lettuces or pea shoots', calories='214' where recipe_id='55';

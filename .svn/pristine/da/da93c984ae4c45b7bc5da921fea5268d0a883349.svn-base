@@ -1,0 +1,29 @@
+<?php
+class Home extends CI_Controller {
+	function index()
+	{					
+		$data['main_content'] = 'home';
+		$this->load->view('templates/template', $data);		
+	}
+
+	function search_recipe()
+	{
+		$this->load->library('table');
+
+		$config['total_rows'] = $this->db->get('recipes')->num_rows();
+		$config['per_page'] = 9;
+		$config['num_links'] = 5;
+		$config['base_url'] = 'http://localhost/index.php/home/search_recipe';
+		$config['full_tag_open'] = '<div class="pagination-link">';
+		$config['full_tag_close'] = '</div>';
+		$this->pagination->initialize($config);
+
+		$this->db->select('recipe_id, recipe_name, meal_time, description, num_of_likes');
+		$data['records'] = $this->db->get('recipes', $config['per_page'], $this->uri->segment(3));
+
+			// load search_recipe view
+		$data['main_content'] = 'search_recipe';
+		$this->load->view('templates/template', $data);			
+	}
+}	
+?>

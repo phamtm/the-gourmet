@@ -1,0 +1,248 @@
+insert into recipes(name,image_uri,description) 
+values('Saffron & tomato risotto','1.jpg','Mix the fennel seeds with the chopped tomatoes. Pour 1 tbsp of boiling water over the saffron to soak. Heat the olive oil in a wide, shallow pan and then add the onion with a bit of seasoning and cook for a few minutes until softened. Heat the stock in a separate pan until simmering.
+Add the rice to the onion and cook until the grains are glistening, about 3 minutes. Pour in the saffron, stir for a minute and then add the wine. Stir until absorbed.
+Add one ladle of stock and stir again until absorbed. Continue this process for about 10-12 minutes or until the rice is done but has a bite to it. Add the tomatoes and fennel seeds and cook for a minute. Serve with the grated Parmesan.');
+
+insert into recipes(name,image_uri,description) 
+values('Ricotta & basil pizza bread','2.jpg','Heat oven to 220C/fan 200C/gas 6. Soften the onion and peppers in the oil in a large pan for a few mins. Pour in the tomatoes, season, then simmer for 10 mins.
+Meanwhile, make up the bread mix according to pack instructions, then bring the dough together and knead a couple of times. Flour a large baking sheet and roll out the dough into a rectangle roughly 25 x 35cm. Bake for 5 mins on a shelf at the top of the oven until firm.
+Remove from the oven, spread with the sauce, add the cherry tomatoes, then dollop over spoonfuls of the ricotta. Bake for 10 mins more until the base is golden and crisp. Scatter with basil and serve straight away with a green salad.');
+
+insert into recipes(name,image_uri,description) 
+values('Red spiced fish with green salad','3.jpg','Heat oven to 200C/fan 180C/gas 6. Brush each fish fillet with 1 tsp of curry paste, then roast on a baking sheet for 8-10 mins until the fish flakes easily.
+Meanwhile, mix together the rest of the ingredients, apart from the rice, in a large bowl with some seasoning. Serve with the spiced fish and brown rice, plus extra lime wedges for squeezing over.');
+
+
+insert into recipes(name,image_uri,description) 
+values('Chicken & white bean stew','4.jpg','Heat the oil in a large pan, add the chicken, then fry until lightly browned. Add the veg, then fry for a few mins more. Stir in the herbs and stock. Bring to the boil. Stir well, reduce the heat, then cover and cook for 40 mins, until the chicken is tender.
+Stir the beans into the pan, then simmer for 5 mins. Stir in the parsley and serve with crusty bread.');
+
+insert into recipes(name,image_uri,description) 
+values('Five-a-day tagine','5.jpg','Heat oven to 200C/fan 180C/gas 6. Scatter the veg over a couple of baking trays, drizzle with half the oil, season, then rub the oil over the veg with your hands to coat. Roast for 30 mins until tender and beginning to brown.
+Meanwhile, fry the spices in the remaining oil for 1 min - they should sizzle and start to smell aromatic. Tip in the tomatoes, apricots, honey and a can of water. Simmer for 5 mins until the sauce is slightly reduced and the apricots plump, then stir in the veg and some seasoning. Serve with couscous or jacket potatoes.');
+
+insert into recipes(name,image_uri,description) 
+values('Lemony prawn & pea risotto','6.jpg','Peel the prawns, keeping the heads and shells. Heat 1 tbsp olive oil in a large saucepan and fry the prawn shells and heads with the sliced chilli until they have toasted and changed colour. Pour in the stock and bring to the boil, then turn down to a simmer.
+Bring the stock to the boil and keep on a low simmer. In a separate pan, melt half the butter over a medium heat. Stir in the onions and sweat gently for 8-10 mins until soft but not coloured, stirring occasionally. Stir the rice into the onions until completely coated in the butter, then stir continuously until the rice is shiny and the edges of the grain start to look transparent.
+Pour in the wine and simmer until totally evaporated. Add the stock, a ladleful at a time, stirring with each addition until absorbed. Stir through the prawns and peas. Continue adding stock a ladleful at a time and stirring the rice over a low heat for 25-30 mins, until the rice is cooked al dente (with a slightly firm, starchy bite in the middle). The risotto should be creamy and slightly soupy. When you draw a wooden spoon through it, there should be a wake that holds for a few moments but not longer. Cook until the prawns change colour. Stir through the chopped chilli, lemon juice and remaining olive oil. Let the risotto rest for a few mins, then serve, topped with the lemon zest.');
+
+insert into recipes(name,image_uri,description) 
+values('Spice-rubbed chicken with pomegranate salad','7.jpg','Score the chicken with a sharp knife, about 2-3 cuts in each piece. Mix the spices with a little salt, the olive oil and vinegar in a small bowl. Using gloves (turmeric stains your fingers), rub this spice mixture over the chicken pieces and transfer to a roasting tin. Leave to marinate for at least 20 mins, or overnight in the fridge if you\'re preparing ahead.
+Heat oven to 200C/180C fan/gas 6. Cover the chicken with foil and bake for 30 mins. Remove the foil and continue cooking in the oven for another 10 mins until tender. Baste with tin juices and rest for 5 mins before serving.
+Meanwhile, make the salad. Mix the pomegranate seeds with the orange segments, mix the lime juice with the pomegranate molasses, then drizzle over. Scatter with torn mint leaves and serve alongside the chicken.');
+
+insert into recipes(name,image_uri,description) 
+values('Superhealthy salmon salad','8.jpg','Heat water in a tier steamer. Season the couscous, then toss with 1 tsp oil. Pour boiling water over the couscous so it covers it by 1cm, then set aside. When the water in the steamer comes to the boil, tip the broccoli into the water, then lay the salmon in the tier above. Cook for 3 mins until the salmon is cooked and the broccoli tender. Drain the broccoli and run it under cold water to cool.
+Mix together the remaining oil and lemon juice. Toss the broccoli, pomegranate seeds and pumpkin seeds through the couscous with the lemon dressing. At the last moment, roughly chop the watercress and toss through the couscous. Serve with the salmon, lemon wedges for squeezing over and extra olive oil for drizzling, if you like.');
+
+insert into recipes(name,image_uri,description) 
+values('Lime & pepper chicken wraps','9.jpg','Toss the chicken with the lime zest and juice, pepper, oil and a little salt. Cook on a griddle pan or barbecue for 6-8 mins, turning until evenly cooked and nicely browned.
+Heat the tortillas in the microwave, following pack instructions. Spread a little guacamole over each tortilla, top with some lettuce and chicken, then drizzle over the yogurt. Roll up and enjoy.');
+
+insert into recipes(name,image_uri,description) 
+values('Lamb meatball & pea pilaf','10.jpg','Mix the lamb with half the garlic and 1 tsp of the cumin, then season and shape into about 16 balls - it\'s easier if you wet your hands. Heat a large frying pan (with a lid for later), then fry the meatballs for about 8 mins until golden and cooked through. Remove from the pan, set aside, then tip in the rice, final tsp of cumin and remaining garlic. Fry for 30 secs, stirring, then pour in enough stock to cover. Cover and simmer for 10 mins or until almost all of the liquid is absorbed.
+Stir in the peas, return the meatballs to the pan, then warm through for a few mins until the peas are tender. Meanwhile mix the cucumber, yogurt and half the mint together, then season. To finish the pilaf, stir in the lemon zest and juice with some seasoning and the remaining mint. Serve with a good dollop of the cooling cucumber yogurt.');
+
+insert into recipes(name,image_uri,description) 
+values('Healthy egg & chips','11.jpg','Heat oven to 200C/fan 180C/gas 6. Tip the potatoes and shallots into a large, non-stick roasting tin, drizzle with the oil, sprinkle over the oregano, then mix everything together well. Bake for 15 mins, add the mushrooms, then cook for a further 10 mins until the potatoes are browned and tender.
+Make four gaps in the vegetables and crack an egg into each space. Return to the oven for 3-4 mins or until the eggs are cooked to your liking.');
+
+insert into recipes(name,image_uri,description) 
+values('Chicken & orange salad','12.jpg','Cook the beans in a large pan of boiling salted water for 4-5 mins. Cool under cold water and put in a bowl. Finely slice the fennel bulb, cutting away the core.
+Peel and slice the avocado and add to bowl with watercress. Peel the oranges, cut out the segments and add to bowl. Squeeze the rest of the orange juice into a bowl and mix with the olive oil to make a dressing. Toss salad in the dressing, scatter over chicken, then serve.');
+
+insert into recipes(name,image_uri,description) 
+values('Very quick chicken casserole','13.jpg','Put the chicken thighs, shallots, carrot, potatoes, some seasoning and the stock in a wide casserole and bring to a simmer.
+Cover and cook for 15 minutes, then add the peas and tarragon and cook for a further 10 minutes or until the potato is tender.');
+
+insert into recipes(name,image_uri,description) 
+values('Butternut risotto','14.jpg','Fry the onions in a tbsp of oil until soft but not browned. Add the thyme, squash and rice and stir for a few seconds to coat the grains with oil. Add a couple of ladles of stock and bring to a simmer.
+Cook, stirring until almost all the stock is absorbed. Add the rest of the stock a little at a time, cooking until each addition is absorbed, until the squash is soft and the rice al dente and creamy.
+Season well. Divide between 4 bowls and scatter with cheese.');
+
+insert into recipes(name,image_uri,description) 
+values('One-pan prawn & tomato curry','15.jpg','Heat the oil in a deep-sided frying pan and cook the onion for 8-10 mins until it starts to turn golden. Add the ginger, garlic and chilli and cook for 1-2 mins. Stir in the sugar and spices for 1 min, then splash in the vinegar and tomatoes. Season with salt and simmer for 5 mins, stirring, until the sauce thickens.
+Stir in the prawns, reduce the heat and cook for 8-10 mins until cooked through - if the sauce gets really thick, add a splash of water. Remove from the heat, stir though most of the coriander. Serve straight from the dish scattered with the remaining coriander and the rice, yogurt, chutney and salad in separate bowls.');
+
+insert into recipes(name,image_uri,description) 
+values('Cauliflower & potato curry','16.jpg','Heat the oil in a saucepan. Cook the onion for 10 mins until soft, then add the ginger, garlic, turmeric, cumin and curry powder. Cook for 1 min more. Stir in the tomatoes and sugar. Add the cauliflower, potatoes and split chilli, seasoning to taste. Cover with a lid and gently cook for a good 30 mins, stirring occasionally, until the vegetables are tender - add a drop of water if you need to, but it is meant to be a dry curry.
+When the vegetables are cooked, remove the chilli, if you like, stir in a squeeze of lemon juice and scatter with coriander. Serve with your choice of Indian bread and a dollop of yogurt.');
+
+insert into recipes(name,image_uri,description) 
+values('Spiced rice & beans','17.jpg','Rinse the rice several times in cold water until the water runs clear. Drain well. Heat the oil in a large pan, add the onion and ginger and fry for 5 mins until the onion is lightly coloured. Stir in the garlic, chilli, cumin and mustard seeds, and fry for 1 min.
+Tip the rice and beans into the pan and mix well. Add 600ml water, the bay, cinnamon stick, turmeric and a little salt. Bring to the boil, then reduce the heat, cover and gently cook for about 15 mins until the rice is tender. Sprinkle with pumpkin seeds and serve with a tomato salad.');
+
+insert into recipes(name,image_uri,description) 
+values('Green club sandwich','18.jpg','Toast the bread and spread houmous evenly over one side of each slice. On one slice of bread, lay half the avocado, rocket and tomato. Season with pepper, then cover with another slice.
+Pile on the rest of the avocado, rocket and tomato, season again and top with the third slice.');
+
+insert into recipes(name,image_uri,description) 
+values('Grilled mackerel with orange, chilli & watercress salad','19.jpg','Finely crush the peppercorns and coriander seeds together using a pestle and mortar. Grate the zest from half an orange and mix into the pepper mixture with half the chopped chilli. Lightly slash the skin of the mackerel and press the zesty, peppery mixture onto the fish. Heat the grill.
+For the salad, segment the oranges. First slice the top and bottom off each orange, then cut away the peel and any white pith using a small, sharp knife. Holding each orange over a bowl to catch all the juice, cut down either side of each segment to release it, then squeeze the shells to release any extra juice. Measure 4 tbsp of this juice into a small bowl and mix with the mustard, honey and remaining chilli.
+Grill the mackerel, skin-side up, for 4 mins or until crisp and cooked through. Meanwhile, divide the salad leaves between 4 plates and scatter with the orange segments and sliced shallot. Drizzle with the chilli orange dressing and top with the grilled mackerel.');
+
+insert into recipes(name,image_uri,description) 
+values('Super-veg pasta','20.jpg','Heat the grill and pop the peppers, skin-side up, underneath for 10 mins or until beginning to char. Transfer to a bowl, cover and set aside. When cool enough to handle, peel off the skin and cut the flesh into strips.
+Heat the oil in a large saucepan and cook the fennel, onion and carrot for 8-10 mins until softened. Stir in the garlic, crushed chillies, fennel seeds and tomato pur¨¨e, cook for 2 mins, then add the canned tomatoes, stock and sugar. Simmer, uncovered, for 15 mins or until the vegetables are completely soft.
+Take out a couple of spoonfuls of the sauce (this will later add texture), then blend the rest in the saucepan until almost smooth with a stick blender. Simmer for 5 mins to thicken, then stir in the reserved sauce, shredded basil and peppers. Serve with the pasta.');
+
+insert into recipes(name,image_uri,description) 
+values('Spanish seafood rice','21.jpg','Heat the oil in a large saucepan and soften the onion for 6-7 mins. Add the pepper and garlic, cook for 2 mins more, then stir in the paella rice and cook for 1 min, stirring to coat.
+Pour in the stock, add the saffron and bring to the boil. Cook, uncovered, at a gentle bubble, for 20 mins, stirring occasionally until the rice is tender.
+Stir in the seafood and lemon juice and cook for 2 mins or until piping hot and completely cooked through. Serve in warm bowls scattered with the parsley.');
+
+insert into recipes(name,image_uri,description) 
+values('Mushroom & chickpea burgers','22.jpg','Heat 1 tsp oil in a non-stick frying pan and cook the mushroom, garlic and spring onion for 5 mins. Mix in the curry powder, lemon zest and juice and cook for 2 mins or until mixture looks quite dry. Tip out onto a plate to cool slightly.
+Use a potato masher or fork to mash the chickpeas in a bowl, leaving a few chunky pieces. Add the mushroom mix and the crumbs, then shape into 4 patties. Fry in the remaining oil for 3-4 mins on each side until crisp and browned.
+Mix the yogurt with the cumin. Place half a muffin on each plate, then spread with the yogurt. Top with the burgers, a few slices of tomato and a little rocket.');
+
+insert into recipes(name,image_uri,description) 
+values('Smoked haddock & leek risotto','23.jpg','Heat oven to 200C/180C fan/gas 6. Heat the butter in a large ovenproof dish over a medium heat. Cook the leek for 4-5 mins, stirring regularly, until just tender. Add the rice and stir for a further 2 mins.
+Add the stock and milk, bring to the boil and bubble for 5 mins before sitting the haddock on top. Cover with a lid or foil and bake in the oven for 18 mins until the rice is tender.
+Fold in the crAme fraAche and spinach, season with plenty of black pepper, then cover the pan again and leave to rest out of the oven for 3 mins before serving - the steam will soften the spinach.');
+
+insert into recipes(name,image_uri,description) 
+values('Courgette & lemon linguine','24.jpg','Cook the linguine following the pack instructions, then drain quickly so some cooking water is still clinging to the strands.
+Tip back into the cooking pan with the grated courgettes, olive oil, garlic, lemon zest, chillies and most of the basil. Season generously, then use tongs to toss everything together. Scatter with remaining basil leaves and add an extra drizzle of oil, if you like.');
+
+insert into recipes(name,image_uri,description) 
+values('Roasted butternut squash with goat\'s cheese','25.jpg','Heat the oven to 200C/fan 180C/gas 6. Cut the squash in half and scoop out the seeds then cut criss-cross patterns over the cut-side of each one. Mix together the garlic, 2 tbsp olive oil, chilli and thyme and brush this mixture over the flesh. Bake for about 30-40 minutes until the flesh is tender.
+To make the filling, put the courgette, pepper and onion in a roasting tin and drizzle with 1 tbsp olive oil. Season and roast for about 20-25 minutes until tender and starting to brown at the edges. Add the cherry tomatoes and pine nuts and cook for another 10 minutes.
+Mix the breadcrumbs, parsley and Parmesan. Arrange the roasted vegetables and goat\'s cheese in the squash halves, scatter with the breadcrumb mix and bake for a further 10 minutes or until golden and bubbling.');
+
+insert into recipes(name,image_uri,description) 
+values('Linguine with prawns, spring greens & chilli','26.jpg','Cook the linguine following packet instructions. Add the spring greens to the pasta for the last 3 minutes of cooking and drain. Heat a little oil in a small pan, add the garlic, prawns and chilli and toss together, season well. Once the prawns are cooked, divide the pasta and greens between 2 bowls and spoon them on top.');
+
+insert into recipes(name,image_uri,description) 
+values('Spring salmon with minty veg','27.jpg','Boil the potatoes in a large pan for 4 mins. Tip in the peas and beans, bring back up to a boil, then carry on cooking for another 3 mins until the potatoes and beans are tender. Whizz the olive oil, lemon zest and juice and mint in a blender to make a dressing(or finely chop the mint and whisk into the oil and lemon).
+Put the salmon in a microwave-proof dish, season, then pour the dressing over. Cover with cling film, pierce, then microwave on High for 4-5 mins until cooked through. Drain the veg, then mix with the hot dressing and cooking juices from the fish. Serve the fish on top of the vegetables.');
+
+insert into recipes(name,image_uri,description) 
+values('Chicken with lemon & courgette couscous','28.jpg','Tip the couscous into a large bowl and pour over the stock. Cover and leave for 10 mins until fluffy and all the stock has been absorbed. Heat 1 tbsp oil and fry the courgettes until softened and crisping at the edges. Tip into the couscous, then stir in with plenty of seasoning and a good squeeze of lemon juice from one of the halves.
+Halve the chicken breasts horizontally and put each piece on a sheet of cling film. Cover with another sheet and beat each piece out with a rolling pin to make it thinner. Season. Heat the remaining oil in a large pan and fry the chicken for about 2 mins on each side until cooked through. Squeeze over the juice from the other lemon half and serve with the couscous and lemon wedges on the side.');
+
+insert into recipes(name,image_uri,description) 
+values('Sweet potato & chicken curry','29.jpg','Cook the sweet potatoes in boiling, salted water for 5-7 mins until just tender. Drain well, then set aside. Meanwhile, heat the oil in a large frying pan, then add the chicken and onion. Cook for 5-6 mins until the chicken is browned and cooked through. Stir in the curry paste, cook for 1 min, add the tomatoes, then cook for another min.
+Pour in 100ml boiling water and mix well. Simmer for 5 mins, add the spinach, then cook for 2 mins until wilted. Fold in the potatoes and heat through. Serve with rice and naan breads.');
+
+insert into recipes(name,image_uri,description) 
+values('Turkey meatballs in tomato & fennel sauce','30.jpg','Put the mince in a mixing bowl with the breadcrumbs and half the garlic. Season and mix well to combine. Using your hands, shape the mixture into 12 balls, then chill for 10 mins.
+Meanwhile, heat 1 tbsp oil in a pan. Add the onion, carrot and remaining garlic. Cook for 5-6 mins until softened. Add the fennel seeds and cook for a few secs. Tip in the tomatoes with half a can of water, then stir in the tomato pur¨¨e. Season and simmer for 15 mins until thickened. Using an electric hand blender, whizz until roughly smooth.
+Meanwhile, heat the remaining oil in a non-stick frying pan and fry the meatballs for 8-10 mins until cooked through. Transfer to the sauce and simmer until piping hot. Serve with spaghetti.');
+
+insert into recipes(name,image_uri,description) 
+values('Stuffed baked trout','31.jpg','Pour the stock over the couscous in a bowl, cover with cling film and leave until the couscous has soaked up the liquid. Stir the toasted pine nuts into the couscous along with parsley, lemon zest and juice. Add salt and pepper to taste.
+Heat oven to 200C/180C fan/gas 6. Lightly oil 2 sheets of foil. Season the trout, then make 2 \'sandwiches\' of 2 fillets with the couscous in the middle. Repeat with the rest of the trout and the couscous. Wrap the \'sandwiches\' individually in foil, then bake for 15-20 mins. Serve with potatoes and salad.');
+
+insert into recipes(name,image_uri,description) 
+values('Salmon with fennel & orange salad','32.jpg','Shave the fennel on a mandolin or slice very finely with a knife. Put in a bowl with the orange juice, zest, vinegar and the oil, and season. Mix well, then add the tarragon.
+Brush the salmon with oil, season then grill for 7 minutes. Put the salmon fillets on plates. Mix the watercress into the fennel mix then sit a pile on top of the salmon.');
+
+insert into recipes(name,image_uri,description) 
+values('Crunchy Asian cabbage & prawn salad','33.jpg','Shred the cabbages, celery and carrot finely on a mandolin or grate them on the largest holes on a grater. Add the mint and coriander to the vegetables along with the prawns. Toss everything together.
+Make the dressing by whisking all the ingredients together. Dress the salad and tip it into a bowl, sprinkle over the peanuts and serve straight away.');
+
+insert into recipes(name,image_uri,description) 
+values('Black bean chilli','34.jpg','In a large pot, heat the olive oil and fry the garlic and onions for 5 mins until almost softened. Add the pimenton and cumin, cook for a few mins, then add the vinegar, sugar, tomatoes and some seasoning. Cook for 10 mins.
+Pour in the beans and cook for another 10 mins. Serve with rice and the accompaniments of your choice in small bowls.');
+
+insert into recipes(name,image_uri,description) 
+values('Salmon with warm chickpea, pepper & spinach salad','35.jpg','Heat the grill. Squash the pepper quarters flat and grill for 5 mins or until well blackened. Leave the grill on, then transfer the peppers to a bowl, cover with cling film and leave to cool slightly before peeling off the skins and cutting the flesh into strips.
+Make the dressing by whisking together the lemon zest, juice, smoked paprika, olive oil and seasoning. Toss half the dressing with the spinach leaves and divide between 2 bowls.
+Season the salmon and grill for 5 mins or until just cooked through. Meanwhile, heat the chickpeas in their canning liquid in a saucepan for 3-4 mins. Drain well, then mix with the remaining dressing and strips of pepper. Spoon over the spinach and top with the salmon to serve.');
+
+insert into recipes(name,image_uri,description) 
+values('Honey & sesame beef noodles','36.jpg','Cook the noodles in boiling salted water until just tender, then drain and rinse in cold water. Heat half the oil in a non-stick wok. Add the broccoli, peas and 2 tbsp water, then cover and steamfry for 3 mins. Remove the lid, add the spring onions and stir-fry for 2 mins, adding a splash more water if needed to cook the veg. Add the noodles and half the soy sauce and toss with the veg. Divide between 2 bowls and keep warm.
+Wipe out the wok and heat the remaining oil until smoking. Tip in the beef and stir-fry for 2 mins over a high heat, but don\'t move it around too much initially or it will release liquid and stew rather than fry. Tip in the sesame seeds, cook for 1 min more, then add the honey. Toss to coat the beef well, then add the remaining soy and bubble briefly. Spoon over the vegetables and noodles and serve immediately.');
+
+insert into recipes(name,image_uri,description) 
+values('Mumbai potato wraps with minted yogurt relish','37.jpg','Heat the sunflower oil in a large saucepan and fry the onion for 6-8 mins until golden and soft. Stir in 1 tbsp curry powder, cook for 30 secs, then add the tomatoes and seasoning. Simmer, uncovered, for 15 mins.
+Meanwhile, add the potatoes and 1 tbsp curry powder to a pan of boiling salted water. Cook for 6-8 mins until just tender. Drain, reserving 100ml of the liquid. Add the drained potatoes and reserved liquid to the tomato sauce along with the mango chutney. Heat through.
+Meanwhile, mix together the yogurt and mint sauce, and warm the chapatis following pack instructions.
+To serve, spoon some of the potatoes onto a chapati and top with a few sprigs of coriander. Drizzle with the minted yogurt relish, adding extra mango chutney if you wish, then roll up and eat.');
+
+insert into recipes(name,image_uri,description) 
+values('Ginger & lime chicken with sweet potato mash','38.jpg','Mix half the lime zest and all the juice with the maple syrup and grated ginger. Slash each chicken breast 3-4 times with a sharp knife, then coat well with the marinade. Set aside for 10 mins. Heat the grill and line the grill tray with foil.
+Cook the sweet potatoes in salted boiling water for 10-12 mins until tender. Drain and mash well, adding the rest of the lime zest, plus some seasoning. Meanwhile, grill the chicken breasts for 10-15 mins, until cooked through and slightly caramelised.
+Heat the oil in a small frying pan. When it\'s really hot, add the ginger matchsticks and fry for 1 min until the ginger is crisp. Lift out the matchsticks with a slotted spoon, then stir the mash into the gingerinfused oil. Divide the mash between 2 plates, top each with a chicken breast, scatter with the crisp ginger and serve with some sugar snap peas.');
+
+insert into recipes(name,image_uri,description) 
+values('Moroccan mushrooms with couscous','39.jpg','Fry the onion in the oil for 6 mins until softened. Add the cinnamon and cumin and cook for 1 min, stirring. Add the mushrooms, cook for 2 mins, then stir in the tomatoes, chickpeas and honey. Season and simmer for 7-8 mins.
+Meanwhile, mix the couscous with the dried apricots and some seasoning in a bowl. Pour over 250ml boiling water, stir to mix, then cover. Leave to stand for 7 mins or until softened. To serve, fluff up with a fork, stir in the parsley and top with the mushroom mixture. Great served with some green beans.');
+
+insert into recipes(name,image_uri,description) 
+values('Cajun turkey steaks with pineapple salsa','40.jpg','Reserve 2 tbsp of the onion for the salsa. Heat the oil in a saucepan and cook the remaining onion and half the pepper for 4 mins or until softened and coloured. Stir in the rice, then pour in the stock. Add the kidney beans and a pinch of salt. Bring to the boil, stir once, cover the pan, then reduce the heat to a gentle simmer. Cook for 15 mins until the rice is tender and the liquid absorbed.
+Dust the turkey steaks with the Cajun spice and griddle or fry in a non-stick pan for about 4-6 mins on each side until cooked through. Cut the pineapple into small pieces and mix together with the reserved red onion, pepper, green chilli and lime juice. Spoon some salsa over each steak and serve with the rice.');
+
+insert into recipes(name,image_uri,description) 
+values('Oriental cod & vegetables','41.jpg','Line the base and sides of a steamer with a large sheet of baking paper. Add the corn and mushrooms in an even layer, then sit the cod on top. Mix the soy, rice wine and honey with the garlic, chilli and ginger, then spoon half over the fish. Lay the pak choy over the cod and drizzle with the remaining soy mixture.
+Add water to the base of the steamer, cover tightly and steam for 10-15 mins or until the cod flakes easily. Serve the cod and veg with its juices and rice.');
+
+insert into recipes(name,image_uri,description) 
+values('Creamy ham, leek & mushroom spaghetti','42.jpg','Heat the oil in a large saucepan. Stir in the leeks, 2 tbsp water and some seasoning, cover, then cook for 5 mins over a medium heat until softened. Add the mushrooms and garlic, then cook for 3 mins more. Meanwhile, cook the spaghetti according to pack instructions, then drain, reserving a little of the cooking liquid.
+Stir the soft cheese into the leek and mushroom mixture, adding enough of the reserved pasta liquid to give a sauce-like consistency. Add the ham, basil leaves and Parmesan, then toss in the spaghetti.');
+
+insert into recipes(name,image_uri,description) 
+values('Mango chicken with spiced pilau','43.jpg','Heat oven to 200C/180C fan/gas 6 and line a baking tray with foil. Cut a horizontal pocket in each chicken breast, taking care not to cut all the way through to the other side. Stuff with the mango chutney, then seal the pocket closed around the chutney with a cocktail stick.
+Mix the curry powder and 2 tsp cumin seeds with 3 tsp oil, then brush all over the chicken. Place on the baking tray and roast for 25-30 mins until cooked through.
+Meanwhile, heat remaining oil and fry the onions for 6-8 mins until golden. Add remaining cumin, bay and cinnamon then cook, stirring, for 1 min. Stir in the rice. Pour over 450ml boiling water, add a pinch of salt, bring to the boil, stir and cover. Reduce heat; simmer for 15 mins.
+Remove bay and cinnamon, stir in coriander and serve with the chicken.');
+
+insert into recipes(name,image_uri,description) 
+values('Fruity pork steaks','44.jpg','Dust the pork steaks with the Chinese five-spice powder. Heat half the oil in a frying pan and fry the pork for about 3 mins on each side until browned and cooked through. Transfer to a plate.
+Add the remaining oil to the frying pan, reduce the heat slightly, then fry the onion wedges for 2 mins. Add the apples and cook, stirring occasionally, for another 3 mins.
+Add the redcurrant jelly to the pan, followed by the vinegar and then the stock. Bring to the boil and simmer rapidly, uncovered, for 8-10 mins until the sauce is slightly syrupy and the apples are tender. Gently reheat the pork in the sauce, turning to glaze each side.');
+
+insert into recipes(name,image_uri,description) 
+values('Inside-out chicken Kiev','45.jpg','Heat oven to 200C/fan 180C/gas 6. Place the chicken on a baking tray, rub with a little of the butter, season and cook under the grill for 15 mins, turning once until cooked through.
+Mix together the remaining garlic butter and breadcrumbs. Remove the chicken from the grill and top each breast with a smear of the breadcrumbed butter. Return to the grill and cook 3-5 mins until the breadcrumbs are golden and the butter melted. Serve any buttery juices, alongside new potatoes and peas or broad beans.');
+
+insert into recipes(name,image_uri,description) 
+values('Tuna sweet potato jackets','46.jpg','Scrub the sweet potatoes and prick all over with a fork. Place on a microwaveable plate and cook on High for 18-20 mins, or until tender. Split in half and place each one, cut-side up, on a serving plate.
+Flake the drained tuna with a fork and divide between the sweet potatoes. Top with the red onion and chilli, then squeeze over the lime juice. Top with a dollop of yogurt and scatter over the coriander, to serve.');
+
+insert into recipes(name,image_uri,description) 
+values('Chicken saltimbocca with basil mash','47.jpg','Make the mash: boil the potatoes in salted water for 15-20 mins until tender. Drain and mash well. Stir in the milk, then the Parmesan and basil. Season with black pepper and keep warm.
+Meanwhile, sit the chicken breasts on a board and cut through them horizontally leaving one side attached. Open them up like a book and lay a basil leaf on top of each, topped with a slice of prosciutto. Secure with a cocktail stick.
+Heat the oil in a large, non-stick frying pan and add the chicken breasts, hamside down. Cook for 2-3 mins until golden, then turn over and cook for 2 mins more. Pour over the Marsala and allow to bubble for 1 min. Add the stock and simmer for 5 mins until the chicken is cooked. Lift the chicken out, cover to keep warm, then boil the pan juices to reduce a little. Serve with the basil mash and a green salad on the side, if you like.');
+
+insert into recipes(name,image_uri,description) 
+values('Chicken chow mein','48.jpg','Mix together the garlic, ginger, chilli, soy sauce and tomato pur¨¨e, then add the chicken and leave it to marinate while you prep the rest of the ingredients.
+Boil a large pan of water, add the noodles, broccoli and carrots, then cook for 4 mins before draining.
+Heat the vegetable oil in a wok, tip in the chicken and its marinade, then stir-fry for 4-5 mins until cooked. Toss in the noodles, vegetables, beansprouts and spring onion to warm through, then mix the oyster sauce with 2 tbsp water and stir this in just before serving.');
+
+insert into recipes(name,image_uri,description) 
+values('Easy peasy lentil curry','49.jpg','Heat the oil in a large pan. Add the onions and cook over a high heat for about 8 minutes or until they are golden brown. Stir in the curry paste and cook for a minute. Slowly pour in a little of the stock so it sizzles, scraping any bits from the bottom of the pan. Gradually pour in the rest of the stock.
+Stir the frozen vegetables, cover and simmer for 5 minutes. Add the lentils and simmer for a further 15-20 minutes or until the vegetables and lentils are cooked.
+While the curry is simmering, cook the rice according to the packet instructions, adding the turmeric to the cooking water. Drain well.
+Season the curry with salt, toss in a handful of raisins and chopped parsley, then serve with the rice, poppadums and chutney.');
+
+insert into recipes(name,image_uri,description) 
+values('Spicy vegetable chapati wraps','50.jpg','Cook the sweet potatoes in a pan of boiling water for 10-12 minutes until tender. Meanwhile, put the tomatoes, chickpeas, chilli flakes and curry paste in another pan and simmer gently for about 5 minutes.
+Preheat the grill. Drain the sweet potatoes and add to the tomato mixture. Stir in the spinach and cook for a minute until just starting to wilt. Stir in the coriander, season to taste and keep warm.
+Sprinkle the chapatis with a little water and grill for 20-30 seconds each side. Spoon on the filling, top with yogurt and fold in half to serve.');
+
+insert into recipes(name,image_uri,description) 
+values('Curried aubergine & potato pie','51.jpg','Preheat the oven to fan 200C/conventional 220C/gas 7. Cook the potatoes in lightly salted simmering water for 15-20 minutes until just tender - don\'t let the water boil or the potatoes will break up.
+Meanwhile, heat the oil in a large frying pan and gently fry the onion and garlic until starting to go golden - about 4-5 minutes. Remove 2 tbsp of onion mixture and set aside.
+Add the aubergines to the pan. Cook gently, stirring now and then, for 6-8 minutes, until softened. Stir in the curry powder. Cook for 30 seconds then add the tomatoes, tomato purae and lentils. Cook for 1-2 minutes, then transfer to a 2 litre dish. Drain the potatoes, pile on top of the aubergine mixture and sprinkle over the reserved onion mixture. (At this stage it can be frozen for up to one month.)
+Bake for 30-35 minutes until nicely browned on top. Serve with broccoli or a salad.');
+
+insert into recipes(name,image_uri,description) 
+values('Easy tomato pizzas','52.jpg','For the dough, put the flour, yeast and 2 tsp salt into a large bowl and mix. Make a well. Mix the oil and water in a jug, then tip into the bowl. Use a wooden spoon to work the liquid into the flour - it will seem pretty wet. Set the bowl aside for 15 mins. Leaving the dough like this will save you from lengthy kneading later.
+Turn the dough onto a well-floured surface, flour your hands, then knead it very gently for about 2 mins until it is fairly even, soft and bouncy. Return the dough to the bowl, cover with oiled cling film, then let it rise in a warm place (or in the fridge overnight) until doubled in size.
+When ready to cook, heat oven to 240C/220C fan/gas 9 or as hot as it will go, then put a baking sheet in on a high shelf. Dust another sheet with flour. Split the dough into 8, then roll 3 balls thinly into rough circles. Lift onto the floured sheet. Smear over a thin layer of the sauce, scatter over a few slices of tomato, season, then add sliced goat\'s or grated Parmesan cheese if you want to. Slide the sheet on top of the heated sheet. Bake for 12 mins or until golden and crisp and the tomatoes are starting to caramelise around the edges. Top with any fresh toppings, then drizzle with more olive oil to serve.');
+
+insert into recipes(name,image_uri,description) 
+values('Smoky chicken with warm corn & potato salad','53.jpg','Bring to the boil a saucepan of water big enough to hold all the potatoes and corn. Cook the potatoes for 12 mins, adding the corn after 6 mins, until both are tender. Drain well.
+Meanwhile, mix the sliced red onion with the lime juice and half the oil in a large salad bowl. Mix the remaining oil with the garlic, paprika and some seasoning in a shallow bowl, then toss in the chicken until thoroughly coated.
+Heat a griddle pan, then griddle the chicken for 3 mins on each side until cooked through. Tip the potatoes into the bowl with the onions. Stand a corn cob on one end on a chopping board, then slice down the length, cutting off the kernels in strips. Mix into the potato salad with the coriander and seasoning, then serve alongside the smoky griddled chicken, with lime wedges, if using.');
+
+insert into recipes(name,image_uri,description) 
+values('Turkey burgers with beetroot relish','54.jpg','Tip the turkey into a bowl with the thyme. Finely grate in the zest from the lemon and add a little seasoning. Use your hands to mix the ingredients well, then shape into 4 patties. Chill until ready to cook. Can be frozen for up to 1 month.
+Mix the beetroot with the juice from the lemon, onion, parsley, oil and mustard. Grill, griddle or barbecue the burgers for about 6 mins each side and serve with the beetroot relish, lettuce and pitta breads.');
+
+insert into recipes(name,image_uri,description) 
+values('Chicken tikka skewers','55.jpg','Put 8 wooden skewers in a bowl of water to soak. Mix the yogurt and curry paste together in a bowl, then add the chicken (if you have time, marinate for an hr or so). In a large bowl, toss together the cucumber, red onion, coriander and lemon juice. Chill until ready to serve.
+Shake off any excess marinade, then thread the chicken pieces and cherry tomatoes onto the pre-soaked skewers. Cook under a medium grill for 15-20 mins, turning from time to time, until cooked through and nicely browned.
+Stir the lettuce or pea shoots into the salad, then divide between 4 plates. Top each serving with 2 chicken tikka skewers and serve with the warm chapatis.');

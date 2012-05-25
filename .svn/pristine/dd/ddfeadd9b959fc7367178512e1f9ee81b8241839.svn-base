@@ -1,0 +1,26 @@
+<div class="centered" id="header">
+	<a id="logo" href="/index.php">The Gourmet</a>
+	<ul>		
+		<li><a href="/index.php">Feature</a></li>	
+		<li><a href="/index.php">Browse</a></li>			
+		<li><a href="/index.php">Meal Planner</a></li>
+		<?php 
+			if ($this->session->userdata('is_logged_in') or $this->session->userdata('is_logged_in') != null)
+			{
+				$this->session->set_userdata('is_logged_in', false);
+				echo "<li><a href=\"\">Edit Profile</a></li>"; 
+				echo "<li>".anchor('user/log_out', 'Sign Out')."</li>";
+			}
+			else
+				echo "<li>".anchor('user/sign_in', 'Sign In')."</li>";
+		?>
+	</ul>
+
+	<!-- WELCOME BOX -->
+	<div id="welcome">		
+		<?php 
+			if ($this->session->userdata('is_logged_in'))
+				echo 'Welcome '.$this->session->userdata('username');
+		?>
+	</div>
+</div><!-- End of header -->

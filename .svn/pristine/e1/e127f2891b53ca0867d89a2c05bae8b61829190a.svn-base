@@ -1,0 +1,14 @@
+<div id="form-signup">
+	<h1>Welcome to Gourmet</h1>
+	<fieldset>
+		<?php
+			echo form_open('user/validate_login');
+			echo "Username";
+			echo form_input('username');		
+			echo "Password".form_password('password');
+			echo form_submit('submit', 'Sign In');			
+			echo "<br />".anchor('/user/sign_up', 'Sign Up');
+			echo "<br />".anchor('/user/forgot_password', 'Forgot your password?');
+		?>
+	</fieldset> <!-- End of account info -->
+</div>

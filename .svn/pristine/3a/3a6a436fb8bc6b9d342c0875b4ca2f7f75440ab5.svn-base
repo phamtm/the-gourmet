@@ -1,0 +1,81 @@
+<DOCTYPE html> 
+<html>
+
+<head>
+
+		<title>Mosaic - Sliding Boxes and Captions jQuery Plugin</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=8">
+		
+		<link rel="stylesheet" href="css/mosaic.css" type="text/css" media="screen">
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/mosaic.1.0.1.js"></script>
+		
+		<script type="text/javascript">  
+			
+			jQuery(function($){
+				
+				$('.circle').mosaic({
+					opacity		:	0.8			//Opacity for overlay (0-1)
+				});
+				
+				$('.fade').mosaic();
+				
+				$('.bar').mosaic({
+					animation	:	'slide'		//fade or slide
+				});
+				
+				$('.bar2').mosaic({
+					animation	:	'slide'		//fade or slide
+				});
+				
+				$('.bar3').mosaic({
+					animation	:	'slide',	//fade or slide
+					anchor_y	:	'top'		//Vertical anchor position
+				});
+				
+				$('.cover').mosaic({
+					animation	:	'slide',	//fade or slide
+					hover_x		:	'400px'		//Horizontal position on hover
+				});
+				
+				$('.cover2').mosaic({
+					animation	:	'slide',	//fade or slide
+					anchor_y	:	'top',		//Vertical anchor position
+					hover_y		:	'80px'		//Vertical position on hover
+				});
+				
+				$('.cover3').mosaic({
+					animation	:	'slide',	//fade or slide
+					hover_x		:	'400px',	//Horizontal position on hover
+					hover_y		:	'300px'		//Vertical position on hover
+				});
+		    
+		    });
+		    
+		</script>
+		
+		<style type="text/css">
+		
+			/*Demo Styles*/
+			body{ background:#e9e8e4 url('img/bg-grid.png');; }
+				#content{ width:845px; margin:20px auto; padding:10px 30px; }
+				.clearfix{ display: block; height: 0; clear: both; visibility: hidden; }
+						
+				.details{ margin:15px 20px; }	
+					h4{ font:300 16px 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:160%; letter-spacing:0.15em; color:#fff; text-shadow:1px 1px 0 rgb(0,0,0); }
+					p{ font:300 12px 'Lucida Grande', Tahoma, Verdana, sans-serif; color:#aaa; text-shadow:1px 1px 0 rgb(0,0,0);}
+					a{ text-decoration:none; }
+		
+		</style>
+		
+	</head>
+
+<body>
+	<div class="mosaic-backdrop" style="display: block; "><img src="http://buildinternet.s3.amazonaws.com/projects/mosaic/desroches.jpg"></div>
+	
+</body> <!-- End of body -->
+
+</html> <!-- End of html -->
+

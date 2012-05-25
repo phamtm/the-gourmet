@@ -1,0 +1,55 @@
+<!-- fieldset- Group similar elements -->
+<div id="form-signup">
+	<h1>Edit Profile</h1>		
+		<fieldset>			
+			<?php 
+			echo form_open('user/update_profile');		
+
+			$data = array('name' => 'password', 'id' => 'input');			
+			echo "Password <span>*</span>".form_password($data);
+			echo form_error('password');
+
+			$data = array('name' => 'confirm_password', 'id' => 'input');
+			echo "Confirm Password <span>*</span>".form_password($data);
+			echo form_error('password');
+
+			$data = array('name' => 'email_address', 'id' => 'input');
+			echo "Email address".form_input($data);
+			echo form_error('email_address');
+			?>
+		</fieldset> <!-- End of account info -->
+
+		<fieldset>
+			<?php						
+			$data = array('name' => 'first_name', 'id' => 'input');
+			echo "First name".form_input($data);
+			echo form_error('first_name');
+			
+			$data = array('name' => 'last_name', 'id' => 'input');
+			echo "Last name".form_input($data);
+			echo form_error('last_name');
+
+			$data = array('name' => 'height', 'id' => 'input');
+			echo "Height".form_input($data);
+			echo form_error('height');
+
+			$data = array('name' => 'weight', 'id' => 'input');
+			echo "Weight".form_input($data);
+			echo form_error('weight');
+
+			$data = array('name' => 'dob', 'id' => 'input');
+			echo "Birthday".form_input($data);
+			echo form_error('dob');
+
+			$options = array(
+                  'male' => 'Male',
+                  'female' => 'Female'
+            	);
+			echo "Gender".form_dropdown('gender', $options, 'Female');
+			echo form_error('gender');	
+
+			echo "<br />".form_submit('submit', 'Save');	
+			?>							
+		</fieldset> <!-- End of Personal Info -->
+	
+</div>

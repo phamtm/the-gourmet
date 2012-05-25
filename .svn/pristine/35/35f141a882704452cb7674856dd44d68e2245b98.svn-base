@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+body {	
+	background:no-repeat 0% 0%;
+	background-image: url('../img/bg2.jpg');
+	line-height: 1;
+	position: relative;
+}
+
+html, body {  
+  /*border: 0;*/
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  /*vertical-align: baseline; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+body {
+	float:left;
+}
+html {
+  min-height: 100%; 
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+/*========== HEADER & FOOTER ==========*/
+#header {
+	background: none no-repeat scroll 0% 0% rgba(255, 255, 255, 0.90);
+	left: 0;
+	padding: 10px 0;
+	position: relative;	
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#header ul {	
+	margin: 0 0 0 25%;
+	position: relative;	
+	z-index: 1;
+	font-family: "Pacifico";	
+}
+
+#header ul li {
+	display: inline-block;
+	padding: 0 5%;
+}
+
+#header a {
+	text-decoration: none;
+	color: #5B5847;
+}
+
+#header a:hover {
+	color: #FFB097; /* mau nuoc mam Nhat Ban */
+}
+
+#header:after {
+	background: url('../img/tab1.png') no-repeat center top;	
+	top: 18px;
+	content: "";
+	display: block;
+	height: 58px;	
+	margin: 0 auto;
+	position: absolute;	
+	width: 100%;
+}
+
+#logo {
+	padding: 0 0px;
+	text-align:left;
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 1.5em;
+	font-family: "Ballpark";
+}
+
+#logo a {
+	color: #5B5847;
+}
+
+#logo a:hover {
+	color: #FFB097; /* mau nuoc mam Nhat Ban */
+}
+
+#footer {
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+#footer a {
+	background: none no-repeat scroll 0% 0% rgba(255, 255, 255, 0.85);
+	padding-right: 10px;
+	padding-left: 10px;	
+}
+
+/*========== WRAPPER ==========*/
+#wrapper {
+	float:left;
+}
+
+#container {		
+	float:left;
+}
+
+#middle-wrapper {
+	float:left;
+}
+
+/*========== TILES ==========*/
+#tiles {
+	float:left;	
+	margin-left: 10%;
+	margin-top: 5%;
+	position: :absolute;
+}
+
+.tiles-small {
+
+}
+
+#tiles-small-form{
+	float:left;	
+}
+
+.tileRect {		
+	float:left;
+}
+
+#bottomRect {
+	margin-top: 1%;
+}
+.tileSquare {
+	float:left;
+	margin-right: 10px;
+}
+
+/*========== WELCOME USER HAVE LOGGED IN ==========*/
+#welcome {
+	float:right;
+	display:block;	
+	font-family:"Lucida Grande";
+	position: :relative;
+	margin-top:-15px;
+	padding-right:10px;
+	font-size:0.9em;
+	text-align:right;
+}
+
+#welcome a:hover {
+	color: #FFB097;
+}

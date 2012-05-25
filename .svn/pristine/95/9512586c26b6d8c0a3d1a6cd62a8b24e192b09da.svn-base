@@ -1,0 +1,9 @@
+<div class="centered" id="header">
+	<a id="logo" href="/">The Gourmet</a>
+	<ul>		
+		<li><a href="">Feature</a></li>	
+		<li><a href="">Browse</a></li>			
+		<li><a href="">Meal Planner</a></li>
+		<li><a href="">Login</a></li>
+	</ul>			
+</div><!-- End of header -->

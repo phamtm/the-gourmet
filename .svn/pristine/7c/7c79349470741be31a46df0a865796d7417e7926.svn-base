@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/*========== RESET STYLE CSS ==========*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*========== PAGE STYLE ==========*/
+
+body {	
+	background:repeat-x repeat-y 0% 0%;
+	/*background-image: url('../img/bg2_large.jpg');*/
+	background-image: url("../img/banner_tile_back.gif");
+	background-position: center top;	
+	display: block;	
+	position: relative;
+}
+
+html, body {  
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size:100%;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 3em;
+}
+
+/*========== TOP NAVIGATION BAR ==========*/
+#logo {
+	padding: 0 0px;
+	text-align:left;
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 1.5em;
+	font-family: "Ballpark";
+	color: black;
+	z-index:11;
+	position: fixed;
+}
+
+#logo a {
+	color: #5B5847;
+	text-decoration:none;
+}
+
+#logo a:hover {
+	color: #DD3124; /* mau nuoc mam Nhat Ban */
+	text-decoration:none;
+}
+
+#nav{
+	width:100%;
+	border:1px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	border-width:1px 0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-family: "Myrida Pro";	
+	background-attachment: scroll/fixed;
+	background: none no-repeat scroll 0% 0% white;	
+	position: fixed;
+	z-index:10;
+}
+#nav li{
+	position:relative;
+	display:inline;
+}
+#nav a{
+	display:inline-block;
+	padding:10px;
+	color: #757575;
+	text-decoration:none;	
+}
+#nav ul{
+	position:absolute;
+	left:-9999px;
+	margin:0;
+	padding:0;
+	text-align:center;	
+	background-color: #F7F7F7;
+}
+#nav ul li{
+	display:block;
+}
+#nav li:hover ul{
+	left:0;
+}
+#nav li:hover a{
+	text-decoration:none;
+	background:#f1f1f1;
+	color:#DD3124;
+	/*background:#FFB097;*/
+	border-bottom: 0px solid red;
+}
+#nav li:hover ul a{
+	text-decoration:none;
+	background:none;
+}
+#nav li:hover ul a:hover{
+	text-decoration:none;
+	background:#f1f1f1;
+	/*background:#FFB097;*/
+}
+#nav ul a{
+	white-space:nowrap;
+	display:block;
+	border-bottom:1px solid #ccc;
+	color: #757575;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+/*========== FOOTER ==========*/
+#footer {
+	text-align: center;	
+	float:bottom;
+	width: 100%;
+	height:60px;
+	border-top: 1px solid #CCC;
+	background: none no-repeat scroll 0% 0% #F7F7F7;
+	padding-bottom:50px;
+	color:gray;	
+}
+
+#footer a {
+	padding-right: 10px;
+	padding-left: 10px;	
+}
+
+.columns {
+	width:60%;
+	height: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 20px;
+}
+
+.column {
+	width: 33%;
+	float:left;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*========== WRAPPER ==========*/
+#wrapper {	
+	margin: 0 auto;
+	margin-top:0;
+	margin-bottom:0;
+	padding-top: 100px;
+}
+
+#container {	
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height:100%;
+    padding-bottom: 30px;
+}
+
+/*========== WELCOME USER HAVE LOGGED IN ==========*/
+#welcome {
+	float:right;
+	display:block;	
+	font-family:"Lucida Grande";	
+	margin-top:-5px;
+	margin-right:20px;
+	font-size:0.9em;
+	text-align:right;
+	position: fixed;
+}
+
+#welcome a:hover {
+	color: #FFB097;
+}

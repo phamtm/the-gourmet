@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Foodhacker's Blog</title>
+	</head><!--End of head-->
+	<body>
+		<h2>Project: The Gourmet - Food Recipe Sharing Website</h2>
+		
+		<h3>I. Project Vision</h3>
+			<p>
+				As people are becoming more and more health conscious nowadays, our objective is to encourage people cooking by themselves, and promote a healthy diet. In the recent years,
+				the trend of eating out or buying takeaways is certainly rising. Our website, The Gourmet, is dedicated to help you find the perfect recipe for your favourite dish. Subsequently, we also hope to promote household cooking to foster family bonding over family meals together.
+				We notice that currently there is a lack of instructional websites about how to cook good food. Evidently, some people may have good recipes that they want to share with others and learn to cook new dishes. With The Gourmet, people who like to cook can come together to share their own recipes, and possibly make a profit from them.
+				What The Gourmet aims to provide:
+				<ul>
+					<li>Free and premium recipes.</li>
+					<li>Nutritional information about the dishes, especially for health conscious people.</li>
+					<li>Cooking is not necessarily consuming. We will provide an estimation of the time required   for the dishes, so that users can choose the recipe that would best suit their time.</li>
+					<li>Rating and comment will be available.</li>
+					<li>Personalized recommendations according to different targeted groups of users, say vegetarians, people with special diet , or people recovering from illness.</li>
+				</ul>	
+				All in all, our vision is to establish a vibrant food recipes sharing website, promoting healthy eating style for people from all walks of life.	
+ 			</p>
+
+ 		<h3>II. Functional Requirement</h3>
+
+			<h4>2.1 Registration</h4>
+			The system requires the users to input their personal information to allow them to create an account.<br /><br />
+			
+			Success<br />
+			<ul>
+				<li>A message will be displayed to inform successful registration.</li>
+				<li>Password will be encoded, so even the administrators would not be able to see.</li>
+			</ul>				
+
+			Fail<br />
+			<ul>
+				<li>When there already exists a user name and/or email, the system will prompt the user to change the user name, or suggest an available user name.</li>
+				<li>When the password is too short, the system will prompt the user to enter a stronger password.</li>
+				<li>If confirmation password does not match, the system will prompt the user to re-enter the password.</li>
+				<li>When there are incomplete mandatory fields, the system will clear the password field and prompt the user to fill in the incomplete fields.</li>
+			</ul>
+
+			Alternatively, the system also allows users to use other popular social media accounts, such as Facebook, Google or Yahoo to log in.<br />
+
+			<h4>2.2 Log in/Log out</h4>
+			<ul>
+				<li>The Gourmet must allow a Guest to log in as a Member or Administrator.</li>
+				<li>The Gourmet must allow Member or Administrator to log out.</li>
+			</ul>			
+
+			<h5>2.2.1 Log in Success</h5>
+			After successful verification of user name and password, respective functions and privileges for Member/Administrator are activated and displayed.<br />
+
+			<h5>2.2.2 Log in Fail</h5>
+			Prompt the user to re-enter user name and password or create new account.<br />
+			In the case of incorrect password, an option “Forgot password” is made available.<br />
+
+			<h5>2.2.3 Forgot password</h5>
+			The system will prompt the user to answer a verification question.<br />
+			After verifying the correct answer, the system will allow log in of user, but will prompt the user to change to a new password.<br />
+
+			<h5>2.2.4 Log out</h5>
+			Return to the index page<br />
+
+
+			<h4>2.3 Manage Account</h4>
+			The Gourmet must allow Members to manage his/her account.<br />
+			<h5>2.3.1 Edit account</h5>
+			A member can change their personal information like email address, user name, password and address.<br />
+
+			<h5>2.3.2 Edit Profile</h5>
+			A member can make changes to privacy settings such that only certain profile information are made available to public or other members.<br />
+
+			<h5>2.3.3 Delete Account</h5>
+			A member can delete his/her own account.<br />
+
+
+			<h4>2.4 Recipe Management</h4>
+			The Gourmet must allow Members and Administrators to manage his/her own recipes.<br />
+			<h5>2.4.1 Create Recipe</h5>
+			Members and Administrators are allowed to create and share recipes.<br />
+			At least one image of the final product is required. Images of immediate instructional steps are optional.<br />
+
+			<h5>2.4.2 Edit Recipe</h5>
+			Members and Administrators are allowed to modify the recipes they have created.<br />
+			Members and Administrators are allowed to upload supplementary cooking instructions such as videos.<br />
+
+			<h5>2.4.3 Delete Recipe</h5>
+			Members and Administrators are allowed to delete the recipe that they have created.<br />
+
+
+			<h5>2.4 Search Functionality</h5>
+			The system allows users to search recipes (and display them) by key words.<br />
+			The searching function will provide different types of searches, such as searching by name or ingredient. In addition, users can further refine their search using categories provided such as breakfast, lunch, dinner, vegetarian, low fat, etc.<br />
+			Users are given the options to choose how the search outcomes will be displayed, either in icon view or list view. Below every search result, there will be a picture and a short description of the dish. User can click on it to read the full description if interested.<br />
+
+			<h4>2.5 View recipes</h4>
+
+
+			<h4>2.6 Buy recipes</h4>
+			Users are able to purchase premium recipes.<br />
+
+
+			<h4>2.7 Meal planner</h4>
+			The website can suggest suitable recipes, in the form of a planner, according to the users’ preferences.<br />
+			From this meal planner, users can plan ahead the menu for one whole week. A calendar will also be displayed on the upper right part of the page.<br />
+			If a particular meal has multiple suitable suggestions, users choose among various alternatives.<br />
+
+			<h4>2.8 Administrator</h4>
+				
+			 	Include two main functions are users management and content management.<br />
+			Users management
+
+				Admin can view all the information of user, send him/her a message or delete  user
+			Content management
+
+				Admin can manage all recipe based on category such as vegetarian, western, chinese , …
+				Add recipes, delete recipes...
+ 		
+ 		<h3>III. Non-Functional Requirement</h3>
+
+ 		<h3>IV. Use case Model</h3> 			
+ 			Use case Diagram
+ 			<img src="ucd.jpg" ></img>
+ 			
+	</body><!--End of body-->
+</html>

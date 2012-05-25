@@ -1,0 +1,5 @@
+<h2>This is member area</h2>.
+
+<?php 
+	echo anchor('login/logout', 'Logout');
+?>

@@ -1,0 +1,101 @@
+<%-- 
+    Document   : facebookLogin
+    Created on : Mar 23, 2011, 1:22:48 AM
+    Author     : thomas
+--%>
+<%@ page import = "hugyourbear.*"%>
+<%@ page import = "java.util.*"%>
+<%@ page import = "java.io.*"%>
+<%@ page import = "java.text.*"%>
+<%@ page import = "org.json.*"%>
+<%@ page import = "org.apache.commons.codec.binary.*"%>
+
+<%
+    String SECRETKEY="1e304c4013e80636fae3ae0b759bdb50";
+
+    //Parse the request String
+    StringBuffer jb = new StringBuffer();
+    String line = null;
+    BufferedReader reader = request.getReader();
+    while ((line = reader.readLine())!= null)
+        jb.append(line+"\n");
+    reader.close();
+
+    //Read and decode the encoded JSON String
+    int idx = jb.indexOf(".");
+    byte[] sig = new Base64(true).decode(jb.substring(0, idx).getBytes());
+    String rawpayload = jb.substring(idx+1);
+    String payload = new String(new Base64(true).decode(rawpayload));
+
+    //Get the JSON Object
+    JSONObject jsonObject = new JSONObject(payload);
+
+    //Get JSON registration object
+    JSONObject jsonRegistration = new JSONObject(jsonObject.get("registration").toString());
+
+    //Get fields
+    String firstName=jsonRegistration.get("first_name").toString();
+    String lastName=jsonRegistration.get("last_name").toString();
+    String email=jsonRegistration.get("email").toString();
+    char gender=jsonRegistration.get("gender").toString().toUpperCase().charAt(0);
+    String password=jsonRegistration.get("password").toString();
+
+    //Convert date format from MM/dd/yyyy to dd-MM-yyyy
+    Date birthdayDate=new SimpleDateFormat("MM/dd/yyyy")
+            .parse(jsonRegistration.get("birthday").toString(),new ParsePosition(0));
+    String birthday=new SimpleDateFormat("dd-MM-yyyy").format(birthdayDate);
+
+    //Generate username
+    String username=generateUsername(jsonRegistration.get("name").toString());
+
+    //Set other fields with default value
+    UserType userType=UserType.CUSTOMER;
+    String facebookAccount=email;
+    String handphone="";
+    String address="";
+    String zipCode="";
+    UserStatus status=UserStatus.VERIFIED;
+
+    //Create user
+    User aUser=new User(username,password,email,facebookAccount,birthday,
+            gender,firstName,lastName,handphone,zipCode,address,userType);
+    aUser.setUserStatus(status);
+
+    out.println(aUser.toString());
+    //Insert User
+     if(User.insertUser(aUser))
+     {
+         session.setAttribute("theUser",aUser);
+         session.setAttribute("username",aUser.getUsername());
+         session.setAttribute("userType",aUser.getUserType());
+         response.sendRedirect("../registrationRedirect.jsp");
+     }
+     else
+         response.sendRedirect("../errorPage.jsp");
+%>
+
+<%! public String generateUsername(String name)
+    {
+        String username=name;
+        StringTokenizer st=new StringTokenizer(username);
+        StringBuffer sb=new StringBuffer(25);//Use stringbuffer for efficiency
+        while(st.hasMoreTokens())
+        {
+            sb.append(st.nextToken());
+        }
+        username=sb.toString();
+
+        int count=0;
+        while(User.hasUsername(username))
+        {
+            if(count<20)
+            {
+                username=username+(int)(1+Math.random()*9);
+                count++;
+            }
+            else
+                username=username+(int)(1+Math.random()*99);
+        }
+        return username;
+    }
+%>

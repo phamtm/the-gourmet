@@ -1,0 +1,17 @@
+<div class="form-center" style="text-align:center;width:350px;">
+	<h2 style="font-family:Myriad Pro; font-size:2.5em; font-weight:bold;padding-top:40px;">Upload Sucessful</h2>
+	<br><br>
+	<div style="margin:0 auto; font-size:1.1em;">Click below to see your recipe</div><br>
+	<?php
+		$img_url = base_url()."/media/recipe_imgs/thumbs/".$recipe->recipe_id.".jpg";
+		echo "<a href='".base_url()."index.php/recipe/view_recipe/".$recipe->recipe_id."' title='".$recipe->recipe_name."'>";
+		echo "<div class=\"food-river-box\"><img src=\"".$img_url."\" width=\"180\" height=\"100\" alt=\"\"></div>";
+		echo "</a>";
+	?>
+	<br/><br/>
+	<div style="margin:0 auto; font-size:1.1em;">
+		<?php
+			echo anchor('/user/upload_recipe', 'Or upload another recipe?');
+		?>
+	</div><br>
+</div>

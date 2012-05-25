@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/*========== FORMS UNIVERSAL==========*/
+form input[type="text"], form input[type="password"], form select, 
+#form-signup input[type="text"], #form-signup input[type="password"] {
+	border-radius:5px;
+	display:block;
+	outline:none;
+	width:100%;
+	min-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#form-signup fieldset .error {
+	color:red;
+	font-size:0.6em;
+	float:right;
+}
+
+#form-signup fieldset p {
+	color:red;
+	font-size:0.7em;
+	float:left;
+}
+
+fieldset {
+	border-radius:7px;
+	border:1px solid gray;
+	border:medium;
+}
+
+.inputText {
+	border-radius:5px;
+	display:block;
+	outline:none;	
+	min-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.focusfield {
+  	border:2px solid #73A6FF;
+  	background:#EFF5FF;
+  	background-color:#EFF5FF;
+}
+
+.idlefield {
+    background:#EEE;
+    border: 2px solid #DFDFDF;
+    background-color: #EEE;
+}
+.w error .validationMessage{
+	color:red;
+}
+ /*========== FORMS LOGIN==========*/
+#form-login{		
+	margin-left: 10px;
+	margin-top: -225px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 200px;
+	height: 470px;	
+	background: rgba(255, 255, 255, 0.85);		
+	border-radius:7px;
+	font-family:"Pacifico";
+	font-size::1em;
+	position: :absolute;
+}
+
+#form-icon {
+	padding-left:30%;
+	padding-top: 10%;
+}
+
+/*========== FORMS SIGNUP==========*/
+#form-signup {
+	width: 300px;
+	margin-left:38%;
+	margin-top: 5%;
+	padding:right:30%;
+	position: :relative;
+	font-family:"Lucida Grande";	
+	/*font-family:Pacifico;*/
+	background: rgba(255, 255, 255, 0.85);
+	padding: 10px;
+	border-radius:7px;	
+}
+
+#form-signup h1 {
+	text-align:center;
+	font-family:BallPark;
+}
+
+#form-signup label {
+	font-family:Pacifico;
+}
+
+/*========== SOCIAL LOGIN ==========*/
+.social-login-inactive {
+	visibility: hidden;
+	margin-left:20%;
+}
+
+.social-login-active {
+	visibility: visible;
+	margin-left:20%;
+}

@@ -1,0 +1,543 @@
+-- phpMyAdmin SQL Dump
+-- version 3.4.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Apr 03, 2012 at 05:14 AM
+-- Server version: 5.5.20
+-- PHP Version: 5.3.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `gourmet`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `calories`
+--
+
+CREATE TABLE IF NOT EXISTS `calories` (
+  `name_ingredient` varchar(64) NOT NULL DEFAULT '',
+  `num_fat` float DEFAULT NULL,
+  `num_cal` float DEFAULT NULL,
+  `level` tinyint(1) NOT NULL,
+  PRIMARY KEY (`name_ingredient`),
+  FULLTEXT KEY `name_ingredient` (`name_ingredient`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `calories`
+--
+
+INSERT INTO `calories` (`name_ingredient`, `num_fat`, `num_cal`, `level`) VALUES
+('Egg, large', 5, 75, 0),
+('Egg White, large', 0, 17, 0),
+('Egg Whites', 0, 15, 0),
+('Egg Yolk, large', 5, 59, 0),
+('Egg Substitute, liquid', 0, 12.5, 0),
+('Butter, regular (salted or unsalted)', 24, 198, 0),
+('Butter, whipped', 16, 134, 0),
+('Ghee', 28, 249, 0),
+('Lard', 25.6, 330, 0),
+('Nutella', 11, 200, 0),
+('Oils - canola, corn, olive, safflower, soybean, sesame, grapesee', 28, 240, 0),
+('Oils - almond, walnut, hazelnut, sesame, truffle (white & black)', 28, 240, 0),
+('Peanut Butter, smooth', 17, 188, 0),
+('Peanut Butter, chunk style', 16, 188, 0),
+('Peanut Butter, reduced num_fat', 12, 180, 0),
+('Shortening, vegetable, regular, or butter flavor', 25.6, 220, 0),
+('All-Purpose Flour, unsifted', 0, 100, 0),
+('Barley Flour, whole grain, stone ground', 0, 55, 0),
+('Bread Flour', 0.25, 62, 0),
+('Buckwheat Flour, organic', 0.5, 50, 0),
+('Cake Flour', 0, 50, 0),
+('Oat Flour, blend', 0.4, 48, 0),
+('Potato Starch', 0, 80, 0),
+('Rice Flour', 0.5, 70, 0),
+('Rye Flour, light', 0.125, 47, 0),
+('Rye flour, dark', 0.125, 55, 0),
+('Semolina Flour (corn)', 0, 70, 0),
+('Soy Flour. low num_fat', 0.3, 36, 0),
+('Spelt Flour', 0.5, 65, 0),
+('Tapioca Flour', 0, 50, 0),
+('Teff Flour', 0.5, 57, 0),
+('Whole Grain Flour', 0.5, 81, 0),
+('Apple, fresh or raw', 0.1, 20, 0),
+('Apples, dried', 0.3, 25, 0),
+('Apples, freeze dried', 0, 80, 0),
+('Apple cider, canned or bottled', 0, 14, 0),
+('Apple juice, unsweetened', 0, 14, 0),
+('Applesauce, canned, unsweetened', 0.05, 14, 0),
+('Apricots, fresh', 0.1, 10, 0),
+('Apricots, halves, dried', 1, 68, 0),
+('Apricot juice/nectar', 0, 15, 0),
+('Avocado, fresh (medium-size avocado without seed and skin)', 4.5, 50, 0),
+('Banana, fresh', 0.2, 50, 0),
+('Banana chips', 9.5, 147, 0),
+('Blackberries, fresh', 0.8, 9, 0),
+('Mushrooms (Portabella) raw', 0, 10, 0),
+('Mushroom Pieces, canned & drained', 0.1, 5, 0),
+('Okra, raw', 0.1, 4, 0),
+('Okra, cooked/boiled & drained', 0.01, 4, 0),
+('Okra, frozen', 0.07, 8.5, 0),
+('Onion, yellow, white, red, & sweet (raw)', 0.025, 7.5, 0),
+('Onions, green (raw)', 0, 8, 0),
+('Pearl Onions, raw', 0, 10, 0),
+('Onion, dried or dehydrated', 0, 32, 0),
+('Peas, green, snap', 0.5, 16, 0),
+('Peas, black-eyed (cooked)', 0.125, 25, 0),
+('Peas, split peas', 0, 55, 0),
+('Peas, Snow or Sugar', 0, 8.5, 0),
+('Pepper, bell', 0.05, 3, 0),
+('Pepper, red roasted', 0, 7.1, 0),
+('Pepper, chile', 0, 20, 0),
+('Pepper, chipotle in adobe sauce, canned', 0.5, 15, 0),
+('Potato. baked with skin', 0.025, 25, 0),
+('Potato, Baby Red-Skinned, boiled', 0.025, 22.5, 0),
+('Potato, sweet, baked with skin', 0.1, 10, 0),
+('Pumpkin, canned', 0.1, 10, 0),
+('Mushrooms, (white or brown) raw', 0, 4, 0),
+('spaghetti', 1.5, 225, 0),
+('elbows spaghetti', 0.5, 37, 0),
+('plain spaghetti', 0.5, 42, 0),
+('beef shank', 28.5, 510, 0),
+('frankfurter beef', 16.8, 184, 0),
+('ground beef', 5.9, 75, 0),
+('pepperoni', 13, 148, 0),
+('flank steak', 1.7, 43, 0),
+('porterhouse steak', 5, 110, 0),
+('sirloin steak', 1.9, 53, 0),
+('tenderloin steak', 1.9, 51, 0),
+('t-bone steak', 2.1, 50, 0),
+('bagel', 1, 320, 0),
+('breads', 1, 70, 0),
+('eggroll wrapper', 0, 23, 0),
+('muffin', 1, 135, 0),
+('fillo', 0, 32, 0),
+('phyllo', 0, 32, 0),
+('panko breading', 1, 110, 0),
+('pita break', 2, 150, 0),
+('won ton', 0.1, 23, 0),
+('all bran', 0.2, 20, 0),
+('cheerios', 0.2, 15, 0),
+('corn flakes', 0.15, 12, 0),
+('corn grits', 0.25, 70, 0),
+('frosted flakes', 0.03, 15, 0),
+('grape nuts', 0.3, 50, 0),
+('kashi', 0.13, 11, 0),
+('rice krispies', 0.05, 15, 0),
+('oatmeal', 0.3, 18, 0),
+('raisin bran', 0.2, 23, 0),
+('shredded wheat', 0.3, 80, 0),
+('cheese', 9, 106, 0),
+('cheddar cheese', 9.4, 114, 0),
+('cottage cheese', 10, 234, 0),
+('cream cheese', 10, 99, 0),
+('edam cheese', 7.9, 101, 0),
+('feta cheese', 6, 75, 0),
+('fontina cheese', 8.8, 110, 0),
+('goat cheese', 7.1, 88, 0),
+('gorgonzota', 9.6, 109, 0),
+('gouda', 8, 101, 0),
+('gruyere', 9.2, 117, 0),
+('harvati', 10.4, 117, 0),
+('swiss cheese', 7, 100, 0),
+('tofu', 1.4, 22, 0),
+('dark chocolate', 9, 140, 0),
+('extra dark chocolate', 13, 180, 0),
+('white chocolate', 10.5, 162, 0),
+('chocolate chips', 9, 160, 0),
+('chocolate syrup', 3, 133, 0),
+('hot fudge topping', 4, 100, 0),
+('unsweetened chocolate', 2, 24, 0),
+('lamb', 2, 43, 0),
+('lamb ground', 7, 80, 0),
+('loin chop', 1.8, 41, 0),
+('rib chop', 2, 43, 0),
+('lamb shoulder', 1.6, 36, 0),
+('braunscheweiger', 9, 100, 0),
+('smoked sausage', 1.2, 40, 0),
+('almond', 13.8, 161, 0),
+('almonds', 13.8, 161, 0),
+('cashwes', 13, 162, 0),
+('hazelnuts', 18, 179, 0),
+('peanuts', 14, 160, 0),
+('walnuts', 17.5, 142, 0),
+('noodles', 0.15, 100, 0),
+('upaasta', 0.5, 112, 0),
+('rice', 0.05, 30, 0),
+('bacon', 15, 150, 0),
+('pork', 9, 80, 0),
+('ham', 2.3, 45, 0),
+('pork chop', 2.3, 55, 0),
+('pork sausage', 3.7, 44, 0),
+('caviar', 4.4, 72, 0),
+('clam', 0.7, 50.3, 0),
+('crab', 0.3, 30, 0),
+('flounder', 0.15, 23, 0),
+('grouper', 0.3, 23, 0),
+('lobster', 1, 33, 0),
+('oysters', 0.6, 18, 0),
+('oyster', 0.6, 18, 0),
+('salmon', 3.1, 53, 0),
+('shrimp', 0.5, 30, 0),
+('prawn', 0.5, 30, 0),
+('tuna', 2, 42, 0),
+('radish', 0.15, 5, 0),
+('spinach', 0.08, 6, 0),
+('squash', 0.01, 5.6, 0),
+('Amaranth Grain', 1.5, 91, 0),
+('Barley, raw', 0.7, 100, 0),
+('Buckwheat Berries', 0.25, 37.75, 0),
+('Bulgur (Tabbouleh)', 0.2375, 59.875, 0),
+('Caraway Seeds', 1.8, 42, 0),
+('Chia Seeds', 10, 130, 0),
+('Couscous', 0.15, 86.5, 0),
+('Farro, raw', 0.375, 42.5, 0),
+('Flax Seeds, raw', 8.15, 103.5, 0),
+('Fennel Seeds', 1.8, 42, 0),
+('Poppy Seeds', 7.8, 89.4, 0),
+('Sesame Seeds, toasted', 9, 60, 0),
+('Sunflower Seeds, roasted, hulled and salted', 7.4, 87, 0),
+('Sunflower Seeds, oil roasted with salt', 14, 166, 0),
+('Wheat Berries, raw', 0.25, 37.75, 0),
+('Allspice, ground', 1.2, 30, 0),
+('Basil, Fresh', 0, 3, 0),
+('Bay Leaf', 0, 12, 0),
+('Capers, drained', 0, 12, 0),
+('Cardamon', 0.6, 36, 0),
+('Chili Powder', 2.4, 36, 0),
+('Cinnamon, ground', 0.6, 36, 0),
+('Cloves, ground', 2.4, 42, 0),
+('Coriander Leaf (Cilantro, Chinese Parsley), diet', 0, 12, 0),
+('Coriander Seed', 5.4, 90, 0),
+('Cumin Seeds', 7.8, 138, 0),
+('Curry Powder', 1.8, 42, 0),
+('Dill Weed, dried', 0, 18, 0),
+('Dill Weed, fresh', 0, 0.5, 0),
+('Dill Seeds', 6, 120, 0),
+('Garlic Powder', 0, 54, 0),
+('Garlic Salt', 0, 18, 0),
+('Ginger, ground', 0.6, 36, 0),
+('Ginger Root', 0.2, 20, 0),
+('Marjoram, dried', 0, 12, 0),
+('Nutmeg, ground', 4.8, 66, 0),
+('Oregano, dried', 0.6, 36, 0),
+('Paprika', 1.8, 36, 0),
+('Parsley, fresh', 0.025, 2.5, 0),
+('Parsley, dried', 1.2, 8, 0),
+('Pepper, Black, ground', 0.4, 32, 0),
+('Pepper, Red or Cayenne, ground', 1.8, 34, 0),
+('Pepper, White', 0.4, 42, 0),
+('Rosemary, fresh', 0, 6, 0),
+('Rosemary, dried', 1.2, 24, 0),
+('Saffron', 0, 12, 0),
+('Sage, ground', 0.6, 12, 0),
+('Salt, iodized or non-iodized', 0, 0, 0),
+('Thyme, dried', 0.6, 24, 0),
+('Thyme, fresh', 0, 0, 0),
+('Turmeric, ground', 1.2, 48, 0),
+('Arugula, raw', 0, 7, 0),
+('Artichoke, globe', 0, 5.4, 0),
+('Artichoke hearts, canned & marinated', 0.4, 64.3, 0),
+('Asparagus, raw', 0.5, 54, 0),
+('Beans, green (fresh)', 0.05, 5.5, 0),
+('Beans, green (canned) & drained', 0.025, 5.5, 0),
+('Beans, black, canned', 0.125, 25, 0),
+('Beans, Garbanzo (chick peas), canned', 0.25, 20, 0),
+('Beans, Kidney, canned', 0.1, 26, 0),
+('Beans, White, canned', 0.1, 27.5, 0),
+('Beans, lentils, cooked/boiled', 0.1, 29, 0),
+('Beans, Lima, cooked/boiled', 0.075, 26, 0),
+('Beans, refried, canned, regular', 0.3, 30, 0),
+('Beans, refried vegetarian', 0.25, 17.5, 0),
+('Beans, navy, cooked', 0.1, 32, 0),
+('Beats', 0, 7.5, 0),
+('Broccoli', 0.05, 3, 0),
+('Brussels Spouts', 0, 12, 0),
+('Cabbage, Chinese raw', 0, 1.25, 0),
+('Cabbage, green raw', 0, 7, 0),
+('Cabbage, red raw', 0, 2.5, 0),
+('Carrot, raw', 0, 0.4, 0),
+('Cauliflower', 0.1, 12.7, 0),
+('Celery', 0, 0.5, 0),
+('Chiles, green, canned', 0, 10, 0),
+('Corn, fresh, yellow or white, raw', 0.2, 15.15, 0),
+('Corn, cream style', 0.1, 23, 0),
+('Cucumber', 0, 3.4, 0),
+('Eggplant, raw', 0, 2.4, 0),
+('baking Powder, double-acting', 0, 48, 0),
+('baking Soda', 0, 0, 0),
+('beef Broth or Stock, num_fat-free', 0, 2.1, 0),
+('cornstarch', 0, 60, 0),
+('cream of tartar', 0, 2, 0),
+('gelatin', 0, 10, 0),
+('horseradish', 0, 30, 0),
+('kechup', 0, 30, 0),
+('mayonnaise', 22, 200, 0),
+('mustard', 0, 36, 0),
+('olives', 1, 10.2, 0),
+('pickle', 0.1, 20, 0),
+('salsa', 0, 6, 0),
+('sour cream', 6, 61, 0),
+('soy sauce', 0, 22, 0),
+('vinilla extract', 0, 60, 0),
+('vinegar', 0, 4, 0),
+('wasabi', 0, 96, 0),
+('wheat germ', 0, 60, 0),
+('worcestershire sauce', 6, 30, 0),
+('yeast bakers', 1.2, 80, 0),
+('graham', 0.3, 7, 0),
+('melba toast', 0.4, 11.7, 0),
+('buttermilk', 0.8, 50, 0),
+('chocolater milk', 1, 26, 0),
+('condesed milk', 2.5, 91, 0),
+('cream', 3.6, 4, 0),
+('evaporated milk', 2.5, 42.5, 0),
+('goat milk', 1.2, 20, 0),
+('milk', 1.2, 20, 0),
+('soy milk', 0.6, 10, 0),
+('yogurt', 1, 15, 0),
+('boysenberries', 0.9, 9, 0),
+('cantaloupe', 0.05, 6, 0),
+('cherries', 1.7, 13, 0),
+('cranberries', 0.025, 6, 0),
+('currents', 0, 51, 0),
+('dates', 0.09, 62, 0),
+('figs', 0, 30, 0),
+('grapefruit', 0.025, 11, 0),
+('grape', 0.03, 8, 0),
+('honeydew melon', 0.025, 7, 0),
+('kiwifruit', 0.3, 46, 0),
+('lemond', 0.2, 8, 0),
+('lime', 0, 8, 0),
+('mango', 0.05, 16, 0),
+('nectarines', 0.07, 8.5, 0),
+('orange', 0, 8, 0),
+('papaya', 0.5, 18, 0),
+('peach', 0.1, 14, 0),
+('pear', 0.1, 12, 0),
+('persimmon', 0.3, 24, 0),
+('pineapple', 0.05, 18, 0),
+('plum', 0.2, 16, 0),
+('pomegranate', 0, 18, 0),
+('prunes', 0.03, 22, 0),
+('raisins', 0.08, 54.8, 0),
+('raspberries', 0.07, 6, 0),
+('tangerine', 0.01, 19, 0),
+('watermelon', 0.07, 6, 0),
+('agave syrup', 0, 80, 0),
+('corn syrup', 0, 120, 0),
+('honey', 0, 120, 0),
+('molasses', 0, 240, 0),
+('sugar', 0, 96, 0),
+('syrup', 0, 100, 0),
+('tomato, raw', 0.1, 6, 0),
+('tomatoes, canned', 0, 6, 0),
+('tomatoes, diced', 0, 6, 0),
+('tomatoes, crushed', 0, 6, 0),
+('tomato sauce', 0, 25, 0),
+('tomatillo', 0, 10, 0),
+('water chestnuts', 0, 15, 0),
+('endive', 0.025, 1, 0),
+('garlic', 0, 4, 0),
+('greens', 0, 1.2, 0),
+('jicama', 0.1, 12, 0),
+('lettuce', 0.5, 2.6, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE IF NOT EXISTS `category` (
+  `recipe_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `category` varchar(32) NOT NULL DEFAULT '',
+  PRIMARY KEY (`recipe_id`,`category`),
+  FULLTEXT KEY `category` (`category`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ingredients`
+--
+
+CREATE TABLE IF NOT EXISTS `ingredients` (
+  `recipe_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `ingredient` varchar(64) NOT NULL,
+  `quantity` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`recipe_id`,`ingredient`),
+  FULLTEXT KEY `ingredient` (`ingredient`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `meal_type`
+--
+
+CREATE TABLE IF NOT EXISTS `meal_type` (
+  `type` tinyint(1) NOT NULL,
+  `recipe_id` int(11) NOT NULL,
+  PRIMARY KEY (`recipe_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recipes`
+--
+
+CREATE TABLE IF NOT EXISTS `recipes` (
+  `recipe_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `recipe_name` varchar(128) NOT NULL,
+  `steps` text NOT NULL,
+  `description` varchar(300) NOT NULL,
+  `ingredients` text NOT NULL,
+  `image_uri` varchar(128) NOT NULL,
+  `num_of_likes` int(11) NOT NULL,
+  `calories` float DEFAULT NULL,
+  `meal_time` tinyint(1) DEFAULT NULL,
+  `vegetarian` tinyint(1) DEFAULT '0',
+  `halal` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`recipe_id`),
+  FULLTEXT KEY `name` (`recipe_name`,`description`,`ingredients`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=276 ;
+
+--
+-- Dumping data for table `recipes`
+--
+
+INSERT INTO `recipes` (`recipe_id`, `recipe_name`, `steps`, `description`, `ingredients`, `image_uri`, `num_of_likes`, `calories`, `meal_time`, `vegetarian`, `halal`) VALUES
+(275, 'Scrambled egg muffin', 'Scramble eggs without butter or cream, stir in chopped sundried tomato and torn fresh basil, and pile on toasted English muffin halves.', 'Healthy scrambled eggs don''t have to be bland, try this simple vegetarian recipe - ideal for Boxing Day', '2 eggs\r\nfew sundried tomatoes\r\nfresh basil , torn\r\nEnglish muffins', '', 0, 0, 0, 0, 0),
+(3, 'Grilled mackerel with sweet soy glaze', 'Score the mackerel fillets a couple of times on the skin, then lay them in a shallow dish. Sprinkle with the lime zest and juice, and leave to marinate for 5-10 mins.\r\nPlace all of the sauce ingredients in a small pan with a splash of water and gradually bring to a simmer. Cook for 5 mins to thicken slightly, then remove from the heat and set aside.\r\nTurn the grill to its highest setting and place the mackerel on a greased baking tray, skin side up. Sprinkle the fillets with the olive oil and some sea salt, then grill for 5 mins until the flesh is opaque and cooked through.\r\nDivide bok choi between plates, lay 2 mackerel fillets on top, drizzle with the sauce and serve with a wedge of lime.', 'Learn to fillet this sustainable fish with our step-by-step guide, then serve with fragrant Asian flavours', '4 mackerel fillets (use our step-by-step guide if filleting from whole)\r\nzest and juice 1 lime , plus extra wedges to serve\r\n1 tbsp extra-virgin olive oil\r\nbutter , for greasing\r\nsteamed baby bok choi , to serve\r\n2 tbsp soy sauce\r\n1 red chilli , deseeded and cut into matchsticks\r\njuice 1 lime\r\nthumb-sized piece ginger , grated\r\n2 tbsp muscovado sugar', '', 4, NULL, 2, 0, 0),
+(4, 'Buttery chilli prawns', 'Melt the butter and oil together in a frying pan. Add the garlic, chilli and paprika, then fry for 1-2 mins until starting to turn golden. Turn up the heat, throw in the prawns and fry for a few mins, stirring, until all the prawns turn pink. Take off the heat, season and stir in the lemon juice and parsley.\r\nAdd some lemon slices to a finger bowl of warm water, grab a bowl for the shells, then dig straight in with your fingers and hunks of crusty bread.', 'Spicy seafood is a really versatile dish for sharing - make sure there''s plenty of bread for the juices', '1 oz butter\r\n2 tbsp olive oil\r\n3 garlic cloves , finely chopped\r\n1 red chilli , seeds left in and finely chopped\r\n1/2 tsp sweet paprika\r\n12-20 large raw king prawns with shells\r\njuice 1 lemon , plus a few slices for a finger bowl\r\n½ x small bunch parsley , roughly chopped\r\nsmall loaf crusty bread , warmed to serve', '', 3, NULL, 2, 0, 0),
+(6, 'Cheesy leek & bacon pasta', 'Heat the oil in a large non-stick frying pan. Add the leeks and 2 tbsp water, and cook for about 10 mins until very soft. Add the bacon, turn up the heat and fry until cooked.\r\nMeanwhile, cook the pasta following pack instructions. Drain and reserve a mug of the cooking water.\r\nSpoon cheese into the leek and bacon mix, adding some of the reserved cooking water. Season and stir gently over a low heat until melted. Toss through the cooked pasta, adding a little more cooking water, if needed, to help the sauce coat the pasta.', 'A creamy and comforting quick pasta recipe, ideal for when you''re short on time', '1 tbsp olive oil\r\n11 oz leeks , halved and finely sliced\r\n8 rashers smoked streaky bacon , sliced\r\n14 oz pasta shapes (we used penne)\r\n4 oz herb & garlic soft cheese (we used Boursin)', '', 11, NULL, 1, 0, 0),
+(7, 'Stir-fried pork with ginger & honey', 'Bring a pan of salted water to the boil and cook the noodles following pack instructions. Meanwhile, mix the cornflour with 1 tbsp water, then stir in the soy sauce and honey, and set aside.\r\nHeat the oil in a wok over a high heat. Add the pork and cook for 2 mins until browned all over. Add the ginger, garlic, pepper and mangetout, and cook for a further 2 mins. Reduce the heat, then add the soy and honey mixture, stirring and cooking until the sauce bubbles and thickens. Divide the drained noodles between 2 bowls. Top with the pork and vegetables, and finish with a sprinkling of sesame seeds.', 'This healthy noodle dish is deliciously low-fat with a great mix of Asian flavours- the perfect midweek supper', '21 oz paneer cheese (see Tip below)\r\njuice 2 lemons\r\n2 tsp ground cumin , plus extra for sprinkling\r\n21/2 oz gram flour (see Tip below)\r\n1 tsp garam masala\r\n1 tbsp paprika\r\ntub double cream\r\n4 garlic cloves , crushed\r\n2 red chillies , deseeded and chopped\r\n2 peppers , red and yellow, roughly chopped\r\n2 courgettes , sliced\r\n1 oz butter , melted\r\n2 lemons , cut into wedges', '', 0, NULL, 2, 0, 0),
+(8, 'Spicy paneer skewers', 'Soak 12-15 bamboo skewers in water for 15 mins – this helps to stop them from burning under the grill. Cut the paneer cheese into 3cm cubes and toss with the lemon juice and ground cumin. Set aside for 30 mins.\r\nSieve the gram flour, garam masala and paprika into a bowl and add the cream, garlic and chopped chillies plus enough water to make a thick batter, then stir until smooth. Drain the paneer and add to the batter with 2 tbsp of the cumin-spiced lemon juice. Coat all the paneer cubes in batter.\r\nHeat grill to its hottest setting and line the grill pan with foil. Thread the paneer onto skewers, alternating it with chunks of pepper and courgette. Drizzle with batter from the bowl and cook for 4-5 mins on each side, spooning over more batter when you turn them. Grill until charred at the edges. Brush with melted butter, sprinkle with the ground cumin, and serve immediately, accompanied with lemon wedges.', 'These vegetarian kebabs use a firm Indian cheese coated in spices and grilled, perfect for a party', '21 oz paneer cheese (see Tip below)\r\njuice 2 lemons\r\n2 tsp ground cumin , plus extra for sprinkling\r\n21/2 oz gram flour (see Tip below)\r\n1 tsp garam masala\r\n1 tbsp paprika\r\ntub double cream\r\n4 garlic cloves , crushed\r\n2 red chillies , deseeded and chopped\r\n2 peppers , red and yellow, roughly chopped\r\n2 courgettes , sliced\r\n1 oz butter , melted\r\n2 lemons , cut into wedges', '', 7, NULL, 0, 0, 0),
+(9, 'Teriyaki prawns & broccoli noodles', 'In a small saucepan, heat the soy sauce, mirin, lemon juice and sugar. Simmer for 5 mins until syrupy, then remove from the heat. Bring a large saucepan of salted water to the boil, then cook the noodles and broccoli for about 3 mins, adding the prawns a few secs before draining. Divide the mixture between 2 plates, pour the warm teriyaki sauce over the top, sprinkle with the red chilli and serve.', 'This low-fat Japanese seafood supper uses healthier soba noodles made from buckwheat', '2 fl oz low-sodium soy sauce\r\n2 fl oz mirin\r\n2 tbsp lemon juice\r\n11/2 tbsp caster sugar\r\n7 oz soba noodles\r\n5 oz thin-stemmed broccoli\r\n5 oz cooked prawns\r\n1 small red chilli , thinly sliced', '', 0, NULL, 0, 0, 0),
+(253, 'California Grilled Veggie Sandwich', 'In a bowl, mix the mayonnaise, minced garlic, and lemon juice. Set aside in the refrigerator.\r\nPreheat the grill for high heat.\r\nBrush vegetables with olive oil on each side. Brush grate with oil. Place bell peppers and zucchini closest to the middle of the grill, and set onion and squash pieces around them. Cook for about 3 minutes, turn, and cook for another 3 minutes. The peppers may take a bit longer. Remove from grill, and set aside.\r\nSpread some of the mayonnaise mixture on the cut sides of the bread, and sprinkle each one with feta cheese. Place on the grill cheese side up, and cover with lid for 2 to 3 minutes. This will warm the bread, and slightly melt the cheese. Watch carefully so the bottoms don''t burn. Remove from grill, and layer with the vegetables. Enjoy as open faced grilled sandwiches.', 'I came up with this recipe to entertain friends. Since I am a semi-vegetarian and love to BBQ, I am always inventing something new.', '1/4 cup mayonnaise\r\n3 cloves garlic, minced\r\n1 tablespoon lemon juice\r\n1/8 cup olive oil\r\n1 cup sliced red bell peppers\r\n1 small zucchini, sliced\r\n1 red onion, sliced\r\n1 small yellow squash, sliced\r\n2 (4-x6-inch) focaccia bread pieces, split horizontally\r\n1/2 cup crumbled feta cheese', '', 0, 0, 1, 0, 0),
+(256, 'Baked eggs with spinach & tomato', 'Heat oven to 200C/180C fan/gas 6. Put the spinach into a colander, then pour over a kettle of boiling water to wilt the leaves. Squeeze out excess water and divide between 4 small ovenproof dishes.\r\nMix the tomatoes with the chilli flakes and some seasoning, then add to the dishes with the spinach. Make a small well in the centre of each and crack in an egg. Bake for 12-15 mins or more depending on how you like your eggs. Serve with crusty bread, if you like.', 'A rustic dish with a delicious combination of flavours and just four ingredients, try whipping it up for brunch', 'bag spinach\r\ncan chopped tomatoes\r\n1 tsp chilli flakes\r\n4 eggs', '', 0, 0, 1, 0, 0),
+(262, 'Quick chicken chasseur', 'Heat a shallow saucepan and sizzle the bacon for about 2 mins until starting to brown. Throw in the chicken, then fry for 3-4 mins until it has changed colour. Turn up the heat and throw in the mushrooms. Cook for a few mins, stir in the flour, then cook until a paste forms.\r\nTip in the tomatoes, stir, then crumble in the stock cube. Bubble everything for 10 mins, splash in the Worcestershire sauce, stir through the parsley, then serve with mash or boiled rice.', 'A classic in a flash, you can also use beef. Either way - it''s a winner', '8 rashers streaky bacon , chopped into large pieces\r\n4 chicken breasts , cut into large chunks\r\n7 oz pack baby button mushrooms\r\n1 tbsp plain flour\r\n14 oz tin chopped tomatoes with garlic\r\n1 beef stock cube\r\ndash Worcestershire sauce\r\nhandful of parsley , chopped', '', 0, 0, 2, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `uploaded`
+--
+
+CREATE TABLE IF NOT EXISTS `uploaded` (
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `recipe_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `time_uploaded` date NOT NULL,
+  PRIMARY KEY (`recipe_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `uploaded`
+--
+
+INSERT INTO `uploaded` (`user_id`, `recipe_id`, `time_uploaded`) VALUES
+(1, 3, '2012-03-23'),
+(1, 4, '2012-03-23'),
+(1, 6, '2012-03-23'),
+(1, 7, '2012-03-23'),
+(1, 8, '2012-03-23'),
+(1, 9, '2012-03-23'),
+(0, 253, '2012-04-01'),
+(0, 256, '2012-04-02'),
+(0, 257, '2012-04-03'),
+(0, 258, '2012-04-03'),
+(0, 259, '2012-04-03'),
+(0, 260, '2012-04-03'),
+(0, 261, '2012-04-03'),
+(0, 262, '2012-04-03'),
+(0, 263, '2012-04-03'),
+(0, 264, '2012-04-03'),
+(0, 265, '2012-04-03'),
+(0, 266, '2012-04-03'),
+(0, 267, '2012-04-03'),
+(0, 268, '2012-04-03'),
+(0, 269, '2012-04-03'),
+(0, 270, '2012-04-03'),
+(0, 271, '2012-04-03'),
+(0, 272, '2012-04-03'),
+(0, 273, '2012-04-03'),
+(0, 274, '2012-04-03'),
+(0, 275, '2012-04-03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_favorites`
+--
+
+CREATE TABLE IF NOT EXISTS `user_favorites` (
+  `user_id` int(10) unsigned NOT NULL,
+  `recipe_id` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_id`,`recipe_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_info`
+--
+
+CREATE TABLE IF NOT EXISTS `user_info` (
+  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) NOT NULL,
+  `email_address` varchar(64) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `activation_code` varchar(32) NOT NULL,
+  `activated` tinyint(1) NOT NULL,
+  `password_reset_code` varchar(32) NOT NULL,
+  `admin_right` tinyint(1) NOT NULL,
+  `dob` date DEFAULT NULL,
+  `height` int(10) unsigned DEFAULT NULL,
+  `weight` int(10) unsigned DEFAULT NULL,
+  `gender` tinyint(1) DEFAULT NULL,
+  `first_name` varchar(32) DEFAULT NULL,
+  `last_name` varchar(32) DEFAULT NULL,
+  `vegetarian` tinyint(1) NOT NULL DEFAULT '0',
+  `halal` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_id`),
+  FULLTEXT KEY `first_name` (`first_name`,`last_name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `user_info`
+--
+
+INSERT INTO `user_info` (`user_id`, `username`, `email_address`, `password`, `activation_code`, `activated`, `password_reset_code`, `admin_right`, `dob`, `height`, `weight`, `gender`, `first_name`, `last_name`, `vegetarian`, `halal`) VALUES
+(1, 'minhpham', 'phamminh95@gmail.com', '54acdc04e8f0979583434b4a3a6348a3', 'XlcRYdYLthMCC78Ix3sxb2o', 1, 'Gg6aAx17jceRd9cXhTeChBu', 1, '0000-00-00', 172, 70, 1, 'Minh', 'Pham', 1, 1),
+(2, 'phamminh91', 'phamminh92@gmail.com', '9d5e9a06629973b77879a16370af9728', '7v9C4TUfZMCzc2ENeOw7q1d', 1, 'ikgiOZ5cNCK9U6tLrGcOUIW', 0, '0000-00-00', 170, 53, 1, 'Trung Kien', 'Tran', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_plan`
+--
+
+CREATE TABLE IF NOT EXISTS `user_plan` (
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `recipe_id` int(10) unsigned DEFAULT NULL,
+  `time` enum('Monday Breakfast','Monday Lunch','Monday Dinner','Tuesday Breakfast','Tuesday Lunch','Tuesday Dinner','Wednesday Breakfast','Wednesday Lunch','Wednesday Dinner','Thursday Breakfast','Thursday Lunch','Thursday Dinner','Friday Breakfast','Friday Lunch','Friday Dinner','Saturday Breakfast','Saturday Lunch','Saturday Dinner','Sunday Breakfast','Sunday Lunch','Sunday Dinner') NOT NULL DEFAULT 'Monday Breakfast',
+  PRIMARY KEY (`user_id`,`time`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

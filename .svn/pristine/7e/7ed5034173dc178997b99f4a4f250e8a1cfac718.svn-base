@@ -1,0 +1,99 @@
+
+<div class="form-center" style="width:350x; background-color:whiteSmoke">
+	<script type="text/javascript" src="<?php echo base_url();?>style/js/validation_hoa.js"></script>
+	<h1>Signup form</h1>
+
+	<form action="<?php echo base_url(); ?>index.php/user/add_user" method="post" accept-charset="utf-8">
+
+		<!-- Account Info -->
+		<fieldset>
+			<!-- username -->
+			<label>Username (Required)</label><!-- <span style="color:red; float:left;"> *</span> -->
+			<span class="error"><?php echo form_error("username");?></span>
+			<!-- check if username exists -->
+
+			<span>
+				<input type="text" id="username" name="username" value="<?php echo set_value('username'); ?>" onkeyup="validate_chars('username', 'yes1', 'no1')" />
+				<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes1"/>
+				<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no1"/>
+			</span>
+			<br />
+
+			<!-- password -->
+				<label>Password (Required)</label>
+				<span class="error"><?php echo form_error('password');?></span>
+			<span>
+				<input type="password" id="password" name="password" onkeyup="validate_chars('password', 'yes2', 'no2')" />
+				<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes2"/>
+				<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no2"/>
+			</span>
+			</fieldset> <!-- End of account info -->
+
+			<!-- Personal info -->
+			<fieldset>
+				<!-- first name -->
+				<label>First name</label>
+				<span>
+					<input type="text" id="first_name" name ="first_name" value="<?php echo set_value('first_name'); ?>" onkeyup="validate_name('first_name', 'yes3', 'no3')" />
+					<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes3" />
+					<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no3" />
+				</span>
+				<br/>
+
+				<!-- last name -->
+				<label>Last name</label>
+				<span>
+					<input type="text" id="last_name" name="last_name" value="<?php echo set_value('last_name'); ?>" onkeyup="validate_name('first_name', 'yes4', 'no4')" />
+					<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes4" />
+					<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no4" />
+				</span>
+				<br />
+
+				<!-- email address -->
+				<label>Email address (Required)</label><!-- <span id="asterisk"> *</span> -->
+				<span class="error"><?php echo form_error('email_address');?></span>
+				<!-- check if email address exists -->
+				<span>
+					<input type="text" id="email_address" name="email_address" value="<?php echo set_value('email_address'); ?>" onkeyup="validate_email('email_address', 'yes5', 'no5')" />
+					<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes5" />
+					<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no5" />
+				</span>
+				<br />
+
+				<!-- submit button -->
+				<input type="submit" name="submit" value="Create Account" />
+
+			</fieldset> <!-- End of Personal Info -->
+
+		</form>
+		<!-- <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '184308401687005',
+            status     : true,
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+        };
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+      </script>
+      <div class="fb-login-button" scope="email,user_checkins,user_birthday,user_interests">
+        Signup with Facebook
+      </div> -->
+	</div><!-- end of form-signup -->
+
+
+
+
+
+
+
+
+

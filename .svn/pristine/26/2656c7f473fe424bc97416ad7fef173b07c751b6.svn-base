@@ -1,0 +1,30 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title>Recipe: <?php echo $title; ?></title>
+	<meta  charset="iso-8859-1" />
+    <link href="<?php echo base_url(); ?>style/css/recipe_page_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	  <div id="background">
+	  	<div id="page">
+			<div class="header">
+					<div class="body">
+                    	<div id="content">
+                        <h2><?php echo $title; ?></h2>
+                        <table id='recipe' class="recipeTable" width=100%;
+		 cellpadding=20px;>
+                        <tr>
+                        <td width=30% valign="top"><img src="<?php echo base_url(); ?>style/images/2.jpg" width="235" height="132" alt=""></td>
+                        <td width=30% valign="top"><h3 style="color:red">INGREDIENTS</h3><?php echo $ingredients; ?></td>
+                        <td width=40% valign="top"><h3 style="color:red">METHOD</h3><?php echo $description; ?></td>
+                        </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

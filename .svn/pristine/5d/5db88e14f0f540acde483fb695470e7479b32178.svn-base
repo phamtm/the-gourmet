@@ -1,0 +1,51 @@
+
+<!--<iframe width="425" height="350"
+	frameborder="0" scrolling="no"
+	marginheight="0" marginwidth="0"
+	src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=NTU+Singapore&amp;aq=0&amp;oq=ntu+sin&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=NTU&amp;hnear=Singapore&amp;t=m&amp;ll=1.319841,103.762026&amp;spn=0.077381,0.196952&amp;output=embed">
+	</iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=NTU+Singapore&amp;aq=0&amp;oq=ntu+sin&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=NTU&amp;hnear=Singapore&amp;t=m&amp;ll=1.319841,103.762026&amp;spn=0.077381,0.196952"
+	style="color:#0000FF;text-align:left">
+	View Larger Map</a></small>
+-->
+	<div class="search-sidebar">
+		<ul>
+			<li><a href="<?php echo base_url(); ?>index.php/admin/index_recipe">Manage Recipe</a></li>
+			<li><a href="<?php echo base_url(); ?>index.php/admin/index_user">Manage User</a></li>
+		</ul>
+	</div>
+
+
+<?php
+	echo "<div class='admin-content'>";
+	echo "<h2>Manage Recipes</h2>";
+	echo "</div>";
+	echo "<div class='deleted-notation'>";
+	if (isset($deleted) and $deleted==TRUE) echo "Recipe Deleted!";
+	if (isset($edited) and $edited==TRUE) echo "Recipe Edited!";
+	echo "</div>";
+?>
+
+<?php
+	echo "<div class='admin-table'><table border=\"1\">";
+	if (isset($records)) {
+	$query = $records;
+	echo "<th>ID</th> <th>Recipe Name</th> <th>Description</th> <th>Delete</th> <th>Edit</th>";
+	foreach($query->result() as $row) {
+	echo "<tr>";
+		echo "<td>".$row->recipe_id."</td>";
+		echo "<td id='edit-link'>".anchor('recipe/view_recipe/'.$row->recipe_id,$row->recipe_name)."</td>";
+		echo "<td>".$row->description."</td>";
+		echo "<td id='edit-link'>".anchor('admin/delete_recipe/'.$row->recipe_id,'Delete')."</td>";
+		echo "<td id='edit-link'>".anchor('admin/edit_recipe/'.$row->recipe_id,'Edit')."</td>";
+	echo "</tr>";
+	}
+	}
+	echo "</table></div>";
+	echo "<div class='pagination-link'>";
+	echo $this->pagination->create_links();
+	echo "</div>";
+
+?>
+
+
+

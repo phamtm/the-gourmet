@@ -1,0 +1,100 @@
+
+<script type="text/javascript">
+function displayForm(formName)
+{
+  if (document.getElementById(formName).style.display != 'none')
+    document.getElementById(formName).style.display = 'none';
+  else
+    document.getElementById(formName).style.display = 'block';                        
+}
+</script>
+<div id="background">
+  <div id="page">
+    <div class="header">
+      <div class="footer">
+        <div class="body">
+          <div id="sidebar">
+            <ul class="navigation">                   
+             <li><?php echo anchor('welcome/load_accInfo_view','Account Info','title="accountInfo_view"'); ?></li>
+           </ul>            
+         </div>
+         <div id="content">
+          <div class="content">               
+            <table class='stripTable' width=100%>
+              <tr>
+                <td>Name</td>
+                <td>Minh Pham</td>                                                  
+                <td><a href="#" onclick='displayForm("form-name"); return false;'>Edit</a></td>
+              </tr>
+            </table>
+
+            <table id="form-name" style="display:none;">
+              <form method="post" action="">
+                <tr>
+                  <td><label for="firstName">First</label></td>
+                  <td><input id="firstName" name="firstName" type="text" size="35" value="" autocomplete="off"/></td>
+                </tr>
+                <tr>
+                  <td><label for="middleName">Middle</label></td>
+                  <td><input id="middleName" name="middleName" type="text" size="35" value="" autocomplete="off"/></td>
+                </tr>
+                <tr>
+                  <td><label for="lastName">Last</label></td>
+                  <td><input id="lastName" name="lastName" type="text" size="35" value="" autocomplete="off"/></td>
+                </tr>
+                <tr>
+                  <td>To save these settings, please enter your password.</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><label for="password">Password</label></td>
+                  <td><input id="password" name="password" type="password" size="35" value="" autocomplete="off"/><br /></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>                    
+                    <input class="button" type="submit" name="submit" value="Save changes"/>
+                    <input class="button" type="button" name="submit" value="Cancel" onclick="displayForm('form-name');"/>
+                  </td>
+                </tr>
+              </form>
+            </table>
+
+            <table class='stripTable' width=100%>
+              <tr>
+                <td>Username</td>
+                <td>Minh Pham</td>                                                  
+                <td><a href="#" onclick='displayForm("form-username"); return false;'>Edit</a></td>
+              </tr>
+            </table>
+            <table id="form-username" style="display:none;">
+              <form method="post" action="">
+                <tr>
+                  <td><label>New username:</label></td>
+                  <td><input id="username" name="username" type="text" size="35" value="" autocomplete="off"/></td>
+                </tr>
+                <tr>
+                  <td>To save these settings, please enter your password.</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><label for="password">Password</label></td>
+                  <td><input id="password" name="password" type="password" size="35" value="" autocomplete="off"/><br /></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>                    
+                    <input class="button" type="submit" name="submit" value="Save changes"/>
+                    <input class="button" type="button" name="submit" value="Cancel" onclick="displayForm('form-username');"/>
+                  </td>
+                </tr>
+              </form>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

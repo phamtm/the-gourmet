@@ -1,0 +1,75 @@
+<div class="gourmet-title">The Gourmet</div>
+
+<div class="center-holder">
+
+	<div id="gallery">
+
+		<div id="slides">
+
+			<div class="slide"><a href="/index.php/recipe/browse"><img src="<?php echo base_url(); ?>style/img/slideshow/sample_slides/macbook.jpg" width="600" height="400" alt="side" /></a></div>
+			<div class="slide"><a href="/index.php/recipe/browse"><img src="<?php echo base_url(); ?>style/img/slideshow/sample_slides/iphone.jpg" width="600" height="400" alt="side" /></a></div>
+			<div class="slide"><a href="/index.php/recipe/browse"><img src="<?php echo base_url(); ?>style/img/slideshow/sample_slides/imac.jpg" width="600" height="400" alt="side" /></a></div>
+
+		</div>
+
+		<div id="menu">
+
+			<ul>
+				<li class="menuItem"><a href=""><img src="<?php echo base_url(); ?>style/img/slideshow/sample_slides/thumb_macbook.png" alt="thumbnail" /></a></li>
+				<li class="menuItem"><a href=""><img src="<?php echo base_url(); ?>style/img/slideshow/sample_slides/thumb_iphone.png" alt="thumbnail" /></a></li>
+				<li class="menuItem"><a href=""><img src="<?php echo base_url(); ?>style/img/slideshow/sample_slides/thumb_imac.png" alt="thumbnail" /></a></li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="form-center" id ="form-signup">
+		<script type="text/javascript" src="<?php echo base_url();?>style/js/validation_hoa.js"></script>
+
+		<h1>Register</h1>
+
+		<span>Share your recipes with the world</span>
+		<br/><br/>
+
+		<form action="<?php echo base_url(); ?>index.php/user/add_user" method="post" accept-charset="utf-8">
+
+			<fieldset>
+
+				<!-- email address -->
+				<label>Email address (Required)</label>
+				<span class="error"><?php echo form_error('email_address');?></span>
+
+				<span>
+					<input type="text" id="email_address" name="email_address" value="<?php echo set_value('email_address'); ?>" onkeyup="validate_email('email_address', 'yes5', 'no5')" />
+					<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes5" style="float:left;" />
+					<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no5" style="float:left;" />
+				</span>
+				<br />
+
+				<!-- password -->
+				<label>Password (Required)</label>
+				<span class="error"><?php echo form_error('password');?></span>
+				<span>
+					<input type="password" id="password" name="password" onkeyup="validate_chars('password', 'yes2', 'no2')" />
+					<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes2"/>
+					<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no2"/>
+				</span>
+
+				<!-- password -->
+	 			<label>Confirm Password (Required)</label>
+					<span class="error"><?php echo form_error('passconf');?></span>
+					<span>
+						<input type="password" id="passconf" name="passconf" onkeyup="validate_chars('password', 'yes2', 'no2')" />
+						<img src="<?php echo base_url(); ?>style/img/yes.png" alt="yes" width="16" height="16" id ="yes2"/>
+						<img src="<?php echo base_url(); ?>style/img/no.png" alt="no" width="16" height="16" id ="no2"/>
+					</span>
+
+			</fieldset> <!-- End of account info -->
+
+			<!-- submit button -->
+			<button class="cupid-green" type="submit" style="margin-left:60px; margin-top:20px;">Create Account</button>
+		</form>
+	</div><!-- end of form-signup -->
+
+</div>

@@ -1,0 +1,20 @@
+<!-- fieldset- Group similar elements -->
+<div class="form-center" style="width:400px;">
+	<h1>Edit Profile</h1>
+	<form action="<?php echo base_url(); ?>index.php/user/update_profile_password" method="post" accept-charset="utf-8">
+		<table>
+			<tr>
+				<td>Current Password</td>
+				<td><input type="password" name="old_password" id="input"></td>
+			</tr>
+			<tr>
+				<td>New Password</td>
+				<td><input type="password" name="password"  id="input"></td>
+			</tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td><input type="password" name="confirm_password" id="input" class="idleField"></td>
+			</tr>
+		</table>
+	</form>
+</div>

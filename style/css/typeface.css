@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*========== TYPEFACES ==========*/
+@font-face {
+	font-family: 'Pacifico';
+	src: url('../typeface/Pacifico.ttf');
+}
+
+@font-face {
+	font-family: 'Ballpark';
+	src: url('../typeface/ballpark_weiner.ttf');
+}
+
+@font-face {
+	font-family: 'BallparkIE';
+	src: url('../typeface/ballpark_ie.eot');
+}
+
+@font-face {
+	font-family: 'ACaslonPro-Italic';
+	src: url('../typeface/acaslonproitalic.ttf');
+}
+
+@font-face {
+	font-family: 'Typewriter';
+	src: url('../typeface/atwriter.ttf');
+}

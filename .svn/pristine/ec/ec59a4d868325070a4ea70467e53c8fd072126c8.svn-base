@@ -1,0 +1,22 @@
+<div class="form-center">
+	<h1>Reset Password</h1>
+	<tr>
+				<td>Current Password</td>
+				<td><input type="password" name="old_password" id="s-input"></td>
+			</tr>
+			<tr>
+				<td>New Password</td>
+				<td><input type="password" name="password"  id="s-input"></td>
+			</tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td><input type="password" name="confirm_password" id="s-input" class="idleField"></td>
+			</tr>
+		<fieldset>
+			<form action="<?php echo base_url(); ?>index.php/user/send_password_reset_code" method="post" accept-charset="utf-8">
+				Enter your email address:
+				<input type="text" class="s-input"  name="email_address">
+				<input type="submit" name="submit" value="Send Confirm Email">		
+			</form>
+		</fieldset> <!-- End of account info -->
+</div>

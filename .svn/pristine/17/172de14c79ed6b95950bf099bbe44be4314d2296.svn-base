@@ -1,0 +1,36 @@
+<!-- fieldset- Group similar elements -->
+<div id="form-signup">
+	<h1>Signup form</h1>
+		
+		<fieldset>
+			<?php 
+			echo form_open('login/create_member');
+			
+			$data = array('name' => 'username', 'id' => 'input');			
+			echo "Username".form_input($data);
+
+			$data = array('name' => 'password', 'id' => 'input');			
+			echo "Password".form_password($data);									
+			?>
+		</fieldset> <!-- End of account info -->
+
+		<fieldset>
+			<?php						
+			$data = array('name' => 'first_name', 'id' => 'input');
+			echo "First name".form_input($data);			
+			
+			$data = array('name' => 'last_name', 'id' => 'input');
+			echo "Last name".form_input($data);
+			
+			$data = array('name' => 'email_address', 'id' => 'input');
+			echo "Email address".form_input($data);
+
+			echo form_submit('submit', 'Create Account');	
+			?>	
+
+			<!-- Validation -->	
+			
+		</fieldset> <!-- End of Personal Info -->		
+		<?php echo validation_errors('<p class="error">'); ?>
+	
+</div>

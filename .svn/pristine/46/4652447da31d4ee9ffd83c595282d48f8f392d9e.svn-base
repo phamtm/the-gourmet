@@ -1,0 +1,19 @@
+	<span id="logo"><a href="/">The Gourmet</a></span>
+
+	<ul id="nav">		
+		<li><a href="/">Home</a></li>
+		<li><a href="/index.php/recipe/browse_recipe">Browse</a></li>
+		<li><a href="/">Plan Meal</a></li>	
+		<li><a href="/index.php/user/upload_recipe">Upload</a></li>
+		<?php 				
+		if ($this->session->userdata('is_logged_in') or $this->session->userdata('is_logged_in') != null)
+		{				
+			echo "<li>".anchor('user/edit_profile_info', 'Edit Profile')."</li>"; 
+			echo "<li>".anchor('user/log_out', 'Sign Out')."</li>";
+		}
+		else
+			echo "<li>".anchor('user/sign_in', 'Sign In')."</li>";				
+		?>	
+	</ul>
+
+	<div id="wrapper">

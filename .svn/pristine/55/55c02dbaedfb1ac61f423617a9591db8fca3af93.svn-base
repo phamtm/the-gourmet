@@ -1,0 +1,69 @@
+<script type="text/javascript" src="http://gettopup.com/releases/latest/top_up-min.js"></script>
+
+<div class="fv-view">
+	<div class="fv-header">
+		<div class="fv-title">Pepperoni Pizza</div>
+		<div class="fv-description">
+			A tastilicious original Italian Pizza, featured in the Godfather trilogy
+		</div>
+	</div>
+
+	<div class="fv-image">
+		<?php 			
+			$row = $records->row();
+			echo "<a href=\"".base_url()."/media/recipe_imgs/".$row->recipe_id.".jpg\" class=\"tu_db\" toptions=\"shaded = 1, overlayClose = 1, title=Pepperoni Pizza\" />";
+			echo "<img src=\"".base_url()."/media/recipe_imgs/thumbs/".$row->recipe_id.".jpg\" alt=\"recipe\" width=\"500px\" height=\"313px\" />";
+			echo "<div class=\"thumb-caption\">Click to View Picture</div>";
+			echo "</a>";					
+		?>
+<!-- 		<a href="<?php echo base_url() ?>/media/recipe_imgs/3.jpg"></a>
+		<img src="<?php echo base_url() ?>/media/recipe_imgs/thumbs/3.jpg" alt="" width="500px" height="313px"> -->
+	</div>
+
+	<div class="fv-details">
+		<div class="fv-left-panel">
+			<div class="fv-left">			
+				<h2 style="font-size:1.5em; line-height:2em;">Ingredients</h2>
+				<ul>
+					<li>1 oz butter</li>
+					<li>2 tbsp olive oil</li>
+					<li>3 garlic cloves , finely chopped</li>
+					<li>1 red chilli , seeds left in and finely chopped</li>
+					<li>1/2 tsp sweet paprika</li>
+					<li>12-20 large raw king prawns with shells</li>
+					<li>juice 1 lemon , plus a few slices for a finger bowl</li>
+					<li>1/2 small bunch parsley , roughly chopped</li>
+					<li>small loaf crusty bread , warmed to serve</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fv-right-panel">
+			<div class="fv-right">
+				<h2 style="font-size:1.5em; line-height:2em;">Steps</h2>
+				<ul>
+					<li>Melt the butter and oil together in a frying pan.</li>
+					<li>Add some lemon slices to a finger bowl of warm</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="food-river">
+	<h2 style="text-align:center; margin-bottom:10px;">Related Recipes:</h2>
+	<div class="food-river-content">
+		<a href="" title="Some recipe name">
+			<div class="food-river-box"><img src="<?php echo base_url(); ?>/style/img/bg1.jpg" width="180" height="100" alt=""></div>
+		</a>
+		<a href="" title="Some recipe name">
+			<div class="food-river-box"><img src="<?php echo base_url(); ?>/style/img/bg1.jpg" width="180" height="100" alt=""></div>
+		</a>
+		<a href="" title="Some recipe name">
+			<div class="food-river-box"><img src="<?php echo base_url(); ?>/style/img/bg1.jpg" width="180" height="100" alt=""></div>
+		</a>
+		<a href="" title="Some recipe name">
+			<div class="food-river-box"><img src="<?php echo base_url(); ?>/style/img/bg1.jpg" width="180" height="100" alt=""></div>
+		</a>
+	</div>
+</div>

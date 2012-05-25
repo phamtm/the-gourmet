@@ -1,0 +1,155 @@
+/*------------ADMIN HOME PAGE------------------*/
+.admin-welcome {
+	text-align:center;
+	font-family:Ballpark,BallparkIE;
+	font-size:40px;
+	margin-bottom:10px;
+}
+
+.admin-content {
+	text-align:center;
+	font-family:Georgia;
+	font-size:30px;
+	color:black;
+	padding-bottom:20px;
+}
+#admin-content-link a{
+	text-align:center;
+	font-family:Georgia;
+	font-size:30px;
+	color:#648BFF;
+}
+
+/*-----------SENDING EMAIl SECTION----------------*/
+.admin-send-email {
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#B5C4B6;
+	border:10px solid white;
+	text-align:center;
+	font-family:Georgia;
+	color: #FF2F0A;
+	font-size: 100%;
+	padding: 20px;
+	line-height:1.3em;
+	padding-top: 30px;
+	padding-bottom:50px;
+	border: 10px solid white;
+	box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+}
+
+#send-email-heading{
+	margin-bottom:30px;
+	color: white;
+	text-align:center;
+	font-size:40px;
+	font-family:Georgia;
+}
+#send-email-area{
+	float:top;
+	width: 100%;
+	font-family:"Myriad Pro";
+
+}
+#send-email-area label{
+	text-align:left;
+	color:black;
+	display: block;
+	font-size:20px;
+}
+#send-email-area textarea {
+	width:100%;
+	height:150px;
+}
+#send-email-area input[type="text"] {
+	width:100%;
+}
+
+/*----------------TABLE SECTION--------------------*/
+.admin-table {
+	table-collapse:collapse;
+	margin:0 auto;
+	font-size:18px;
+	width:40%;
+}
+.admin-table table{
+	text-align:center;
+	border: 1px solid #9BBBFF;
+	border-collapse: collapse;
+	width: 600px;
+	margin-bottom: 10px;
+	font-family:Georgia;
+	font-size:0.9em;
+	float:left;
+}
+
+.admin-table table th {
+	text-align: center;
+	padding-top: 20px;
+	height:30px;
+	padding-left:lem;
+	background: #ccc;
+	border-bottom: 1px solid white;
+	border-right: 1px solid #aaaaaa;
+
+}
+
+.admin-table table tr{
+	border: 1px solid #9BBBFF;
+	margin-bottom: 10px;
+	padding:10px;
+}
+
+.admin-table table td {
+	border-right: 1px solid #aaaaaa;
+	width:30px;
+	padding:lem;
+}
+
+#edit-link a{
+ 	padding:5px;
+ 	padding-top:5px;
+ 	color:#3755FF;
+ }
+
+#edit-link a:hover{
+ 	color:#FF4023;
+ 	text-decoration:underline;
+ }
+
+.admin-table table td:last-child {
+	border-right: none;
+}
+/*-----------------OTHERS-----------------------*/
+
+.deleted-notation {
+	text-align:center;
+	color:red;
+	font-size:20px;
+	margin-bottom:10px;
+}
+
+.admin-table table tr td {
+	padding:10px;
+	font-family:"Times New Roman";
+	font-size:0.9em;
+}
+.admin-table table tr td:nth-child(2) {
+	color:red;
+	width:300px;
+	text-align: left;
+}
+
+.admin-table table tr td:nth-child(3) {
+	width:550px;
+	text-align: left;
+}
+
+.admin-table table tr td:nth-child(4) {
+	text-align: left;
+}
+
+.admin-table table tr td:nth-child(5) {
+	text-align: left;
+}

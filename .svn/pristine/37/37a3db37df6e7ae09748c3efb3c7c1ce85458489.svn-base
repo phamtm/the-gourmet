@@ -1,0 +1,206 @@
+<?php 
+
+	class User_model extends CI_Model 
+	{
+		//===================== LOGGING IN LOGIC=========================/
+		function validate_login() 
+		{
+			$this->db->where('username', $this->input->post('username'));
+			$this->db->where('password', md5($this->input->post('password')));
+			$this->db->where('activated', 1);
+			$query = $this->db->get('user_info');
+
+			// one record is returned
+			if ($query->num_rows() == 1)		
+				return true;		
+		}
+
+		// return user_email_address, first_name, last_name, height, weight, gender
+		function get_user($user_name)
+		{
+			$query_str     = "SELECT * FROM user_info WHERE username = ?";
+			$query_r       = $this->db->query($query_str, $user_name);
+			return $query_r;
+		}
+
+		//===================== REGISTRATION LOGIC=========================/
+		// check validation code
+		function confirm_registration($registration_code)
+		{
+			$query = "SELECT user_id FROM user_info WHERE activation_code = ?";
+			$user_id = $this->db->query($query, $registration_code);
+			if ($user_id->num_rows() == 1)
+			{
+				$query = "UPDATE user_info SET activated = 1 WHERE activation_code = ?";
+				$this->db->query($query, $registration_code);
+				return true;
+			}
+
+			return false;
+		}
+
+		// add a new unauthenticated user to database
+		// only if validation pass
+		function register_user($username, $password, $email, $first_name, $last_name, $activation_code, $password_reset_code)
+		{
+			//1. Insert into user_account_info
+			$account_info = array(
+					'username'            => $username,
+					'password'            => $password,
+					'email_address'       => $email,
+					'activation_code'     => $activation_code,
+					'password_reset_code' => $password_reset_code,
+					'activated'           => false,
+					'admin_right'         => false,					
+					'first_name'          => $first_name,
+					'last_name'           => $last_name,
+					'dob'=> 0,									
+				);		
+
+			$insert_result = $this->db->insert('user_info', $account_info);
+			
+
+			return $insert_result;
+		}
+
+		// check if username exists		
+		function check_username_exist($user_name)
+		{
+		    $this->db->where('username',$user_name);
+		    $query=$this->db->get('user_info');
+		    if($query->num_rows()>0)	    
+		        return true;
+		    else	    
+		        return false;	    
+		}
+
+		// check if email exists
+		function check_email_exist($email_address)
+		{
+		    $this->db->where('email_address',$email_address);
+		    $query=$this->db->get('user_info');
+		    if($query->num_rows()>0)	    
+		        return true;	    
+		    else
+		        return false;	    
+		}
+
+		// creat a random string of predefined length
+		function _random_string($length)
+		{
+			$this->load->helper('string');
+			$len  = $length;
+			$base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
+			$max  =strlen($base)-1;
+			$activation_code = '';
+			mt_srand((double)microtime()*1000000);
+			while (strlen($activation_code)<$len+1)
+				$activation_code.=$base{mt_rand(0, $max)};
+			
+			return $activation_code;
+		}
+
+		//===================== PASSWORD RESET LOGIC=========================/
+		// return password_reset_code
+		function get_password_reset_code($email_address)
+		{
+			$query_str = "SELECT password_reset_code FROM user_info WHERE email_address = ?";
+			$r = $this->db->query($query_str, $email_address);
+
+			if ($r->num_rows() == 1)
+				foreach ($r->result() as $row)
+					$pwd = $row->password_reset_code;
+			return $pwd;
+		}
+
+		// check password_reset_code against db
+		function confirm_reset_password($reset_code)
+		{					
+			$query = "SELECT user_id FROM user_info WHERE password_reset_code = ?";
+			$query_r = $this->db->query($query, $reset_code);
+			
+			if ($query_r->num_rows() == 1)
+			{
+				$user_id = $query_r->row()->user_id;
+				$query = "UPDATE user_info SET password_reset_code = ? WHERE user_id = ?";
+				$new_reset_code = $this->_random_string(22);
+				$data = array('password_reset_code' => $new_reset_code, 'user_id' => $user_id);
+				$this->db->query($query, $data);
+				return true;
+			}
+
+			return false;
+		}
+
+		//===================== UPDATE PROFILE LOGIC=========================/		
+		function update_account_info($data)
+		{			
+			if ($data['email_address'] != null)
+				$this->update_fields('user_info', 'user_id', $user_id, 'first_name', $data['first_name']);
+			if ($data['password'] == $data['confirm_password']
+				and $data['password'] != null)
+				update_fields('user_info', 'user_id', $user_id, 'first_name', $data['first_name']);
+		}
+
+		function update_personal_info($data)
+		{
+			$user_id = $this->session->userdata('user_id');
+
+			if ($data['first_name'] != null)
+				if (!$this->update_fields('user_info', 'user_id', $user_id, 'first_name', $data['first_name']))
+					return false;
+			if ($data['last_name'] != null)
+				if (!$this->update_fields('user_info', 'user_id', $user_id, 'last_name', $data['last_name']))
+					return false;	
+			if ($data['height'] != null)
+				if (!$this->update_fields('user_info', 'user_id', $user_id, 'height', $data['height']))
+					return false;
+			if ($data['weight'] != null)
+				if (!$this->update_fields('user_info', 'user_id', $user_id, 'weight', $data['weight']))
+					return false;				
+			if ($data['dob'] != null)
+				if (!$this->update_fields('user_info', 'user_id', $user_id, 'dob', $data['dob']))
+					return false;
+			if ($data['gender'] != null)
+				if (!$this->update_fields('user_info', 'user_id', $user_id, 'gender', $data['gender']))
+					return false;
+			return true;
+		}
+
+		// update a field in a tuple
+		function update_fields($table_name, $key, $key_value, $field_name, $field_value)
+		{			
+			$query_str = 'UPDATE '.$table_name.' SET '.$field_name.' = '."'".$field_value."'".' WHERE '.$key.' = '."'".$key_value."'";
+			$update_succesful = $this->db->query($query_str);
+			return $update_succesful;
+		}
+
+		// return user_id
+		function get_user_id($username)
+		{
+			$query_str = 'SELECT user_id FROM user_info WHERE username = ?';
+			$result = $this->db->query($query_str, $username);
+
+			if ($result->num_rows == 1)
+			{
+				foreach ($result->result() as $row)
+					$user_id = $row->user_id;
+				return $user_id;
+			}
+			else
+				return -1;			
+		}
+		//Edit Profile Functions
+		function getAccountInfo($user_id){
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('user_id', $user_id);
+		$query = $this->db->get();
+		return $query->row();
+		}
+		function updateAccountInfo($data,$user_id){
+			$this->db->where('user_id',$user_id);
+			$this->db->update('user',$data);
+		}			
+	}
+?>

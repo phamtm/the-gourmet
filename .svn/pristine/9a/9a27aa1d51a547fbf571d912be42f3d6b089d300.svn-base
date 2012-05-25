@@ -1,0 +1,447 @@
+@charset "UTF-8";
+
+/*========== FORMS UNIVERSAL==========*/
+fieldset {
+	border-radius:7px;
+	border:1px solid gray;
+	border:medium;
+	font-size: 0.8em;
+}
+
+fieldset span#asterisk {
+	color:red;
+}
+
+.inputText {
+	border-radius:5px;
+	display:block;
+	outline:none;
+	min-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.focusfield {
+	border:2px solid #e53326;
+	background:#EFF5FF;
+	background-color:#EFF5FF;
+}
+
+.idlefield {
+	background:#EEE;
+	border: 2px solid #DFDFDF;
+	background-color: #EEE;
+}
+
+/*========== FORMS SIGNUP==========*/
+.form-center {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-family:"Lucida Sans";
+	padding: 20px;
+	padding-bottom: 40px;
+}
+
+.form-center input[type="text"], .form-center input[type="password"] {
+	outline:none;
+	width:100%;
+	min-height:25px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:5px;
+	-webkit-border-radius:3px;
+	border:1px solid #ccc;
+}
+
+.form-center span {
+	display:inline-block;
+}
+
+.form-center span img{
+	visibility:hidden;
+	position:absolute;
+	position:inherit;
+	float:left;
+}
+
+.form-center h1 {
+	text-align:center;
+	font-weight:bold;
+}
+
+.form-center fieldset label {
+	display:block;
+	font-size:1.2em;
+}
+
+.form-center fieldset form label {
+	display:block;
+	float:left;
+}
+
+/*========== UPLOAD RECIPE PAGE ==========*/
+#upload-area {
+	width: 500px;
+	background-color: rgba(255, 255, 255, 0.4);
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 100%;
+	padding: 20px;
+	line-height:1.3em;
+	padding-top: 60px;
+	padding-bottom:50px;
+	border: 10px solid white;
+	box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+	-moz-box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+	-webkit-box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+}
+
+#upload-title {
+	width:100%;
+	height: 100px;
+	text-align:center;
+	font-family: "Myriad Pro";
+	font-weight: bold;
+	font-size:3em;
+}
+
+#upload-area textarea {
+	overflow: auto;
+}
+
+#rec-desc {
+	float:top;
+	width: 100%;
+	font-family:"Lucida Sans";
+}
+
+#rec-desc textarea{
+	width: 100%;
+}
+
+#rec-desc lablel, #rec-desc textarea {
+	display:block;
+}
+
+#rec-desc input[type="text"] {
+	display:block;
+	width: 100%;
+}
+
+#rec-desc textarea, #rec-desc input[type="text"] {
+	border-radius:5px;
+	outline:none;
+	border: 1px solid #ccc;
+}
+
+#rec-desc p.instruction {
+	font-size: 0.8em;
+	line-height: 0.8em;
+	font-style: italic;
+	color:red;
+}
+
+
+.form-center fieldset .error {
+	color:red;
+	font-size:1em;
+	display:block;
+	float:left;
+	line-height:0.9em;
+	padding:0;
+}
+
+.edit-hidden{
+	border-bottom: 1px solid #036;
+	margin: 0 auto;
+	width: 580px;
+	font-family: Georgia;
+	padding: 10px 0px;
+	float:left;
+	display: block;
+	font-size: 0.9em;
+	line-height: 1.2em;
+}
+
+/*========== Sign in page ==========*/
+#form-signin {
+	/*	background-color: #f5f5f5;*/
+	margin: 0 0;
+	float:left;
+	border: none;
+	margin-left: 5px;
+	width:250px;
+	color:none;
+}
+
+#form-signin input[type="text"], #form-signin input[type="password"] {
+	outline:none;
+	width:100%;
+	min-height:25px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:5px;
+}
+
+a.signin-right-button, a.signin-right-button:hover {
+	color:#0089CD;
+	text-decoration:none;
+	float:right;
+	margin-top:8px;
+}
+
+.center-holder {
+	/*width: 100%;
+	padding-left:20%;*/
+	margin: 0 auto;
+	width: 900px;
+	height:447px;
+	background:-webkit-gradient(linear, left top, left bottom, from(white), to(#CFCFCF));
+	margin-bottom: 50px;
+	box-shadow:0 0 3px #AAAAAA;
+}
+
+/*========== Sign in page ==========*/
+#form-signup {
+	width:240px;
+	float:left;
+}
+
+
+/* cupid green (inspired by okcupid.com)
+*******************************************************************************/
+button.cupid-green {
+	background-color: #7fbf4d;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
+	background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+	background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+	background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+	background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+	background-image: linear-gradient(top, #7fbf4d, #63a62f);
+	border: 1px solid #63a62f;
+	border-bottom: 1px solid #5b992b;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+	-moz-box-shadow: inset 0 1px 0 0 #96ca6d;
+	box-shadow: inset 0 1px 0 0 #96ca6d;
+	color: #fff;
+	font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	line-height: 1;
+	padding: 7px 0 8px 0;
+	text-align: center;
+	text-shadow: 0 -1px 0 #4c9021;
+	width: 120px;
+}
+
+button.cupid-green:hover {
+	background-color: #76b347;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
+	background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+	background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+	background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+	background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+	background-image: linear-gradient(top, #76b347, #5e9e2e);
+	-webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+	-moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+	box-shadow: inset 0 1px 0 0 #8dbf67;
+	cursor: pointer;
+}
+
+button.cupid-green:active {
+	border: 1px solid #5b992b;
+	border-bottom: 1px solid #538c27;
+	-webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+	-moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+	box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+}
+
+/* minimal
+*******************************************************************************/
+button.minimal {
+  background: #e3e3e3;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #333;
+  font: bold 11px "helvetica neue", helvetica, arial, sans-serif;
+  line-height: 1;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #fff;
+  width: 120px;
+}
+
+/* clean gray
+*******************************************************************************/
+button.clean-gray {
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: linear-gradient(top, #eeeeee, #cccccc);
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+  font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  line-height: 1;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee;
+  width: 150px; }
+  button.clean-gray:hover {
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+    background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: linear-gradient(top, #dddddd, #bbbbbb);
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #ddd; }
+  button.clean-gray:active {
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; }
+
+/* This is the selector of the eleventh box, here's where we establish the measures, background colors, borders and shadows */
+.box11{
+	float:left;
+    margin: 30px auto;
+    width: 600px;
+    min-height: 500px;
+    padding: 0 0 1px 0;
+    padding: 30px;
+    position:relative;
+    background: #f3f3f3;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1,#f3f3f3));
+    background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    -webkit-border-bottom-right-radius: 60px 60px;
+    -moz-border-radius-bottomright: 60px 60px;
+    border-bottom-right-radius: 60px 60px;
+    -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -1px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: -1px 2px 2px rgba(0,0,0,0.2);
+
+}
+
+/* This pseudo class creates the bottom fold */
+.box11:before{
+    content:'';
+    width: 25px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    bottom:0; right:0;
+    background:#fff;
+    background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to( #eee), color-stop(.1,#fff));
+    background: -moz-linear-gradient(0 50%, #fff, #fff 10%, #eee);
+    -webkit-border-bottom-right-radius: 30px;
+    -moz-border-radius-bottomright: 30px;
+    border-bottom-right-radius: 30px;
+    -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -2px -2px 5px rgba(0,0,0,0.3);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+                        transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+    -moz-transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+                        transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+    -o-transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+                        transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+    transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+                        transform: rotate(-20deg)
+                        skew(-40deg,-3deg)
+                        translate(-13px,-13px);
+}
+
+/* This is the shading of the fold */
+.box11:after{
+    content: '';
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 20px 20px 17px rgba(0,0,0,0.2);
+    box-shadow: 20px 20px 17px rgba(0,0,0,0.2);
+    -webkit-transform: rotate(0deg)
+                        translate(-45px,-20px)
+                        skew(20deg);
+    -moz-transform: rotate(0deg)
+                        translate(-40px,-17px)
+                        skew(20deg);
+    -o-transform: rotate(0deg)
+                        translate(-40px,-17px)
+                        skew(20deg);
+    transform: rotate(0deg)
+                        translate(-40px,-17px)
+                        skew(20deg);
+}
+
+/* This is the top tape of the box */
+.box11_tape{
+    position:absolute;
+    top:-25px; left: 30%;
+    width: 130px;
+    height: 40px;
+    background:#ccc;
+    background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+    background: -moz-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+/* Upload box*/
+.upload-description{
+	float:left;
+	width:330px;
+	background-color:yellow;
+	margin-right:40px;
+}
+
+.upload-wrapper{
+	width:1050px;
+	overflow:auto;
+	margin:0 auto;
+	padding-bottom:40px;
+}
+
+

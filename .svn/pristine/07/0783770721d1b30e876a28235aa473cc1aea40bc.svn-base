@@ -1,0 +1,3 @@
+<div class="form-center">
+	<h1>Hello <?php echo $this->session->userdata['first_name'] ?>!</h1>	
+</div>

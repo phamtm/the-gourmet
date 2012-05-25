@@ -1,0 +1,12 @@
+<?php 
+	
+class Signup extends CI_Controller 
+{
+	function index()
+	{
+		$data['main_content'] = "signup";
+		$this->load->view('templates/template', $data);
+	}	
+}
+
+?>

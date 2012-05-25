@@ -1,0 +1,59 @@
+<script type="text/javascript" src="<?php echo base_url();?>style/js/placeholder.js"></script>	
+<script type="text/javascript" src="<?php echo base_url();?>style/js/html5uploader.js"></script>
+
+<div id="upload-area">
+	<img src="<?php echo base_url();?>style/img/clip.png" alt="" style="position:absolute; margin-left:-40px; margin-top:-80px;">
+	<div id="upload-title">
+		Upload Your Recipe
+	</div><!-- end of upload-title -->
+	<div id="rec-desc">
+		<form action="<?php echo base_url(); ?>index.php/user/create_recipe" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+			<label>Recipe Name:</label>
+			<input type="text" id="rec_name" name="recipe_name" size="85" placeholder="E.g. Chocolate &amp; raspberry pots"/>
+			<br>
+			
+			<label>Short Description (&lt; 300 words):</label>			
+			<textarea rows="3" name="rec_desc" placeholder="E.g. These individual fluffy chocolate mousses are a great way to get kids into the kitchen to build their skills"></textarea>
+			<br>
+			<div>
+				<span style="float:left;">
+					<input type="radio" name="meal_time" value="0" /> Breakfast
+					<input type="radio" name="meal_time" value="1" /> Lunch
+					<input type="radio" name="meal_time" value="2" /> Dinner
+				</span>
+
+				<span style="float:right;">
+					<input type="checkbox" name="vegetarian" value="vegeterian" />Vegetarian
+					<input type="checkbox" name="halal" value="halal" />Halal
+				</span>
+				<br><br>
+			</div>	
+        </div>
+        
+
+
+    <div id="list" style="width:200px; height:150px;color:green; border:2px dashed gray;">
+        Drag here to upload <input type="file" id ="drop" style="width:200px; height:200px;  opacity:0;">
+    </div>
+
+<body onload="new uploader('drop', 'status', 'uploader.php', 'list');">
+</body>
+</html>
+        <div>
+			
+			<br><br>
+
+			<label>Ingredients</label>			
+			<textarea rows="7" name="ingredients" placeholder="E.g. 7 oz plain chocolate"></textarea>
+			<br>
+			
+			<label>Steps</label><br>			
+			<textarea rows="10" name="steps" placeholder="E.g. Remove the chocolate from the heat and leave to cool for 10 mins. Meanwhile, divide the raspberries between 6 small ramekins or glasses."></textarea>
+			<br>
+
+			<input type="submit" name="upload" value="Submit" style="margin-left:44%;" />
+		</form>
+	</div>	
+
+</div><!-- end of upload-area -->
+

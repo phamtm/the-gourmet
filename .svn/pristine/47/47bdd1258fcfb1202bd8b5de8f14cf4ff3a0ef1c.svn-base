@@ -1,0 +1,16 @@
+<div id="form-signup">
+	<h1>Welcome to Gourmet</h1>
+	<fieldset>
+		<?php
+			echo form_open('user/validate_login/sign_in');
+			echo "Username";
+			echo form_input('username');		
+			echo "Password".form_password('password');
+			if (!$this->session->userdata('is_logged_in') and $this->session->userdata('sign_in_failed'))
+			 	echo "<br /> Username and password do not match";
+			echo form_submit('submit', 'Sign In');
+			echo "<br />".anchor('/user/sign_up', 'Sign Up');
+			echo "<br />".anchor('/user/forgot_password', 'Forgot your password?');
+		?>
+	</fieldset> <!-- End of account info -->
+</div>

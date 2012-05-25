@@ -1,0 +1,33 @@
+<DOCTYPE html> 
+<html>
+
+<head>
+	<title>The Gourmet | Homepage</title>
+	<link href="layout.css" rel="stylesheet" type="text/css"> 
+
+</head> <!-- End of head -->
+
+<body>
+	<div class="centered" id="header">
+		<ul>
+			<li><a href="">Featured</a></li>
+			<li><a href="">Discover</a></li>			
+			<li><a href="">Meal Planner</a></li>
+			<li><a href="">Edit Profile</a></li>			
+		</ul>			
+	</div> <!-- End of header -->
+
+	<!-- <div id="footer">		
+		<p>
+			<a href="#">The Gourmet</a> Copyright &copy; 2006 - 2011
+			<a href="#">Foodhackers Inc</a>
+		</p>
+		<p>
+			<a href="#">About Us</a>
+			<a href="#">Advertise</a>
+		</p>
+	</div> End of footer -->
+	
+</body> <!-- End of body -->
+
+</html> <!-- End of html -->

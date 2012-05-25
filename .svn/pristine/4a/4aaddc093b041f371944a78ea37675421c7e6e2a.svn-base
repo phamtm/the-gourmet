@@ -1,0 +1,6 @@
+<div class="form-center">
+	<?php 
+		$user_firstname = $this->session->userdata['user']->first_name;
+		echo "<h1>Hello ".$user_firstname."!</h1>";
+	?>	
+</div>

@@ -1,0 +1,25 @@
+<div class="form-center" id="form-signin">
+	<h1>Sign In</h1>
+	<fieldset>
+		<form action="/index.php/user/validate_login/sign_in" method="post" accept-charset="utf-8" autocomplete="off">
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<?php
+			if (isset($id_pwd_not_matched) and $id_pwd_not_matched)
+			{
+				$id_pwd_not_matched = TRUE;
+				echo "<span style='display:block; color:red;'>Username and password do not match</span>";
+			}
+			else
+				echo "<br/>";
+			?>
+			<span style="display:block;">
+				<a href="/index.php/user/forgot_password">Forgot your password?</a>
+				<input type="submit" name="submit" value="Sign In">
+			</span>
+
+			<a href="/index.php/user/sign_up">Sign Up</a><br>
+
+</form>
+</fieldset> <!-- End of account info -->
+</div>

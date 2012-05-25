@@ -1,0 +1,1214 @@
+@charset "UTF-8";
+/*========== RESET STYLE CSS ==========*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Myriad Pro';
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration:none;
+	color:black;
+}
+
+input {
+	outline:none;
+}
+
+input [type="text"], input [type="password"]{
+	border:none;
+}
+
+/*========== TYPEFACES ==========*/
+@font-face {
+	font-family: 'Pacifico';
+	src: url('../typeface/Pacifico.ttf');
+}
+
+@font-face {
+	font-family: 'Ballpark';
+	src: url('../typeface/ballpark_weiner.ttf');
+}
+
+@font-face {
+	font-family: 'BallparkIE';
+	src: url('../typeface/ballpark_ie.eot');
+}
+
+@font-face {
+	font-family: 'ACaslonPro-Italic';
+	src: url('../typeface/acaslonproitalic.ttf');
+}
+
+@font-face {
+	font-family: 'Typewriter';
+	src: url('../typeface/atwriter.ttf');
+}
+
+/*========== PAGE STYLE ==========*/
+
+body {
+	background-color:#F6F6F8;
+	background-position: center top;
+	display: block;
+	position: relative;
+}
+
+html, body {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size:100%;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 3em;
+}
+
+input, textarea {
+/*    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:5px;
+    border:1px solid rgba(0,0,0, 0.2);*/
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, .05),0 1px 0 rgba(255, 255, 255, .075);
+	-webkit-transition: .2s linear background;
+	transition: .2s linear background;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 1px 1px #99C420;
+}
+
+.gourmet-title {
+	width:100%;
+	text-align:center;
+	font-family: Ballpark, BallparkIE;
+	font-size:60px;
+	margin-bottom:10px;
+}
+
+/*========== SEPERATOR ==========*/
+.horizontal-seperator {
+	width:100%;
+	border-bottom:1px solid #ccc;
+}
+
+.vertical-seperator {
+	width:11px;
+	height:100%;
+	border-left:1px solid black;
+	float:left;
+}
+
+/*========== SELECTION COLOR ==========*/
+::selection {
+	background: #e53326;
+	color:white;
+}
+
+/*========== TOP NAVIGATION BAR ==========*/
+.logo {
+	padding: 0 0px;
+	text-align:left;
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+	margin-top:10px;
+	font-weight: normal;
+	font-size: 1.5em;
+	font-family: Ballpark, BallparkIE;
+	color: #5B5847;
+	z-index:11;
+	position: fixed;
+}
+
+.logo a {
+	text-decoration:none;
+}
+
+.logo a:hover {
+	color: #DD3124;
+	text-decoration:none;
+}
+
+.nav{
+	width:100%;
+	border-bottom: 1px solid #ccc;
+	box-shadow: 0px 1px 3px -2px gray;
+	/*box-shadow-bottom:1px 1px 2px 2px rgba(0,0,0,.2);	*/
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-family:Georgia;
+	font-size:0.95em;
+	/*background-attachment: scroll/fixed;*/
+	/*background: white;	*/
+	position:fixed;
+	z-index:10;
+	background-color: #F7F7F7;
+}
+
+.nav li{
+	position:relative;
+	display:inline;
+}
+.nav a{
+	display:inline-block;
+	padding:10px;
+	color: #757575;
+	text-decoration:none;
+	font-size:1em;
+}
+.nav ul{
+	position:absolute;
+	left:-9999px;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.nav ul li{
+	display:block;
+}
+.nav li:hover a{
+	background:#f1f1f1;
+	color:#DD3124;
+}
+.nav li:hover ul a{
+	text-decoration:none;
+	background:none;
+}
+.nav li:hover ul a:hover{
+	text-decoration:none;
+	background:#f1f1f1;
+	/*background:#FFB097;*/
+}
+.nav ul a{
+	white-space:nowrap;
+	display:block;
+	border-bottom:1px solid #ccc;
+	color: #757575;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+/*========== TOP NAVIGATION BAR - ADMIN ==========*/
+#nav-admin {
+	background: black;
+	border:none;
+}
+
+#nav-admin a{
+	color:white;
+}
+
+#nav-admin a:hover {
+	background-color:orange;
+}
+
+#logo-admin {
+	color:white;
+}
+
+#logo-admin a{
+	color:white;
+}
+
+#logo-admin a:hover{
+	color:orange;
+}
+
+/*========== CENTER HEADING ==========*/
+.center-heading {
+	width:70%; text-align:center; font-family: Ballpark, BallparkIE; font-size:40px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom: 1px solid #ccc;
+}
+
+/*========== FOOTER ==========*/
+#footer {
+	clear: both;
+	float:left;
+	width: 100%;
+	height:100px;
+	border-top: 1px solid #CCC;
+	background: #F7F7F7;
+	padding-bottom:50px;
+	color:gray;
+}
+
+#footer a {
+	color:gray;
+	text-decoration:none;
+	font-family:'Myriad Pro';
+	text-align:left;
+}
+
+#footer a:hover {
+	color:black;
+}
+
+.columns {
+	width:60%;
+	height: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 20px;
+}
+
+.column {
+	width: 30%;
+	float:left;
+	margin-left:auto;
+	margin-right:auto;
+	line-height:1.3em;
+	font-size: 0.8em;
+	padding-left: 20px;
+}
+
+.column li.title {
+	font-family:Georgia;
+	font-weight:bold;
+	display: block;
+}
+
+.column li {
+	display: block;
+}
+
+.copyright {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:5px;
+	font-family: Georgia;
+	font-size: 0.9em;
+
+}
+
+/*========== WRAPPER ==========*/
+#wrapper {
+	margin: 0 auto;
+	margin-top:0;
+	margin-bottom:0;
+	padding-top: 100px;
+	padding-bottom: 40px;
+	height:100%;
+	min-height:400px;
+    height:auto !important;
+	background-image: url('../img/bg/bkg_content.jpg');
+	background: repeat-x repeat-y;
+	overflow: auto;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height:100%;
+    padding-bottom: 30px;
+}
+
+/*========== WELCOME USER HAVE LOGGED IN ==========*/
+#welcome {
+	float:right;
+	display:block;
+	font-family:"Lucida Grande";
+	margin-top:-5px;
+	margin-right:20px;
+	font-size:0.9em;
+	text-align:right;
+	position: fixed;
+}
+
+#welcome a:hover {
+	color: #FFB097;
+}
+
+/*========== SEARCH PAGE ==========*/
+.search {
+	width:100%;
+	height:100%;
+	margin-left:auto;
+}
+.search-sidebar {
+	float:left;
+	width:180px;
+	/*background-color: #eee;*/
+	padding-left:30px;
+	position:absolute;
+	height:40%;
+	padding-top:100px;
+	padding-right:20px;
+	list-style:none;
+/*	opacity: 0.6;
+	-moz-opacity: 0.6;
+	filter:alpha(opacity=6);*/
+	font-family:Helvetica;
+	font-weight:bold;
+	font-size:0.9em;
+	border-right: 1px solid #ccc;
+}
+
+.search-sidebar li a.gh-button:hover{
+	color:white;
+}
+
+.search-sidebar ul li {
+	padding:5px;
+	display:block;
+	list-style:none;
+}
+
+.search-sidebar ul li a:visited, .search-sidebar ul li a, .search-sidebar ul li a:active{
+	color:black;
+	text-decoration:none;
+}
+
+.search-sidebar ul li a:hover {
+	color:green;
+}
+
+.search-sidebar ul li ul li {
+	font-size: 0.9em;
+	padding: 5px;
+}
+
+.search-area {
+	float:left;
+	width:80%;
+	height:100%;
+	/*padding-left:70px;*/
+	margin-left:270px;
+}
+
+.search-result {
+	float:left;
+	height:100%;
+	min-height:350px;
+	width:100%;
+}
+
+.collage {
+	float:left;
+	padding-bottom:10px;
+	background-color: white;
+	width:280px;
+	height:240px;
+	font-family:"Lucida Grande";
+	margin-right:50px;
+	margin-bottom:30px;
+	border-radius: 3px;
+	box-shadow:0 0 4px rgba(0,0,0,.2);
+}
+
+ a.collage{
+	text-decoration:none;
+	color:black;
+}
+
+ a:hover .collage, a:active .collage, a:visited .collage {
+	text-decoration:none;
+	color:black;
+	outline: 0;
+}
+
+ a:hover .collage{
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	/*border: 2px solid green;*/
+}
+
+.collage-text {
+	margin:7px;
+}
+
+.collage-title {
+	font-size: 1em;
+	padding-bottom:5px;
+	float:top;
+	text-align:center;
+	width:100%;
+	line-height:0.8em;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 2px;
+}
+
+.collage img {
+	display:block;
+	width:100%;
+	margin-bottom:15px;
+	float:top;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+}
+
+.collage-description {
+	font-size:0.9em;
+	float:top;
+}
+
+.collage div.rating {
+	font-size:0.7em;
+	float:top;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:green;
+	text-align:center;
+}
+
+collage-top-text {
+	width:100%;
+	display:block;
+	float:top;
+}
+
+.pagination-link {
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	padding-top:20px;
+	padding-bottom:20px;
+	width:100%;
+	text-align:center;
+	font-family:"Lucida Grande";
+	font-weight:bold;
+}
+
+.pagination-link a{
+	text-decoration:none;
+	color:gray;
+	width:20px;
+	height:20px;
+	border-radius: 3px;
+}
+
+.pagination-link a:hover{
+	text-decoration:none;
+	color:red;
+	width:20px;
+	height:20px;
+	border-radius: 3px;
+}
+
+/*========== SEARCH BOX CENTER ==========*/
+.cf:before, .cf:after{
+    content:"";
+    display:table;
+}
+
+.cf:after{
+    clear:both;
+}
+
+.cf{
+    zoom:1;
+}
+
+/* Form wrapper styling */
+.form-wrapper {
+    width: 450px;
+    padding: 0px;
+    margin:5px auto 40px auto;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+/* Form text input */
+
+.form-wrapper input {
+    width: 330px;
+    height: 20px;
+    padding: 10px 5px;
+    float: left;
+    font: 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border:0;
+    background: white;
+    border-radius: 3px 0 0 3px;
+    outline: 1px solid #ccc;
+}
+
+.form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.form-wrapper input::-webkit-input-placeholder {
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
+}
+
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Form submit button */
+.form-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #d83c3c;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+
+.form-wrapper button:hover{
+    background: #e54040;
+}
+
+.form-wrapper button:active,
+.form-wrapper button:focus{
+    background: #c42f2f;
+    outline: 0;
+}
+
+.form-wrapper button:before { /* left arrow */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #d83c3c transparent;
+    top: 12px;
+    left: -6px;
+}
+
+.form-wrapper button:hover:before{
+    border-right-color: #e54040;
+}
+
+.form-wrapper button:focus:before,
+.form-wrapper button:active:before{
+        border-right-color: #c42f2f;
+}
+
+.form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+}
+
+/*========== RECIPE VIEW ==========*/
+.foodview {
+	width:1340px;
+	margin-left:auto;
+	margin-right:auto;
+	height:auto;
+}
+
+.foodview-top-row {
+	height: 10%;
+}
+
+.food-title {
+	font-size:2.5em;
+	font-style:small-caps;
+	float:left;
+	width:100%;
+	text-align:center;
+	padding-bottom:20px;
+}
+
+.foodview-wrapper {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.foodview-left-wrapper {
+	width:580px;
+	float:left;
+}
+
+.foodview-left-content {
+	float:right;
+	margin-right:30px;
+	width:500px;
+}
+
+.thumb {
+	border: 5px solid white;
+	border-radius: 3px;
+	box-shadow:2px 2px 10px rgba(0,0,0,.6);
+}
+
+.foodview-left-content img{
+	border-radius:3px;
+}
+
+.thumb-caption {
+	position:absolute;
+	background-color: black;
+	background:rgba(0,0,0,0.5);
+	color:white;
+	margin-top:-45px;
+	margin-left:5px;
+	width:500px;
+	height:30px;
+	text-align:center;
+	font-size:1.2em;
+	padding-top:10px;
+	visibility: hidden;
+}
+
+a:hover img.thumb{
+	box-shadow:2px 2px 5px 2px rgba(0,0,0,.5);
+}
+
+a:hover .thumb-caption {
+	visibility: visible;
+}
+/* Shaded when view picture full screen */
+.te_shaded {
+opacity: .9;
+background: white;
+}
+
+.social-box {
+	width: 500px;
+	padding-left:60px;
+	margin:0 auto;
+	float:left;
+	margin-top:10px;
+}
+
+.fb-like {
+	float:left;
+}
+
+.twitter-share-button{
+	float:left;
+}
+
+.favorite {
+	float:right;
+}
+
+.foodview-right-wrapper {
+	width: 720px;
+	min-width:720px;
+	float:left;
+	min-height:276px;
+	padding-bottom:30px;
+	background-image: url('../img/wash-white-30.png');
+	background: repeat-x repeat-y;
+}
+
+.foodview-right-wrapper li {
+	font-family:"Palatino Linotype";
+	font-size:0.9em;
+	line-height:1.5em;
+}
+
+.foodview-ingredient {
+	float:left;
+	width:40%;
+	min-width:250px;
+	padding-left: 5%;
+	padding-right:5%;
+}
+
+.foodview-right-wrapper ul{
+	list-style:circle;
+}
+
+.foodview-col3-wrapper {
+	float:left;
+	padding-left:5%;
+	padding-right:4%;
+	width:41%;
+}
+
+.food-river {
+	width:100%;
+	float:left;
+	padding-top:60px;
+}
+
+.food-river-content {
+	border-top: 1px solid #ccc;
+	padding-bottom: 10px;
+	padding-top:10px;
+	width:900px;
+	text-align:center;
+	letter-spacing:35px;
+	white-space: nowrap;
+	overflow:hidden;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.food-river-box {
+	width: 180px;
+	height: 100px;
+	border: 3px solid white;
+	border-radius:3px;
+	box-shadow:2px 2px 4px rgba(0,0,0,.5);
+	display:inline-block;
+	margin-right:30px;
+}
+
+a:hover div.food-river-box{
+	border: 3px solid rgba(54, 157, 255, 1);
+	box-shadow: 0 0 5px rgba(9, 178, 255, .9);
+}
+
+.fv-description {
+	font-style:italic;
+	padding-bottom:30px;
+	text-align:center;
+}
+
+/*========== EDIT PROFILE ==========*/
+.error {
+	color:red;
+	font-size:0.9em;
+	display:block;
+	float:left;
+	padding:0;
+	font-family:"Times New Roman";
+}
+
+#edit-profile-error {
+	padding-top:30px;
+	line-height:1.5em;
+}
+
+/*========== SLIDESHOW ==========*/
+/* Gallery styles */
+#gallery{
+	/* CSS3 Box Shadow */
+	-moz-box-shadow:0 0 3px #AAAAAA;
+	-webkit-box-shadow:0 0 3px #AAAAAA;
+	box-shadow:0 0 3px #AAAAAA;
+
+	/* CSS3 Rounded Corners */
+	-moz-border-radius-bottomleft:4px;
+	-webkit-border-bottom-left-radius:4px;
+	border-bottom-left-radius:4px;
+
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;
+	border-bottom-right-radius:4px;
+
+	border:1px solid white;
+
+	background:url(../img/slideshow/panel.jpg) repeat-x bottom center #ffffff;
+
+	/* The width of the gallery */
+	width:600px;
+	overflow:hidden;
+	float:left;
+}
+
+#slides{
+	/* This is the slide area */
+	height:400px;
+
+	/* jQuery changes the width later on to the sum of the widths of all the slides. */
+	width:600px;
+	overflow:hidden;
+}
+
+.slide{
+	float:left;
+}
+
+#menu{
+	/* This is the container for the thumbnails */
+	height:45px;
+}
+
+#gallery ul{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+#gallery li:first-child {
+	background:url(../img/slideshow/divider.png) no-repeat left;
+}
+
+#gallery li{
+	/* Every thumbnail is a li element */
+	width:60px;
+	display:inline-block;
+	list-style:none;
+	height:45px;
+	overflow:hidden;
+}
+
+#gallery li.inact:hover{
+	/* The inactive state, highlighted on mouse over */
+	background:url(../img/slideshow/pic_bg.png) repeat;
+}
+
+#gallery li.act,li.act:hover{
+	/* The active state of the thumb */
+	background:url(../img/slideshow/active_bg.png) no-repeat;
+}
+
+#gallery li.act:hover {
+	background:url(../img/slideshow/active_bg.png) no-repeat;
+}
+
+#gallery li.act a{
+	cursor:default;
+}
+
+.fbar{
+	/* The left-most vertical bar, next to the first thumbnail */
+	width:2px;
+	background:url(../img/slideshow/divider.png) no-repeat right;
+}
+
+#gallery li a{
+	display:block;
+	background:url(../img/slideshow/divider.png) no-repeat right;
+	height:35px;
+	padding-top:10px;
+}
+
+#gallery a img{
+	border:none;
+}
+
+
+/*=============== MEAL PLANNER ====================*/
+.mp-recipe-row{
+	width:800px;
+	float:left;
+	border-bottom:1px solid #ccc;
+	padding-top:30px;
+	font-family:Myriad Pro;
+	line-height:1.5em;
+}
+
+.collage-pic-only{
+	height:190px;
+	display:block;
+	float:left;
+}
+
+.mp-recipe-description-box{
+	width:400px;
+	float:left;
+}
+
+.mp-recipe-time{
+	font-family:'BallPark';
+	font-size:28px;
+	color:gray;
+	border-bottom:1px solid #ccc;
+}
+
+.mp-recipe-nutrients{
+	font-family:"Myriad Pro";
+	font-size:15px;
+	color:orange;
+	padding-top:10px;
+}
+
+.mp-recipe-short-description{
+	font-size:15px;
+}
+
+.mp-buttons-wrapper{
+	padding-top:20px;
+}
+
+
+
+/*------------ADMIN HOME PAGE------------------*/
+.admin-welcome {
+	text-align:center;
+	font-family:Ballpark,BallparkIE;
+	font-size:40px;
+	margin-bottom:10px;
+}
+
+.admin-content {
+	text-align:center;
+	font-family:Georgia;
+	font-size:30px;
+	color:black;
+	padding-bottom:20px;
+}
+#admin-content-link a{
+	text-align:center;
+	font-family:Georgia;
+	font-size:30px;
+	color:#648BFF;
+}
+
+/*-----------SENDING EMAIl SECTION----------------*/
+.admin-send-email {
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#B5C4B6;
+	border:10px solid white;
+	text-align:center;
+	font-family:Georgia;
+	color: #FF2F0A;
+	font-size: 100%;
+	padding: 20px;
+	line-height:1.3em;
+	padding-top: 30px;
+	padding-bottom:50px;
+	border: 10px solid white;
+	box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+}
+
+#send-email-heading{
+	margin-bottom:30px;
+	color: white;
+	text-align:center;
+	font-size:40px;
+	font-family:Georgia;
+}
+#send-email-area{
+	float:top;
+	width: 100%;
+	font-family:"Myriad Pro";
+
+}
+#send-email-area label{
+	text-align:left;
+	color:black;
+	display: block;
+	font-size:20px;
+}
+#send-email-area textarea {
+	width:100%;
+	height:150px;
+}
+#send-email-area input[type="text"] {
+	width:100%;
+}
+
+/*----------------TABLE SECTION--------------------*/
+.admin-table {
+	table-collapse:collapse;
+	margin:0 auto;
+	font-size:18px;
+	width:40%;
+}
+.admin-table table{
+	text-align:center;
+	border: 1px solid #9BBBFF;
+	border-collapse: collapse;
+	width: 600px;
+	margin-bottom: 10px;
+	font-family:Georgia;
+	font-size:0.9em;
+	float:left;
+}
+
+.admin-table table th {
+	text-align: center;
+	padding-top: 20px;
+	height:30px;
+	padding-left:lem;
+	background: #ccc;
+	border-bottom: 1px solid white;
+	border-right: 1px solid #aaaaaa;
+
+}
+
+.admin-table table tr{
+	border: 1px solid #9BBBFF;
+	margin-bottom: 10px;
+	padding:10px;
+}
+
+.admin-table table td {
+	border-right: 1px solid #aaaaaa;
+	width:30px;
+	padding:lem;
+}
+
+#edit-link a{
+ 	padding:5px;
+ 	padding-top:5px;
+ 	color:#3755FF;
+ }
+
+#edit-link a:hover{
+ 	color:#FF4023;
+ 	text-decoration:underline;
+ }
+
+.admin-table table td:last-child {
+	border-right: none;
+}
+/*-----------------OTHERS-----------------------*/
+
+.deleted-notation {
+	text-align:center;
+	color:red;
+	font-size:20px;
+	margin-bottom:10px;
+}
+
+.admin-table table tr td {
+	padding:10px;
+	font-family:"Times New Roman";
+	font-size:0.9em;
+}
+.admin-table table tr td:nth-child(2) {
+	color:red;
+	width:300px;
+	text-align: left;
+}
+
+.admin-table table tr td:nth-child(3) {
+	width:550px;
+	text-align: left;
+}
+
+.admin-table table tr td:nth-child(4) {
+	text-align: left;
+}
+
+.admin-table table tr td:nth-child(5) {
+	text-align: left;
+}
+
+
+/*============== MEMBER AREAS ===============*/
+.ma-wrapper{
+	width:600px;
+	background-color:rgba(255,255,255,1);
+	margin:0 auto;
+	text-align:center;
+	padding:20px;
+	border-radius:5px;
+}
+
+.ma-river{
+	width:430px;
+	margin-top: 50px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ma-pic{
+	float:left;
+}
+
+.ma-pic a:hover img{
+	-webkit-transform:rotate(-10deg);
+	-o-transform:rotate(-10deg);
+	-moz-transform:rotate(-10deg);
+	transform:rotate(-10deg);
+}
+
+.ma-river p{
+	margin-top:20px;
+	font-family:Myriad Pro;
+	font-size:1.5em;
+}
+
+.empty{
+	width:700px;
+	background-color:rgba(255,255,255,0.5);
+	box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.5);
+	text-align:center;
+	border-radius:10px;
+	padding:20px 20px 0px 20px;
+	font-family:Palatino Linotype;
+	margin-top:40px;
+}
+
+.empty p{
+	line-height:1.5em;
+	padding-bottom:20px;
+}
+
+.white-box{
+	width:500px;
+	height:400px;
+	padding:30px;
+	background-image: url('../img/bg/bg-stitches.png');
+	background: repeat-x repeat-y;
+	border-radius:10px;
+	margin:0 auto;
+	text-align:center;
+	font-family:Palatino Linotype;
+}

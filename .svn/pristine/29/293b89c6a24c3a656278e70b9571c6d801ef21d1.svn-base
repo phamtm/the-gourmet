@@ -1,0 +1,12 @@
+<div class="form-center" id="form-signin">
+	<h1>Sign In</h1>
+	<fieldset>
+		<form action="<?php echo base_url(); ?>index.php/user/validate_login/sign_in" method="post" accept-charset="utf-8">			
+			<input type="text" name="username" placeholder="Username">			
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit" name="submit" value="Sign In"><br><br>
+			<a href="http://localhost/index.php/user/sign_up">Sign Up</a><br>
+			<a href="http://localhost/index.php/user/forgot_password">Forgot your password?</a>  
+		</form>
+	</fieldset> <!-- End of account info -->
+</div>

@@ -1,0 +1,65 @@
+
+<div class="search">
+
+	<div class="search-sidebar">
+		<ul>
+           <li><?php echo anchor('user/edit_profile','Account Info','title="accountInfo_view"'); ?></li>
+           <li><?php echo anchor("user/favorites/",'Favourites','title="favorites"'); ?></li>
+		   <li><?php echo anchor('user/upload_recipe','Uploaded Recipes','title="view_uploaded"'); ?></li> 
+
+		</ul>
+	</div>
+
+	<div class="search-area">
+		<div class="search-result">
+			<?php
+				if($records->num_rows() == 0){
+					echo "<div style='width:100%; text-align:center; font-size:1.3em; margin-top:130px'>You currently have no favories recipe.</div>";
+					echo "<div style='width:100%; text-align:center; font-size:1.3em; margin-top:130px'>Click <a href=".base_url()."index.php/recipe/browse_recipe>here</a> to brown recipes</div>";
+				}
+				else
+				{
+				// loop through the result table
+					foreach($records->result() as $row)
+					{
+						$img_url = base_url()."media/recipe_imgs/".$row->recipe_id.".jpg";
+						$recipe_description = $row->description;
+						$recipe_name = $title_name = $row->recipe_name;
+						$num_of_likes = $row->num_of_likes;
+
+						if (strlen($recipe_description) > 100)
+						{
+							$recipe_description = substr($recipe_description, 0, 100)."...";
+						}
+						if (strlen($recipe_name) > 30)
+						{
+							$recipe_name = substr($recipe_name, 0, 29)."...";
+						}
+						echo "<a href='".base_url()."index.php/recipe/view_recipe/".$row->recipe_id."' title='".$title_name."' />\r\n";
+						echo "<div class='collage'>\r\n";
+						echo "<img src='".$img_url."' alt='' width='200' height='140'>\r\n";
+						echo "<div class='collage-text'>\r\n";
+						echo "<div class='collage-title'>".$recipe_name."</div>\r\n";
+						echo "<div class='rating'>Likes: ".$num_of_likes."</div>\r\n";
+						echo "<div class='collage-description'>".$recipe_description."</div>\r\n";
+
+						echo '<div class="favorite">';
+						echo '<a href="'.base_url().'index.php/recipe/unfavorite/'.$row->recipe_id.'">';
+						echo '<button class="cupid-green">';
+						echo 'Unfavorites';
+						echo '</button>';
+						echo '</a>';
+						echo '</div>';
+
+						echo "</div>\r\n";
+						echo "</div>\r\n";
+						echo "</a>\r\n";
+
+					}
+					echo $this->pagination->create_links();
+				}
+			?>
+		</div>
+	</div>
+
+</div>

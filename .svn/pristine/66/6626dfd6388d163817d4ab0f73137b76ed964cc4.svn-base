@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+/*========== FORMS UNIVERSAL==========*/
+fieldset {
+	border-radius:7px;
+	border:1px solid gray;
+	border:medium;
+	font-size: 0.8em;
+}
+
+fieldset span#asterisk {
+	color:red;
+}
+
+.inputText {
+	border-radius:5px;
+	display:block;
+	outline:none;	
+	min-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.focusfield {
+  	border:2px solid #73A6FF;
+  	background:#EFF5FF;
+  	background-color:#EFF5FF;
+}
+
+.idlefield {
+    background:#EEE;
+    border: 2px solid #DFDFDF;
+    background-color: #EEE;
+}
+
+/*========== FORMS SIGNUP==========*/
+.form-center {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-family:"Lucida Sans";
+	background-color: white;
+	border-radius:7px;
+	padding: 20px;	
+	padding-bottom: 40px;
+	border: 1px solid #ccc;	
+}
+
+.form-center input[type="text"], .form-center input[type="password"] {
+	outline:none;	
+	width:90%;
+	min-height:25px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:5px;
+	-webkit-border-radius:3px;
+	border:1px solid #ccc;
+}
+
+.form-center span {
+	display:inline;
+}
+
+.form-center span img{
+	visibility:hidden;
+	position:absolute;
+}
+
+.form-center h1 {
+	text-align:center;
+	font-weight:bold;
+}
+
+.form-center fieldset .error {
+	color:red;
+	font-size:1em;
+	float:right;
+}
+
+#form-signin {
+	height:260px; 
+	margin-bottom:250px;
+	background-color: #f5f5f5;
+	padding-right:10px;
+}
+
+#form-signin input[type="text"], #form-signin input[type="password"] {
+	outline:none;	
+	width:96%;
+	min-height:25px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:5px;
+}
+/*========== UPLOAD RECIPE PAGE ==========*/
+#upload-area {
+	width: 500px;	
+	background-color: rgba(255, 255, 255, 0.4);
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 100%;
+	padding: 20px;
+	line-height:1.3em;
+	padding-top: 60px;
+	padding-bottom:50px;
+	border: 10px solid white;
+	box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+    -moz-box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+    -webkit-box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);    
+}
+
+#upload-title {	
+	width:100%;
+	height: 100px;
+	text-align:center;
+	font-family: "Myriad Pro";	
+	font-weight: bold;
+	color:#F8483F;
+	font-size:3em;
+}
+
+#upload-area textarea {
+	overflow: auto;
+}
+
+#rec-desc {
+	float:top;
+	width: 100%;
+	font-family:"Myriad Pro";
+	/*font-family: "ACaslonPro-Italic";*/
+}
+
+#rec-desc textarea{
+	width: 100%;	
+}
+
+#rec-desc lablel, #rec-desc textarea {
+	display:block;	
+}
+
+#rec-desc input[type="text"] {
+	display:block;
+	width: 100%;
+}
+
+#rec-desc textarea, #rec-desc input[type="text"] {
+	border-radius:5px;
+	outline:none;
+	border: 1px solid #ccc;
+}
+
+#rec-desc p.instruction {
+	font-size: 0.8em;
+	line-height: 0.8em;
+	font-style: italic;
+	color:red;
+}

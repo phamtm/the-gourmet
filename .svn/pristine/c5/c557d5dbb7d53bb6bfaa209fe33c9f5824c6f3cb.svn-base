@@ -1,0 +1,84 @@
+
+<div class="search">
+	<div class="search-sidebar">
+		<ul>			
+			<li><a href="/index.php/recipe/top_rated">Top Rated</a></li>
+			<li><a href="/index.php/recipe/most_viewed">Most Viewed</a></li>
+			<li><a href="/index.php/recipe/recent_upload">Newly Added</a></li>
+			<li><div class="horizontal-seperator"></div></li>			
+			<ul>
+				<li><a href="/index.php/recipe/meal_time/breakfast">Breakfast</a></li>
+				<li><a href="/index.php/recipe/meal_time/lunch">Lunch</a></li>
+				<li><a href="/index.php/recipe/meal_time/dinner">Dinner</a></li>
+			</ul>
+
+			<li><div class="horizontal-seperator"></div></li>
+			<ul>
+				<li><a href="/index.php/recipe/meal_type/vegetarian">Vegetarian</a></li>
+				<li><a href="/index.php/recipe/meal_type/halal">Halal</a></li>					
+			</ul>			
+		</ul>
+	</div>
+
+	<!-- Live search script -->
+	<script type="text/javascript">
+	function getStates(value) 
+	{
+		$.post("index.php/recipe/dyn_search", {partialState:value}, function(data)
+			$("$search-result").html(data)
+		});
+	</script>
+
+	<div class="search-area">
+		<div style="width:100%; float:left;">
+			<form class="form-wrapper cf" action="/index.php/recipe/search_recipe" method="post" accept-charset="utf-8">
+				<input type="text" placeholder="Search here..." required onkeyup="getStates(thisValue)" autofocus="autofocus" name="query" value="<?php if(isset($cur_search_str)) echo $cur_search_str;?>" spellcheck="false">
+				<button type="submit";>Search</button>
+			</form>
+		</div>		
+		<div class="search-result">
+			<?php 		
+			if($records->num_rows == 0)
+				echo "<div style='width:100%; text-align:center; font-size:1.3em; margin-top:130px'>Sorry, there is no recipe that matches your search..</div>";
+			else
+			{
+			// loop through the result table
+				foreach($records->result() as $row)
+				{			
+					$img_url = base_url()."media/recipe_imgs/".$row->recipe_id.".jpg";
+					$recipe_description = $row->description;
+					$recipe_name = $title_name = $row->recipe_name;
+					$num_of_likes = $row->num_of_likes;
+
+					if (strlen($recipe_description) > 100)
+					{					
+						$recipe_description = substr($recipe_description, 0, 100)."...";
+					}
+					if (strlen($recipe_name) > 30)
+					{
+						$recipe_name = substr($recipe_name, 0, 29)."...";
+					}				
+					echo "<a href='/index.php/recipe/view_recipe/".$row->recipe_id."' title='".$title_name."' />";
+					echo "<div class='collage'>";
+					echo "<img src='".$img_url."' alt='' width='200' height='140'>";
+					echo "<div class='collage-text'>";
+					echo "<div class='collage-title'>".$recipe_name."</div>";
+					echo "<div class='rating'>Likes: ".$num_of_likes."</div>";
+					echo "<div class='collage-description'>".$recipe_description."</div>";
+					echo "</div>";							
+					echo "</div>";
+					echo "</a>";
+				}
+				echo $this->pagination->create_links(); 
+			}
+			?>			
+		</div>
+		<div style="width:100%; float:left;">
+			<form class="form-wrapper cf" action="/index.php/recipe/search_recipe" method="post" accept-charset="utf-8"  spellcheck="false">
+				<input type="text" placeholder="Search here..." required name="query">
+				<button type="submit";>Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+

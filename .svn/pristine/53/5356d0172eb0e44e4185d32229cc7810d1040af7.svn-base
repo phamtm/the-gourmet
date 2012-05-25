@@ -1,0 +1,10 @@
+<div class="form-center">
+	<?php
+		echo "<h1>Hello!</h1>";
+		if (isset($this->session->userdata['user']->admin_right))
+		{
+			if ($this->session->userdata['user']->admin_right == 1)
+				echo "<h1>(Admin)</h1>";
+		}
+	?>
+</div>

@@ -1,0 +1,78 @@
+create database gourmet;
+use gourmet;
+
+create table user_info(
+	user_id int unsigned not null auto_increment key,
+	username varchar(64) not null,
+	email_address varchar(64) not null,
+	password varchar(128) not null,
+	activation_code varchar(32) not null,
+	activated tinyint(1) not null,
+	password_reset_code varchar(32) not null,
+	admin_right tinyint(1) not null,
+	dob date,
+	height int unsigned,
+	weight int unsigned,
+	gender tinyint(1),
+	first_name varchar(32),
+	last_name varchar(32),
+	vegetarian bool,
+	halal bool,
+	fulltext(first_name, last_name))
+	engine=MyISAM;
+
+create table recipes(
+	recipe_id int unsigned not null auto_increment key,
+	name varchar(128) not null,
+	steps text not null,
+	description varchar(300) not null,
+	ingredients text not null,
+	image_uri varchar(128) not null,
+	num_of_likes int not null,
+	calories float,
+	meal_time tinyint(1),
+	vegetarian tinyint(1),
+	halal tinyint(1),
+	fulltext(name, description, ingredients))
+	engine=MyISAM;
+
+create table uploaded(
+	user_id int unsigned references user_account_info(user_id),
+	recipe_id int unsigned references recipes(recipe_id),
+	time_uploaded date not null,
+	primary key(recipe_id));
+
+create table ingredients(
+	recipe_id int unsigned references recipes(recipe_id),
+	ingredient varchar(64) not null,
+	quantity int unsigned,
+	primary key(recipe_id,ingredient),
+	fulltext(ingredient))
+	engine=MyISAM;
+
+create table category(
+	recipe_id int unsigned references recipes(recipe_id),
+	category varchar(32),
+	primary key(recipe_id,category),
+	fulltext(category))
+	engine=MyISAM;
+
+create table calories(
+	name_ingredient varchar(64),
+	num_fat float,
+	num_calories float,
+	level tinyint(1) not null,
+	primary key(name_ingredient),
+	fulltext(name_ingredient))
+	engine=MyISAM;
+
+create table user_plan(
+	user_id int unsigned references user_account_info(user_id),
+	recipe_id int unsigned references recipes(recipe_id),
+	time enum('Monday Breakfast','Monday Lunch','Monday Dinner','Tuesday Breakfast','Tuesday Lunch','Tuesday Dinner','Wednesday Breakfast','Wednesday Lunch','Wednesday Dinner','Thursday Breakfast','Thursday Lunch','Thursday Dinner','Friday Breakfast','Friday Lunch','Friday Dinner','Saturday Breakfast','Saturday Lunch','Saturday Dinner','Sunday Breakfast','Sunday Lunch','Sunday Dinner'),
+	primary key(user_id,time));
+
+create table user_favorites(
+	user_id int unsigned not null references user_account_info(user_id),
+	recipe_id int unsigned references recipes(recipe_id),
+	primary key(user_id, recipe_id));

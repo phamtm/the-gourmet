@@ -1,0 +1,120 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>The Gourmet-Edit Basic Account Information</title>
+<meta charset="iso-8859-1" />
+<link href="<?php echo base_url(); ?>style/css/style.css" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+		<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+<!--[if IE 7]>
+        <link href="css/ie7.css" rel="stylesheet" type="text/css" />  
+	<![endif]-->
+</head>
+
+<body>
+<div id="background">
+  <div id="page">
+    <div class="header">
+      <div class="footer">
+        <div class="body">
+          <div id="sidebar"> <a href="index.html"><img id="logo" src="<?php echo base_url(); ?>style/images/chef-hat-icon.jpg" with="154" height="74" alt="Logo" title=""/></a>
+            <ul class="navigation">
+              	<li><?php echo anchor('editProfile/index','About','title="abount_view"'); ?></li>
+				<li><?php echo anchor('editProfile/load_accInfo_view','Account Info','title="accountInfo_view"'); ?></li>
+				<li><?php echo anchor('editProfile/load_plans_view','Plans','title="plans_view"'); ?></li>
+				<li class='last'><?php echo anchor('editProfile/load_tour_around_view','Take a tour!','title="tour_around_view"'); ?></li>
+            </ul>
+            <div class="connect"> <a href="http://www.facebook.com/groups/405423676138602/" class="facebook">&nbsp;</a> <a href="http://twitter.com/fwtemplates" class="twitter">&nbsp;</a> <a href="http://www.youtube.com/fwtemplates" class="vimeo">&nbsp;</a> </div>
+            <div class="footenote"> <span>&copy; Copyright &copy; 2012.</span> <span><a href="index.html">The Gourmet Team</a> all rights reserved</span> </div>
+          </div>
+          <div id="content">
+            <div class="content">
+				<br /><br /><br /><br /><br />
+				<div style="color:#FFFFFF"><h3>General Account Settings</h3></div>
+				<table id='accountInfo' class='stripTable' width=100%>
+				<tr>
+					<td>Name</td>
+					<td><?php echo $first_name.' '.$last_name; ?></td>
+					<td><?php echo anchor('editProfile/load_updateName_view','Edit','title="update Name"'); ?></td>
+				</tr>
+				<tr>
+					<td>Username</td>
+					<td><?php echo $user_name; ?></td>
+					<td><?php echo anchor('editProfile/load_updateUsername_view','Edit','title="update Username"'); ?></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><?php echo $email; ?></td>
+					<td><?php echo anchor('editProfile/load_updateEmail_view','Edit','title="update Email"'); ?></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><?php echo $lastModifyTime; ?></td>
+					<td><?php echo anchor('editProfile/load_updatePassword_view','Edit','title="update Password"'); ?></td>
+				</tr>
+                <tr>
+                	<td>Date of Birth</td>
+                    <td><?php echo $dob; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateDOB_view','Edit','title="update dob"'); ?></td>
+                </tr>
+                <tr>
+                	<td>Gender</td>
+                    <td><?php if($gender==1) echo 'Male'; else echo 'Female'; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateGender_view','Edit','title="update Gender"'); ?></td>
+                </tr>
+                <tr>
+                	<td>Height</td>
+                    <td><?php echo $height.'cm'; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateHeight_view','Edit','title="update Height"'); ?></td>
+                </tr>
+                <tr>
+                	<td>Weight</td>
+                    <td><?php echo $weight.'kg'; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateWeight_view','Edit','title="update Weight"'); ?></td>
+                </tr>
+                <tr>
+                	<td>Vegitarian</td>
+                    <td><?php if($vegetarian==1) echo 'Yes'; else echo 'No'; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateVegitarian_view','Edit','title="update Vegitarian"'); ?></td>
+                </tr>
+                <tr>
+                	<td>Muslim</td>
+                    <td><?php if($muslim==1) echo 'Yes'; else echo 'No'; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateMuslim_view','Edit','title="update Muslim"'); ?></td>
+                </tr>
+                <tr style="background-color:#CCC">
+                	<td style="text-align:center" colspan="3" align="center">
+                	<div align="center" id="formArea">
+                    <form name="submitform" id="submitform" method="post">
+                    <label for="muslim">Muslim</label>
+                    <input type="radio" name="muslim" value="Yes" checked>Yes
+                    <input type="radio" name="muslim" value="No" checked>No
+                    <br />
+                    <input class="button" type="submit" name="submit" value="Save changes"/>
+                	<input class="button" type="button" name="submit" value="Cancel"/>
+        			</form>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                	<td>Allegies</td>
+                    <td><?php echo $allegies; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateAllegies_view','Edit','title="update Allegies"'); ?></td>
+                </tr>
+                <tr>
+                	<td>Additional preferences</td>
+                    <td><?php echo $additional; ?></td>
+                    <td><?php echo anchor('editProfile/load_updateAdditional_view','Edit','title="update Additional"'); ?></td>
+                </tr>
+				</table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shadow"> </div>
+  </div>
+</div>
+</body>
+</html>

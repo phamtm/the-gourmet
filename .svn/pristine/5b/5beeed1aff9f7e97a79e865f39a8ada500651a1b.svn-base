@@ -1,0 +1,23 @@
+<?php
+
+class Gallery_model extends CI_Model 
+{
+	//===================== MANAGE USERS ========================/
+	function delete_user($user_id)
+	{
+
+	}
+
+	function send_email($user_id)
+	{
+
+	}
+
+	//===================== MANAGE RECIPES ======================/
+	function delete_recipe($recipe_id)
+	{
+
+	}
+}
+
+?>

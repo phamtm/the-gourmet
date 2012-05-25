@@ -1,0 +1,154 @@
+#bannerContainer   {
+	background
+	padding: 7px 0 13px;
+	padding-bottom:50px;
+}
+
+#banner    {
+	margin: 0 auto;
+	width: 972px
+}
+
+#banner .homeNav    {
+	background-image: url("../img/banner_back.png");
+	background-repeat: no-repeat;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 972px;
+	height: 481px
+}
+
+#banner .homeNav li {
+	float: left
+}
+
+#banner .homeNav li.panel1    {
+	padding: 10px 10px 68px;
+	position: relative;
+	width: 300px;
+	height: 403px
+}
+
+#banner .homeNav li.panel1 .button a   {
+	color: #999;
+	font-size: 16px;
+	font-family: Cochin, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	line-height: 50px;
+	text-decoration: none;
+	background-image: url("../img/banner_panel1_bt_back.png");
+	background-repeat: no-repeat;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	top: 431px;
+	left: 5px;
+	width: 310px;
+	height: 50px
+}
+
+#banner .homeNav li.panel1 .button a:hover, #banner .homeNav li.panel1 .button a.hover   {
+	color: #fff;
+	background-image: url("../img/banner_panel1_bt_back_over.png");
+	background-repeat: no-repeat
+}
+
+#banner .homeNav li.panel2    {
+	margin: 0 0 0 6px;
+	padding: 10px 10px 68px;
+	position: relative;
+	width: 300px;
+	height: 403px
+}
+
+#banner .homeNav li.panel2 .button a   {
+	color: #999;
+	font-size: 16px;
+	font-family: Cochin, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	line-height: 50px;
+	text-decoration: none;
+	background-image: url("../img/banner_panel2_bt_back.png");
+	background-repeat: no-repeat;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	top: 431px;
+	left: 5px;
+	width: 310px;
+	height: 50px
+}
+
+#banner .homeNav li.panel2 .button a:hover, #banner .homeNav li.panel2 .button a.hover   {
+	color: #fff;
+	background-image: url("../img/banner_panel2_bt_back_over.png");
+	background-repeat: no-repeat
+}
+
+#banner .homeNav li.panel3    {
+	margin: 0 0 0 6px;
+	padding: 10px 10px 68px;
+	position: relative;
+	width: 300px;
+	height: 403px
+}
+
+#banner .homeNav li.panel3 .button a   {
+	color: #999;
+	font-size: 16px;
+	font-family: Cochin, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	line-height: 50px;
+	text-decoration: none;
+	background-image: url("../img/banner_panel3_bt_back.png");
+	background-repeat: no-repeat;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	position: absolute;
+	top: 431px;
+	left: 5px;
+	width: 310px;
+	height: 50px
+}
+
+#banner .homeNav li.panel3 .button a:hover, #banner .homeNav li.panel3 .button a.hover   {
+	color: #fff;
+	background-image: url("../img/banner_panel3_bt_back_over.png");
+	background-repeat: no-repeat
+}
+
+#banner .mouseover1, #banner .mouseover2, #banner .mouseover3   {
+	background-image: url("../img/banner_mouseover_back.png");
+	background-repeat: no-repeat;
+	text-align: center;
+	display: none;
+	padding: 18px 20px 0;
+	position: absolute;
+	top: 270px;
+	left: 5px;
+	width: 270px;
+	height: 100px
+}
+
+#banner .mouseover1 h3, #banner .mouseover2 h3, #banner .mouseover3 h3 {
+	color: #df1409;
+	font-size: 18px;
+	font-family: Cochin, Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0
+}
+
+#banner .mouseover1 h4, #banner .mouseover2 h4, #banner .mouseover3 h4 {
+	color: #7c7b7b;
+	font-size: 16px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 18px;
+	margin: 6px 0 0
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Polaroids Gallery</title>
+<style type="text/css">
+  .photo {
+    padding:10px 10px 20px 10px;
+    margin: 0px 60px 20px 0px;
+    float: left;
+  }
+	.polaroid-inactive {
+    border: 1px solid #666666;
+    padding: 10px 10px 50px 10px;
+    box-shadow: 5px 5px 15px #6E6E6E;
+  }
+
+  .photo a.aclass:hover {
+    animation: zoom 3s;    
+    -moz-animation: zoom 3s;
+    -webkit-animation: myfirst 3s;
+  }
+
+  .photo a.aclass:hover img.polaroid-inactive {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    
+    -webkit-animation:myfirst 5s;
+  }
+
+/*  @-webkit-keyframe myfirst {
+    from   {  
+      -webkit-transform:scale(0.5);
+    }
+    to {
+      -webkit-transform:scale(1.5);
+    }
+  }*/
+   
+</style>
+
+</head>
+
+<body>
+
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+	</div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+  <div class="photo">
+    <a href="#" class="aclass"><img src="pic.jpg" alt="" class="polaroid-inactive"></a>
+  </div>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>example four</title>
+  <meta name="author" content="Natalie Downe">
+  
+  <style type="text/css">
+  
+  body {
+    background-color: #E9E9E9;
+    color: #333;
+    font-family:"Lucida handwriting", "Snell Roundhand", "Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+  }
+
+  a.polaroid {
+    display: block;
+    margin: 10em auto 0 auto;
+    text-decoration: none;
+    color: #333;
+    padding: 13px 13px 26px 13px;
+    width: 640px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    z-index: 2;
+    font-size: 0.8em;
+    -webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+    -webkit-transition: all 0.5s ease-in;
+  }
+  a.polaroid:hover,
+  a.polaroid:focus,
+  a.polaroid:active {
+    z-index: 999;
+    border-color: #6A6A6A;
+    box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    -webkit-transform: rotate(0deg) scale(1.05);
+    -moz-transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.05);
+  }
+  .polaroid img {
+    margin: 0 0 15px;
+  }
+  
+  a img {
+    border: none;
+    display: block;
+  }
+  
+  </style>
+  
+</head>
+<body>
+  
+  <div class="photo-album">
+
+    <a href="http://www.flickr.com/photos/nataliedowne/2340993237/in/set-72157604232220981/" class="medium polaroid"><img src="pic.jpg" alt="">White water rafting in Queenstown</a>
+
+  </div>
+  
+
+</body>
+</html> -->

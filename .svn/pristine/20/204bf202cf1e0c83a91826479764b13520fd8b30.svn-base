@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/*========== FORMS UNIVERSAL==========*/
+.s-input {
+	border-radius:5px;
+	/*display:block;*/
+	outline:none;
+	width:98%;
+	min-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+form input[type="password"] {
+	margin-right: 2px;
+}
+
+fieldset {
+	border-radius:7px;
+	border:1px solid gray;
+	border:medium;
+	font-size: 0.8em;
+}
+
+fieldset span#asterisk {
+	color:red;
+}
+
+.inputText {
+	border-radius:5px;
+	display:block;
+	outline:none;	
+	min-height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.focusfield {
+  	border:2px solid #73A6FF;
+  	background:#EFF5FF;
+  	background-color:#EFF5FF;
+}
+
+.idlefield {
+    background:#EEE;
+    border: 2px solid #DFDFDF;
+    background-color: #EEE;
+}
+
+ /*========== FORMS LOGIN==========*/
+#form-login{		
+	margin-left: 10px;
+	margin-top: -225px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 200px;
+	height: 470px;	
+	background-color:#F7F7F7;
+	border-radius:7px;
+	font-family:"Lucida Grande";
+	font-size::1em;
+	position: :absolute;
+}
+
+#form-icon {
+	padding-left:30%;
+	padding-top: 10%;
+}
+
+/*========== FORMS SIGNUP==========*/
+#form-signup {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-family:"Lucida Grande";
+	background-color: #F7F7F7;
+	padding: 10px;
+	border-radius:7px;
+	/*height:100%;*/
+	padding: 20px;	
+	padding-bottom: 40px;
+}
+
+#form-signup h1 {
+	text-align:center;
+	font-family:BallPark;
+}
+
+#form-signup img {
+	visibility: hidden;
+	position: absolute;
+	float:right;	
+	margin-top: 17px;
+}
+
+#form-signup span {
+	display: inline;
+}
+
+#form-signup fieldset .error {
+	color:red;
+	font-size:0.6em;
+	float:right;
+}
+
+#form-signup fieldset p {
+	color:red;
+	font-size:0.7em;
+	float:left;
+}
+
+#form-signup table tr td{		
+	line-height:2.5em;
+	font-size: 1em;
+	font-family: Georgia;
+	cellpadding:100;
+}
+
+#form-signup .editable {
+	color: green;
+}
+
+/*========== UPLOAD RECIPE PAGE ==========*/
+#upload-area {		
+	width: 500px;
+	background-color: white;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 100%;
+	padding: 20px;
+	line-height:1.3em;
+	padding-bottom:100px;
+	border: 5px solid white;
+
+	box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+    -moz-box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+    -webkit-box-shadow: 7px 5px 23px rgba(0, 0, 0, 0.40);
+}
+
+#upload-title {	
+	width:100%;
+	height: 100px;
+	text-align:center;
+	font-family: "BallPark";
+	font-size:2em;
+	/*background-color:blue;*/
+}
+
+#upload-left-panel {
+	float:left;
+	width: 40%;
+	height: 50%;
+	/*background-color:red;*/
+}
+
+#upload-right-panel {
+	float:left;
+	width: 60%;
+	/*background-color:gray;*/
+	height: 50%;
+}
+
+#upload-area input {
+	outline:none;
+}
+
+#rec-desc {
+	float:top;
+	width: 100%;
+	font-family: "ACaslonPro-Italic";
+}
+
+#rec-desc textarea{
+	width: 100%;	
+}
+
+#rec-desc lablel, #rec-desc textarea {
+	display:block;	
+}
+
+#rec-desc input[type="text"] {
+	display:block;
+	width: 100%;
+}
+
+#rec-desc textarea, #rec-desc input[type="text"] {
+	border-radius:5px;
+	outline:none;
+	border: 1px solid #ccc;
+}
+
+#rec-desc p.instruction {
+	font-size: 0.8em;
+	line-height: 0.8em;
+	font-style: italic;
+	color:red;
+}

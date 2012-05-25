@@ -1,0 +1,233 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Welcome extends CI_Controller {
+	public function __construct()
+       {
+            parent::__construct();
+            $this->load->model('user_model');
+       }
+	
+	function index()
+	{
+		$this->load->view('about_view');
+	}
+	function load_accInfo_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('accInfo_view',$accountInfo);
+	}
+	function load_plans_view(){
+		$this->load->view('plans_view');
+	}
+	function load_tour_around_view(){
+		$this->load->view('tour_around_view');
+	}
+	//Loading the recipe view
+	function load_recipes_view(){
+		$recipeInfo['title']='Red spiced fish with green salad';
+		$recipeInfo['description']='<p>Heat oven to 220C/fan 200C/gas 6. Soften the onion and peppers in the oil in a large pan for a few mins. Pour in the tomatoes, season, then simmer for 10 mins.</p>
+<p>Meanwhile, make up the bread mix according to pack instructions, then bring the dough together and knead a couple of times. Flour a large baking sheet and roll out the dough into a rectangle roughly 25 x 35cm. Bake for 5 mins on a shelf at the top of the oven until firm.</p>
+<p>Remove from the oven, spread with the sauce, add the cherry tomatoes, then dollop over spoonfuls of the ricotta. Bake for 10 mins more until the base is golden and crisp. Scatter with basil and serve straight away with a green salad.</p>';
+		$recipeInfo['ingredients']='1 onion, finely chopped<br />
+2 yellow peppers, roughly chopped<br />
+1 tsp olive oil<br />
+2 x 400g/14oz cans chopped tomatoes<br />
+500 g bag mixed grain or granary bread mix<br />
+plain flour, for dusting<br />
+10 cherry tomatoes, halved or whole<br />
+250 g tub ricotta<br />
+a few basil leaves, to serve';
+		
+		$this->load->view('recipe_view',$recipeInfo);
+		
+	}
+	//Methods for editing the account Info and personal Info
+	function load_updateName_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editName_view',$accountInfo);
+	}
+	function load_updateUsername_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editUsername_view',$accountInfo);
+	}
+	function load_updateEmail_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editEmail_view',$accountInfo);
+	}
+	function load_updatePassword_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editPassword_view',$accountInfo);
+	}
+	function load_updateDOB_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editDOB_view',$accountInfo);
+	}
+	function load_updateGender_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editGender_view',$accountInfo);
+	}
+	function load_updateHeight_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editHeight_view',$accountInfo);
+	}
+	function load_updateWeight_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editWeight_view',$accountInfo);
+	}
+	function load_updateVegitarian_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editVegetarian_view',$accountInfo);
+	}
+	function load_updateMuslim_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editMuslim_view',$accountInfo);
+	}
+	function load_updateAllegies_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editAllegies_view',$accountInfo);
+	}
+	function load_updateAdditional_view(){
+		$accountInfo=$this->user_model->getAccountInfo(1);
+		$this->load->view('editAdditional_view',$accountInfo);
+	}
+	
+	//Functions for updating user profile
+	//Change user_id to $this->session->userdata['user_id'];
+	function updateName(){
+		$this->form_validation->set_rules('firstName', 'FirstName', 'alpha|required|xss_clean');
+		$this->form_validation->set_rules('middleName', 'MiddleName', 'alpha|xss_clean');
+		$this->form_validation->set_rules('lastName', 'LastName', 'alpha|required|xss_clean');
+		
+		$pass=checkPassword($this->input->post('password'),1);
+		if($this->form_validation->run()==TRUE && $pass==TRUE){
+			$data=array('first_name'=>$this->input->post('firstName'),
+						'middle_name'=>$this->input->post('middleName'),
+						'last_name'=>$this->input->post('lastName'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('welcome/load_updateName_view');
+		}
+	}
+	function updateUserName(){
+		$this->form_validation->set_rules('username','Username','required|is_unique[user.user_name]');
+		$pass=checkPassword($this->input->post('password'),1);
+		if($this->form_validation->run()==TRUE && $pass==TRUE){
+			$data=array('user_name'=>$this->input->post('username'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}
+	}
+	function updateEmail(){
+		$this->form_validation->set_rules('email','Email','required|valid_email|is_unique[user.email]');
+		$pass=checkPassword($this->input->post('password'),1);
+		if($this->form_validation->run()==TRUE && $pass==TRUE){
+			$data=array('email'=>$this->input->post('email'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}
+	}
+	function updatePassword(){
+		$this->form_validation->set_rules('newPass', 'NewPassword', 'required');
+		$this->form_validation->set_rules('confPass', 'Password Confirmation', 'required|matches[newPass]');
+		
+		$pass=checkPassword($this->input->post('oldPass'),1);
+		if($this->form_validation->run()==TRUE && $pass==TRUE){
+			$data=array('password'=>$this->input->post('newPass'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}	
+	}
+	function updateDOB(){
+		$year=$this->input->post('Year');
+		$month=$this->input->post('Month');
+		$day=$this->input->post('Day');
+		if($year!=""&&$month!=""&&$day!=""){
+			$data=array('dob'=>$year.'-'.$month.'-'.$day);
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}
+	}
+	function updateGender(){
+		$gender=$this->input->post('gender');
+		if($gender=='Male') $gender=1;
+		else $gender=0;
+		$data=array('gender'=>$gender);
+		$this->user_model->updateAccountInfo($data,1);
+		redirect('welcome/load_accInfo_view');
+	}
+	function updateHeight(){
+		$this->form_validation->set_rules('height','Height','required');
+		if($this->form_validation->run()==TRUE){
+			$data=array('height'=>$this->input->post('height'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}	
+	}
+	function updateWeight(){
+		$this->form_validation->set_rules('weight','Weight','required');
+		if($this->form_validation->run()==TRUE){
+			$data=array('weight'=>$this->input->post('weight'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}
+	}
+	function updateVegetarian(){
+		if($this->input->post('vegetarian')=='Yes') $veg=1;
+		else $veg=0;
+		$data=array('vegetarian'=>$veg);
+		$this->user_model->updateAccountInfo($data,1);
+		redirect('welcome/load_accInfo_view');
+	}
+	function updateMuslim(){
+		$muslim=$this->input->post('muslim');
+		if($muslim=='Yes') $mus=1;
+		else $mus=0;
+		$data=array('muslim'=>$mus);
+		$this->user_model->updateAccountInfo($data,1);
+		redirect('welcome/load_accInfo_view');
+	}
+	function updateAllegies(){
+		$this->form_validation->set_rules('allegies','Allegies','required');
+		if($this->form_validation->run()==TRUE){
+			$data=array('allegies'=>$this->input->post('allegies'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}	
+	}
+	function updateAdditional(){
+		$this->form_validation->set_rules('additional','Additional','required');
+		if($this->form_validation->run()==TRUE){
+			$data=array('additional'=>$this->input->post('additional'));
+			$this->user_model->updateAccountInfo($data,1);
+			redirect('welcome/load_accInfo_view');
+		}else{
+			redirect('wel.come/load_updateName_view');
+		}	
+	}
+	
+	//Validate password
+	function checkPassword($password,$user_id){	
+		$this->db->where('user_id', $user_id);
+		$this->db->where('password', $password);
+		$query = $this->db->get('user');
+
+		// one record is returned
+		if ($query->num_rows == 1){	
+			return true;
+		}else{ return false;}
+	}
+}

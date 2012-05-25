@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/*========== TYPEFACES ==========*/
+@font-face {
+	font-family: 'Pacifico';
+	src: url(Pacifico.ttf);
+}
+
+@font-face {
+	font-family: 'Ballpark';
+	src: url(ballpark_weiner.ttf);
+}

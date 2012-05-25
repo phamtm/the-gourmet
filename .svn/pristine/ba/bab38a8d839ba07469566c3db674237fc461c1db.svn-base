@@ -1,0 +1,22 @@
+=== 2012-03-16 06:28:36 ===============================
+FILES:Array
+(
+    [xfile] => Array
+        (
+            [name] => IMG_0037.JPG
+            [type] => image/jpeg
+            [tmp_name] => C:\wamp\tmp\phpE710.tmp
+            [error] => 0
+            [size] => 273268
+        )
+
+)
+
+POST:Array
+(
+    [post] => upload.php
+    [width] => 220
+    [height] => 345
+    [crop] => true
+)
+

@@ -1,0 +1,137 @@
+<?php 
+class Recipe_model extends CI_Model 
+{
+	var $gallery_path;
+	var $gallery_path_thumb;
+	var $gallery_path_url;
+
+	function __construct() 
+	{
+		parent::__construct();
+		$this->gallery_path = realpath(APPPATH . '../database/recipe_image/images');
+		$this->gallery_path_url = base_url().'database/recipe_image/images/';
+	}
+
+	//===================== CREATE A NEW RECIPE ========================/
+	function create_recipe() 
+	{
+
+		$new_recipe = array(
+				'recipe_name' => $this->input->post('recipe_name'),
+				'description' => $this->input->post('rec_desc'),
+				'meal_type'	  => $this->input->post('meal_type'),			
+				'ingredients' => $this->input->post('ingredients'),
+				'steps' => $this->input->post('steps')
+			);
+
+		$insert=$this->db->insert('recipes',$new_recipe);
+		$imagename = $this->get_recipe_id($new_recipe['recipe_name']);
+
+		$this->upload_image($imagename);
+
+		return $insert;
+	}
+
+
+	function get_recipe_id($recipe_name) {
+			$query_str = 'SELECT recipe_id FROM recipes WHERE recipe_name = ?';
+			$result = $this->db->query($query_str, $recipe_name);
+
+			if ($result->num_rows == 1)			
+			{
+				
+				foreach ($result->result() as $row)
+					$recipe_id = $row->recipe_id;
+				return $recipe_id;
+			}		
+	}
+
+	function upload_image($recipe_id) {
+
+		// upload images
+		$config = array(
+			'allowed_types' => 'jpg|jpeg|gif|png|bmp',
+			'upload_path' => $this->gallery_path,
+			'file_name' => $recipe_id,
+			'max_size' => 2000
+		);
+
+		
+		$this->load->library('upload', $config);
+		$q = $this->upload->do_upload(); 				// do upload
+		
+		$image_data = $this->upload->data(); 		//get image data
+		
+		// create a thumbnail
+		$config = array(
+			'source_image' => $image_data['full_path'],
+			'new_image' => $this->gallery_path . '/thumbs',
+			'maintain_ration' => true,
+			'width' => 150,
+			'height' => 100
+
+		);
+		
+		$this->load->library('image_lib', $config);
+		$this->image_lib->resize();
+	}
+
+
+	function get_images($id) 
+	{
+		
+		$files = scandir($this->gallery_path);
+		
+		$files = array_diff($files, array('.', '..', 'thumbs'));
+		
+		$images = array();
+		
+		foreach ($files as $file) {
+			$images []= array (
+				'url' => $this->gallery_path_url . $file,
+				'thumb_url' => $this->gallery_path_url . 'thumbs/' . $file
+			);
+		}
+		
+		return $images;
+	}
+
+	//======================= DELETE A RECIPE ==========================/
+	// delete a recipe from db
+	function delete($recipe_id)
+	{
+
+	}
+
+	//======================= UPDATE A RECIPE ==========================/
+
+	//======================= SHARE A RECIPE ===========================/
+
+	//================ VIEW A RECIPE USING RECIPE_ID====================/
+	// display a recipe according to id
+	function view($recipe_id)
+	{
+
+	}
+
+	// return the name of a recipe
+	private function get_recipe_name($recipe_id)
+	{
+
+	}
+
+	// return the instruction of a recipe
+	private function get_recipe_instructions($recipe_id)
+	{
+
+	}
+
+	// return the ingredients of a recipe
+	private function get_recipe_ingredients($recipe_id)
+	{
+
+	}
+	
+}
+
+?>

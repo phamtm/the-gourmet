@@ -1,0 +1,145 @@
+ /** Website template by freewebsitetemplates.com **/
+/* body { 
+ 	margin:0;
+ 	padding:0;
+ 	font-family: Arial, Verdana, Helvetica, sans-serif; 
+ 	font-size: 12px; 
+ 	line-height: 25px; 
+ 	color:#222; 
+ 	background-color:#ccc;
+ }*/
+
+ #page{
+ 	width:950px;
+ 	margin:0 auto;
+ 	padding: 0 5px;
+ }
+
+ #page .header{
+ 	padding: 78px 0 0 0;
+ }	
+
+ #page .header .footer .body{
+ 	background-image:url('../images/bg-page.jpg');  
+ 	width:950px;
+ 	overflow:hidden; 
+ }
+
+ /** Start of Sidebar style **/	
+ #page .header .footer .body #sidebar{
+ 	width:211px;
+ 	float:left;
+ }
+
+ /** start style navitagion style**/
+
+ #page .header .footer .body #sidebar ul.navigation{
+ 	margin:0 0  50px 8px;
+ 	padding:5px 0 0 0;
+ 	list-style-type:none;  	
+ 	position:relative;
+ 	width:200px;
+ 	z-index:9990;
+ }
+
+
+ #page .header .footer .body #sidebar ul.navigation li{
+ 	width:200px;
+ 	height:40px;
+ 	position:relative;
+ 	line-height:40px;
+ 	background-image:url('../images/menu-separator.jpg');  
+ 	background-repeat:no-repeat;
+ 	background-position:0 35px;
+
+ }
+
+ #page .header .footer .body #sidebar ul.navigation li a{
+ 	width:214px;
+ 	height:40px;
+ 	height:40px;
+ 	display:block;
+ 	position:absolute;
+ 	left:0;
+ 	top:-5px;
+ 	text-align:center;
+ 	padding-right:10px;
+ 	color:#999999;
+ 	text-decoration:none;
+ }
+
+ #page .header .footer .body #sidebar ul.navigation li a:hover{
+ 	width:214px;
+ 	height:40px;
+ 	height:40px;
+ 	display:block;
+ 	position:absolute;
+ 	color:#669933;
+ 	/*background: url("../images/sprite.gif");*/
+ 	background-repeat:no-repeat;
+ 	background-position: 200px -228px;
+ 	text-shadow: #ffffff 2px 0px 1px;
+ }
+
+ #page .header .footer .body #sidebar ul.navigation li.active a{
+ 	width:214px;
+ 	height:40px;
+ 	height:40px;
+ 	display:block;
+ 	position:absolute;
+ 	color:#669933;
+ 	background: url("../images/sprite.gif");
+ 	background-repeat:no-repeat;
+ 	background-position: 200px -228px;
+ 	text-shadow: #ffffff 2px 0px 1px;
+ }
+
+ #page .header .footer .body #sidebar .connect a{
+ 	display:block;
+ 	float:left;
+ 	text-decoration:none;
+ 	margin: 10px 10px 0 20px;
+ }
+ /** end of Sidebar style **/			
+
+ /** Start of Content Style **/	
+
+ #page .header .footer .body #content{
+ 	width:739px;
+ 	float:left;
+ 	padding-bottom:50px;
+ 	overflow:hidden;
+ 	padding-left:0px;
+ }	
+
+ #page .header .footer .body #content .content{
+ 	width:726px; 	
+ 	float:left;
+ 	padding-top:20px;
+ 	overflow:hidden;
+ }
+
+ /**-----------------  start table style --------------------------**/
+ #page .header .footer .body #content .content table.stripTable{ 	
+ 	font-family: verdana,sans-serif;
+ 	font-size:.8em;
+ 	border:0;
+ }
+ #page .header .footer .body #content .content table.stripTable tr{
+ 	background: #eee; border-bottom:1px solid #036;
+ }
+
+ #page .header .footer .body #content .content table.stripTable tr.odd {
+ 	background:#0f0;
+ }
+ #page .header .footer .body #content .content table.stripTable tr.hilight {
+ 	background:#FFF;
+ }
+ #page .header .footer .body #content .content table.stripTable td{
+ 	padding:.3em;
+ }	  
+ #page .header .footer .body #content .content table.stripTable td:first-child{
+ 	font-weight:bold;
+ }
+ /** end table style **/
+

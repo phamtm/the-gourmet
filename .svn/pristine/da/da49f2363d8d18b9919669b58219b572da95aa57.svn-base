@@ -1,0 +1,54 @@
+<?php 
+$partialStates = $_POST['partialState'];
+
+$config['total_rows']     = $this->db->get('recipes')->num_rows();
+$config['per_page']       = 9;
+$config['num_links']      = 5;
+$config['base_url']       = 'http://localhost/index.php/home/search_recipe';
+$config['full_tag_open']  = '<div class="pagination-link">';
+$config['full_tag_close'] = '</div>';
+$this->pagination->initialize($config);	
+
+$query_str = 'SELECT *
+FROM recipes
+WHERE Match(recipe_name, description, ingredients, steps) Against (? IN BOOLEAN MODE)';
+$data['records'] =  $this->db->query($query_str, $search_str);
+$data['cur_search_str']	= $search_str;
+
+{
+	if($records->num_rows == 0)
+		echo "<div style='width:100%; text-align:center; font-size:1.3em; margin-top:100px'>Sorry, there is no recipe that matches your search..</div>";
+	else
+	{
+				// loop through the result table
+		foreach($data['records']->result() as $row)
+		{			
+
+			$img_url = base_url()."style/img/rec1.jpg";
+			$recipe_description = $row->description;
+			$recipe_name = $title_name = $row->recipe_name;
+			$num_of_likes = $row->num_of_likes;
+
+			if (strlen($recipe_description) > 100)
+			{					
+				$recipe_description = substr($recipe_description, 0, 100)."...";
+			}
+			if (strlen($recipe_name) > 30)
+			{
+				$recipe_name = substr($recipe_name, 0, 29)."...";
+			}				
+			echo "<a href='/index.php/home/view_recipe/1' title=\"".$title_name."\">";
+			echo "<div class='collage'>";
+			echo "<img src='".$img_url."' alt='' width='200' height='140'>";
+			echo "<div class='collage-text'>";
+			echo "<div class='collage-title'>".$recipe_name."</div>";
+			echo "<div class='rating'>Likes: ".$num_of_likes."</div>";
+			echo "<div class='collage-description'>".$recipe_description."</div>";
+			echo "</div>";							
+			echo "</div>";
+			echo "</a>";
+		}
+		echo $this->pagination->create_links(); 
+	}
+}
+?>

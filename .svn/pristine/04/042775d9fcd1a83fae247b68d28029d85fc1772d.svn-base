@@ -1,0 +1,30 @@
+<?php
+	echo "<div class='admin-content'>";
+	echo "User Manager";
+	echo "</div>";
+	echo "<div class='deleted-notation'>";
+	if (isset($deleted) and $deleted==TRUE) echo "User Deleted!";
+	if (isset($sent_email)and $sent_email==TRUE) echo "Email Sent!";
+	echo "</div>";
+?>
+
+<?php
+	echo "<div class='admin-table'><table>";
+	$query = $records;
+	echo "<th>id</th> <th>Username</th> <th>First Name</th> <th>Last Name</th> <th>Send Email</th> <th>Delete</th>";
+	foreach($query->result() as $row) {
+	echo "<tr>";
+		echo "<td>".$row->user_id."</td>";
+		echo "<td>".$row->username."</td>";
+		echo "<td>".$row->first_name."</td>";
+		echo "<td>".$row->last_name."</td>";
+		echo "<td id='edit-link'>".anchor('admin/send_email_view/'.$row->user_id,'Send Email')."</td>";
+		echo "<td id='edit-link'>".anchor('admin/delete_user/'.$row->user_id,'Delete User')."</td>";
+		// if ($row->admin_right == 0)
+		// 	echo "<td id='edit-link'>".anchor('admin/make_admin/'.$row->user_id,'Make Admin')."</td>";
+		// else
+		// 	echo "<td id='edit-link'>".anchor('admin/remove_admin/'.$row->user_id,'Remove Admin')."</td>";
+	echo "</tr>";
+	}
+	echo "</table></div>";
+?>

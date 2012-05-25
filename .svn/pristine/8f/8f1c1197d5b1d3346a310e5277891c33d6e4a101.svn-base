@@ -1,0 +1,21 @@
+<div id="facebook" align="center">
+        <iframe src="http://www.facebook.com/plugins/registration.php?
+                     client_id=222667541173410&
+                     redirect_uri=https://falling-autumn-1214.herokuapp.com/Controller/facebookRegistration.jsp&
+                     fields=[
+                         {'name':'name'},
+                         {'name':'first_name'},
+                         {'name':'last_name'},
+                         {'name':'email'},
+                         {'name':'gender'},
+                         {'name':'birthday'},
+                         {'name':'password'},
+                        ]"
+                scrolling="auto"
+                frameborder="no"
+                style="border:none;"
+                allowTransparency="true"
+                width="66%"
+                height="398">
+        </iframe>
+</div>
